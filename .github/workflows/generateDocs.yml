@@ -29,5 +29,5 @@ jobs:
       with:
         add: 'build'
         branch: 'main'
-        message: 'Your commit message'
+        message: 'Documentation updated'
         default_author: github_actions
