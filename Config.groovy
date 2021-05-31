@@ -17,8 +17,8 @@ inputFiles = [
 // in order to decide if the docs have to be re-build
 taskInputsDirs = [
                     "${inputPath}",
-//                  "${inputPath}/src",
-//                  "${inputPath}/images",
+                  "${inputPath}/src",
+                  "${inputPath}/images",
                  ]
 
 taskInputsFiles = []
