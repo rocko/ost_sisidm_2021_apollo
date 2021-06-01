@@ -70,7 +70,7 @@ Beispielsweise UML Deployment-Diagramme mit den Kanälen zu Nachbarsystemen, beg
 ausführlich
 
 .Benutzer und Benutzergruppen von VENOM
-[plantuml]
+[plantuml, "{plantUMLDir}demoPlantUML", png]
 ----
 !pragma graphviz_dot smetana
 :Private User: as private
