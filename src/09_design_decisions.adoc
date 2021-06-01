@@ -21,3 +21,5 @@ Verschiedene Möglichkeiten:
 * ausführlicher in Form einzelner Unterkapitel je Entscheidung
 * ADR (http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions[Architecture Decision Record]) für jede wichtige Entscheidung
 ****
+
+:important-caption: ausführlich

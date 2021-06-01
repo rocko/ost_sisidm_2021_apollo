@@ -21,3 +21,5 @@ Fassen Sie die zentralen Entwurfsentscheidungen *kurz* zusammen.
 Motivieren Sie, ausgehend von Aufgabenstellung, Qualitätszielen und Randbedingungen, was Sie entschieden haben und warum Sie so entschieden haben.
 Vermeiden Sie redundante Beschreibungen und verweisen Sie eher auf weitere Ausführungen in Folgeabschnitten.
 ****
+
+:important-caption: ausführlich
