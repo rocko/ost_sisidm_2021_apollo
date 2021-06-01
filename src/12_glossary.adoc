@@ -23,9 +23,9 @@ Sie sollten relevante Begriffe klar definieren, so dass alle Beteiligten
 |===
 |Begriff |Definition
 
-|<Begriff-1>
-|<Definition-1>
+|LIDAR
+|Light detection and ranging
 
-|<Begriff-2
-|<Definition-2>
+|RADAR
+|radio detection and ranging
 |===
