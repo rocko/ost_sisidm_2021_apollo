@@ -72,7 +72,7 @@ ausführlich
 .Benutzer und Benutzergruppen von VENOM
 [plantuml]
 ----
-!pragma graphviz_dot jdot
+!pragma graphviz_dot smetana
 :Private User: as private
 :User Groups: as groups
 :Corporate Users: as corporate
