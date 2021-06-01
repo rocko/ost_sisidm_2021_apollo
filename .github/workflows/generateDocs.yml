@@ -29,5 +29,5 @@ jobs:
       with:
         add: 'build'
         branch: 'main'
-        message: 'Documentation updated'
+        message: '[no ci] Documentation updated'
         default_author: github_actions
