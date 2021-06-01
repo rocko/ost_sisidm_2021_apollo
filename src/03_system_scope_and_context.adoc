@@ -67,4 +67,26 @@ Beispielsweise UML Deployment-Diagramme mit den Kanälen zu Nachbarsystemen, beg
 
 **<Mapping fachliche auf technische Schnittstellen>**
 
-:important-caption: ausführlich
+ausführlich
+
+.Benutzer und Benutzergruppen von VENOM
+[plantuml]
+----
+!pragma graphviz_dot jdot
+:Private User: as private
+:User Groups: as groups
+:Corporate Users: as corporate
+:Government Users: as gov
+:Regulation &\nStandard Bodies: as bodies
+:Operations: as ops
+:internal Users: as internal
+(VENOM\ni.B.O.S.S) as venom
+private -right-> venom
+groups --> venom
+corporate --> venom
+gov -up-> venom
+bodies -up-> venom
+ops --> venom
+internal -left-> venom
+----
+
