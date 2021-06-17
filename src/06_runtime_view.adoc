@@ -1,6 +1,8 @@
 [[section-runtime-view]]
 == Laufzeitsicht
 
+Diese Sicht visualisiert im Gegensatz zur statischen Bausteinsicht dynamische Aspekte. Wie spielen die Teile zusammen?
+
 [role="arc42help"]
 ****
 .Inhalt

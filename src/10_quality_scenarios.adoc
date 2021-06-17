@@ -1,6 +1,8 @@
 [[section-quality-scenarios]]
 == Qualitätsanforderungen
 
+Dieser Abschnitt beinhaltet konkrete Qualitätsszenarien, welche die zentralen Qualitätsziele, aber auch andere geforderte Qualitätseigenschaften besser fassen. Sie ermöglichen es, Entscheidungsoptionen zu bewerten.
+
 [role="arc42help"]
 ****
 .Inhalt
@@ -56,3 +58,6 @@ Insbesondere wenn Sie die Qualität Ihrer Architektur mit Methoden wie ATAM übe
 .Form
 Entweder tabellarisch oder als Freitext.
 ****
+
+
+Das folgende Bild gibt einen Überblick über die relevanten Qualitätsmerkmale und den ihnen jeweils zugeordneten Szenarien.

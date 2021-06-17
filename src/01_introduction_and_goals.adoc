@@ -1,6 +1,8 @@
 [[section-introduction-and-goals]]
 ==	Einführung und Ziele
 
+Dieser Abschnitt führt in die Aufgabenstellung ein und skizziert die Ziele, die Baidu Apollo verfolgt.
+
 [role="arc42help"]
 ****
 Beschreibt die wesentlichen Anforderungen und treibenden Kräfte, die bei der Umsetzung der Softwarearchitektur und Entwicklung des Systems berücksichtigt werden müssen.
@@ -17,6 +19,12 @@ Dazu gehören:
 
 
 === Aufgabenstellung
+
+==== Was ist Apollo Baidu?
+
+==== Wesentliche Features:
+
+
 
 [role="arc42help"]
 ****

@@ -1,6 +1,8 @@
 [[section-system-scope-and-context]]
 == Kontextabgrenzung
 
+Dieser Abschnitt beschreibt das Umfeld von Baidu Apollo. Für welche Benutzer ist es da, und mit welchen Fremdsystemen interagiert es?
+
 [role="arc42help"]
 ****
 .Inhalt

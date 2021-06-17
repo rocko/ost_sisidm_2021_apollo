@@ -1,6 +1,8 @@
 [[section-glossary]]
 == Glossar
 
+Das folgende Glossar erklärt Begriffe aus dem Bereich Autonomes Fahren.
+
 [role="arc42help"]
 ****
 .Inhalt
