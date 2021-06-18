@@ -20,7 +20,7 @@ Weil Qualitätsanforderungen die Architekturentscheidungen oft maßgeblich beein
 .Benutzer und Benutzergruppen von VENOM
 [plantuml, "{plantUMLDir}qualitytree", png]
 ----
-!pragma graphviz_dot smetana
+//!pragma graphviz_dot smetana
 left to right direction
 
 card Qualität as q
