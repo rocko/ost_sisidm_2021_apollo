@@ -645,149 +645,201 @@ Für die Dokumentation eigener System verwenden Sie besser die <em>plain</em> Ve
 <h2 id="section-introduction-and-goals">1. Einführung und Ziele</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Dieser Abschnitt führt in die Aufgabenstellung ein und skizziert die Ziele, die Baidu Apollo verfolgt.</p>
-</div>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<p>Beschreibt die wesentlichen Anforderungen und treibenden Kräfte, die bei der Umsetzung der Softwarearchitektur und Entwicklung des Systems berücksichtigt werden müssen.</p>
-</div>
-<div class="paragraph">
-<p>Dazu gehören:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>zugrunde liegende Geschäftsziele,</p>
-</li>
-<li>
-<p>wesentliche Aufgabenstellungen und</p>
-</li>
-<li>
-<p>essenzielle fachliche Anforderungen an das System sowie</p>
-</li>
-<li>
-<p>Qualitätsziele für die Architektur und</p>
-</li>
-<li>
-<p>relevante Stakeholder und deren Erwartungshaltung.</p>
-</li>
-</ul>
-</div>
-</div>
+<p>Dieser Abschnitt führt in die Aufgabenstellung ein und skizziert die Ziele, die Apollo Auto verfolgt.</p>
 </div>
 <div class="sect2">
 <h3 id="_aufgabenstellung">1.1. Aufgabenstellung</h3>
 <div class="sect3">
-<h4 id="_was_ist_apollo_baidu">1.1.1. Was ist Apollo Baidu?</h4>
-
+<h4 id="_was_ist_apollo_auto">1.1.1. Was ist Apollo Auto?</h4>
+<div class="paragraph">
+<p>Apollo ist eine hochleistungsfähige, flexible Architektur, die die Entwicklung, das Testen und den Einsatz von autonomen Fahrzeugen beschleunigt.
+Apollo Auto bietet unter Andrem Lösungen für Valet Parking, V2X-Kommunikation und intelligente Lichtsignalanlagen.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_wesentliche_features">1.1.2. Wesentliche Features:</h4>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Kurzbeschreibung der fachlichen Aufgabenstellung, treibenden Kräfte, Extrakt (oder Abstract) der Anforderungen.
-Verweis auf (hoffentlich vorliegende) Anforderungsdokumente (mit Versionsbezeichnungen und Ablageorten).</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Valet Parking</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Software- und Hardware-Integrationslösung.
+Multifusionslösung bestand aus Fahrzeug, Cloud, HD-Karte und Parkplätzen</p>
+</li>
+<li>
+<p>Bietet hochwertige Dienstleistungen, wie automatische Parkplatzerkennung und autonomes Parken, für Kunden.</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Aus Sicht der späteren Nutzung ist die Unterstützung einer fachlichen Aufgabe oder Verbesserung der Qualität der eigentliche Beweggrund, ein neues System zu schaffen oder ein bestehendes zu modifizieren.</p>
+</li>
+<li>
+<p>V2X-Communication</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Interaktionslösung für intelligente Fahrzeuginfrastruktur</p>
+</li>
+<li>
+<p>Apollo V2X umfasst ein intelligentes Transportsystem für Fahrzeug Straßendatenerfassung und intelligente Verarbeitungsanalyse, Verkehrssicherheit und -effizienz</p>
+</li>
+<li>
+<p>Wahrnehmung aller Verkehrsteilnehmer im Sichtfeld und die bereitgestellten straßenseitigen Sensorinformationen können für die Entscheidungsfindung beim autonomen Fahren auf hohem Niveau verwendet werden</p>
+</li>
+<li>
+<p>Wahrnehmung von Verkehrteilnehmern ausserhalb des Sichtfeldes</p>
+</li>
+<li>
+<p>Bietet einen vollständigen, kontinuierlichen, multimodalen Datendienst mit niedriger Latenz für L4-Autopilot-Fahrzeuge, die in mehreren Szenarien getestet wurden</p>
+</li>
+<li>
+<p>Durch die permanente dynamische Erfassung von Verkehrsinformationen und die Cloud-Integration, wird eine weltweite optimale kollaborative Steuerungsfunktionen für Verkehrsteilnehmer und Verkehrsmanagement erreicht</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Kurze textuelle Beschreibung, eventuell in tabellarischer Use-Case Form.
-Sofern vorhanden, sollte die Aufgabenstellung Verweise auf die entsprechenden Anforderungsdokumente enthalten.</p>
+</li>
+<li>
+<p>Smart Traffic Signals</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Holographisches Wahrnehmen und Verstehen, basierend auf dem holografischen Wahrnehmungs- und Erkennungssystem</p>
+</li>
+<li>
+<p>Status von Fußgängern und Fahrzeugen auf jeder Fahrspur genau erkennen und die Leistung des aktuellen Verkehrsflusses wie Volumen, Warteschlangenlänge, Verspätungen usw.</p>
+</li>
+<li>
+<p>Vollständige raum-zeitliche Ableitung und Entscheidungsfindung</p>
+</li>
+<li>
+<p>Echtzeitsteuerung der gesamten Szene</p>
+</li>
+<li>
+<p>Reduzierung der durchschnittlichen Wartezeit um 20-30% während der Rush Hour</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>Halten Sie diese Auszüge so knapp wie möglich und wägen Sie Lesbarkeit und Redundanzfreiheit gegeneinander ab.</p>
+</li>
+<li>
+<p>Robotaxi</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Die Robotaxis, die aus Chinas erstem werkseitig installierten L4-Passagier-Fahrzeug sind zur Zeit auf öffentlichen Straßen im Testbetrieb</p>
+</li>
+<li>
+<p>Sie werden in Kooperation von Baido und FAW an einer gemeinsamen Produktionsline hergstellt</p>
+</li>
+</ul>
 </div>
+</li>
+<li>
+<p>Minibus</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Die Minibusse ermöglichen ebenfalls autonomes Fahren der Stufe 4</p>
+</li>
+<li>
+<p>Funktionen sind unter Anderem Hinderniserkennung und -vermeidung, zu einem Zielort Fahren und Kreuzungen überqueren</p>
+</li>
+</ul>
 </div>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_qualitätsziele">1.2. Qualitätsziele</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
 <div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Die Top-3 bis Top-5 der Qualitätsziele für die Architektur, deren Erfüllung oder Einhaltung den maßgeblichen Stakeholdern besonders wichtig sind.
-Gemeint sind hier wirklich Qualitätsziele, die nicht unbedingt mit den Zielen des Projekts übereinstimmen. Beachten Sie den Unterschied.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Weil Qualitätsziele grundlegende Architekturentscheidungen oft maßgeblich beeinflussen, sollten Sie die für Ihre Stakeholder relevanten Qualitätsziele kennen, möglichst konkret und operationalisierbar.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Tabellarische Darstellung der Qualitätsziele mit möglichst konkreten Szenarien, geordnet nach Prioritäten.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_stakeholder">1.3. Stakeholder</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Expliziter Überblick über die Stakeholder des Systems – über alle Personen, Rollen oder Organisationen –, die</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>die Architektur kennen sollten oder</p>
-</li>
-<li>
-<p>von der Architektur überzeugt werden müssen,</p>
-</li>
-<li>
-<p>mit der Architektur oder dem Code arbeiten (z.B. Schnittstellen nutzen),</p>
-</li>
-<li>
-<p>die Dokumentation der Architektur für ihre eigene Arbeit benötigen,</p>
-</li>
-<li>
-<p>Entscheidungen über das System und dessen Entwicklung treffen.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Sie sollten die Projektbeteiligten und -betroffenen kennen, sonst erleben Sie später im Entwicklungsprozess Überraschungen.
-Diese Stakeholder bestimmen unter anderem Umfang und Detaillierungsgrad der von Ihnen zu leistenden Arbeit und Ergebnisse.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Tabelle mit Rollen- oder Personennamen, sowie deren Erwartungshaltung bezüglich der Architektur und deren Dokumentation.</p>
-</div>
-</div>
+<p>Die folgende Tabelle beschreibt die zentralen Qualitätsziele von DokChess, wobei die Reihenfolge eine grobe Orientierung bezüglich der Wichtigkeit vorgibt.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 50%;">
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Rolle</th>
-<th class="tableblock halign-left valign-top">Kontakt</th>
-<th class="tableblock halign-left valign-top">Erwartungshaltung</th>
+<th class="tableblock halign-left valign-top">Qualitätsziel</th>
+<th class="tableblock halign-left valign-top">Motivation und Erläuterung</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Rolle-1&gt;</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Kontakt-1&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Erwartung-1&gt;</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Rolle-2&gt;</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Kontakt-2&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Erwartung-2&gt;</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Rolle-2&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Kontakt-2&gt;</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Rolle-2&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Kontakt-2&gt;</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Rolle-2&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Kontakt-2&gt;</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_stakeholder">1.3. Stakeholder</h3>
+<div class="paragraph">
+<p>Die folgende Tabelle stellt die Stakeholder von Apollo Auto und ihre jeweilige Intention dar.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Rolle</th>
+<th class="tableblock halign-left valign-top">Interesse, Bezug</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Softwarearchitekten</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">• Wollen ein Gefühl bekommen, wie Architekturdokumentation für ein konkretes System aussehen kann</p>
+<p class="tableblock">• Möchten sich Dinge (z.B. Form, Notation) für Ihre tägliche Arbeit abgucken</p>
+<p class="tableblock">• Gewinnen Sicherheit für Ihre eigenen</p>
+<p class="tableblock">• Haben in der Regel keine tiefen Schachkenntnisse</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Entwickler</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">• Nehmen Architekturaufgaben im Team wahr
+• Brauchen ein generelles Verständnis für die Architektur</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>OEM &amp; Lieferanten</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">• Entwickeln neue Produkte auf Grundlage von Apollo Auto</p>
+<p class="tableblock">• Wollen Anregungen für eigene Produkte finden</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Gesetzgeber &amp; Genehmigungsbehörden</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">• Entwickeln einen gesetzlichen Rahmen zur Zulassung von fahrerlosen Fahrzeugen im öffentlichen Straßenverkehr</p>
+<p class="tableblock">• Etablieren Prüfvorschriften und Tests für Genehmigungsverfahren</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Universitäten</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">• Entwickeln eigene Forschungsprojekte auf Grundlage von Apollo Auto</p>
+<p class="tableblock">• Wollen Anregungen für weitere Forschungsprojekte und studentische Arbeiten finden</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Studenten</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">• Interessieren sich aufgrund ihres Studiums für die verschiedenen</p>
+<p class="tableblock">• Setzen eigene Projekte (z.B. Masterarbeit) zum Thema autonomes Fahren mit Apollo Auto um</p>
+<p class="tableblock">• Schreiben eine Architektur Dokumentation zu Apollo Auto</p></td>
 </tr>
 </tbody>
 </table>
@@ -799,7 +851,8 @@ Diese Stakeholder bestimmen unter anderem Umfang und Detaillierungsgrad der von 
 <h2 id="section-architecture-constraints">2. Randbedingungen</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Beim Lösungsentwurf waren zu Beginn verschiedene Randbedingungen zu beachten, sie wirken in der Lösung fort. Dieser Abschnitt stellt sie dar und erklärt auch – wo nötig – deren Motivation.</p>
+<p>Beim Einsatz von Apollo sind verschiedene Randbedingungen zu beachten.
+Dieser Abschnitt stellt sie dar und erklärt auch – wo nötig – deren Motivation.</p>
 </div>
 <div class="sidebarblock arc42help">
 <div class="content">
@@ -822,14 +875,74 @@ Bei Bedarf unterscheiden Sie technische, organisatorische und politische Randbed
 </div>
 <div class="sect2">
 <h3 id="_technische_randbedingungen">2.1. Technische Randbedingungen</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Ein Fahrzeug, das mit dem By-Wire-System ausgestattet ist, einschließlich, aber nicht beschränkt auf Brake-by-Wire, Steering-by-Wire, Throttle-by-Wire und Shift-by-Wire (Apollo wird derzeit auf Lincoln MKZ getestet).</p>
+</li>
+<li>
+<p>Ein Rechner mit einem 4-Kern-Prozessor und mindestens 8 GB Speicher (16 GB für Apollo 3.5 und höher)</p>
+</li>
+<li>
+<p>Ubuntu 18.04</p>
+</li>
+<li>
+<p>Arbeitskenntnisse über Docker</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_organisatorische_randbedingungen">2.2. Organisatorische Randbedingungen</h3>
-
+<div class="paragraph">
+<p>hier irgendwas das github verwendet wird &#8230;&#8203;.
+sonst kein plan wie die arbeiten, denke mal auch verteilt</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Randbedingung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterungen, Hintergrund</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">github</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Quellcode ist über github verfügbar.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_konventionen">2.3. Konventionen</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Konvention</th>
+<th class="tableblock halign-left valign-top">Erläuterungen, Hintergrund</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Architekturdokumentation</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Terminologie und Gliederung nach dem deutschen arc42-Template in der Version 6.0</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Kodierrichtlinien für C++</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>C++ Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Kodierrichtlinien für Python</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Python Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle</em></p></td>
+</tr>
+</tbody>
+</table>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -873,6 +986,12 @@ Stellen Sie sicher, dass Sie diese komplett verstanden haben.</p>
 </div>
 <div class="sect2">
 <h3 id="_fachlicher_kontext">3.1. Fachlicher Kontext</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/plantUMLfachkontext.png" alt="plantUMLfachkontext" width="302" height="205">
+</div>
+<div class="title">Abbildung 1. Benutzer und Benutzergruppen von VENOM</div>
+</div>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -939,7 +1058,7 @@ Zusätzlich eine Erklärung (<em>mapping</em>), welche fachlichen Ein- und Ausga
 <div class="content">
 <img src="./images/plantUMLdemoPlantUML.png" alt="plantUMLdemoPlantUML" width="333" height="340">
 </div>
-<div class="title">Abbildung 1. Benutzer und Benutzergruppen von VENOM</div>
+<div class="title">Abbildung 2. Benutzer und Benutzergruppen von VENOM</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -1439,6 +1558,9 @@ Nutzen Sie beispielsweise:</p>
 <div class="sect1">
 <h2 id="section-deployment-view">7. Verteilungssicht</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="./images/Hardware_overview_3_5.png" alt="Deployment von Apollo Auto"></span></p>
+</div>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -1763,11 +1885,8 @@ Die wichtigsten davon haben Sie bereits in Abschnitt 1.2 (Qualitätsziele) hervo
 </div>
 <div class="sect2">
 <h3 id="_qualitätsbaum">10.1. Qualitätsbaum</h3>
-<div class="imageblock">
-<div class="content">
-<img src="./images/plantUMLqualitytree.png" alt="plantUMLqualitytree" width="403" height="159">
-</div>
-<div class="title">Abbildung 2. Benutzer und Benutzergruppen von VENOM</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/qualitytree.png" alt="Qualitätsbaum"></span></p>
 </div>
 <div class="sidebarblock arc42help">
 <div class="content">
@@ -1946,7 +2065,7 @@ Risikomanagement ist Projektmanagement für Erwachsene.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-18 09:09:30 UTC
+Last updated 2021-06-18 21:08:11 UTC
 </div>
 </div>
 </body>
