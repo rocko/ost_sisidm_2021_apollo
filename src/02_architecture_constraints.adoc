@@ -1,7 +1,8 @@
 [[section-architecture-constraints]]
 == Randbedingungen
 
-Beim Lösungsentwurf waren zu Beginn verschiedene Randbedingungen zu beachten, sie wirken in der Lösung fort. Dieser Abschnitt stellt sie dar und erklärt auch – wo nötig – deren Motivation.
+Beim Einsatz von Apollo sind verschiedene Randbedingungen zu beachten.
+Dieser Abschnitt stellt sie dar und erklärt auch – wo nötig – deren Motivation.
 
 [role="arc42help"]
 ****
@@ -28,5 +29,25 @@ Bei Bedarf unterscheiden Sie technische, organisatorische und politische Randbed
 * Arbeitskenntnisse über Docker
 
 === Organisatorische Randbedingungen
+[cols="e,2e" options="header"]
+
+hier irgendwas das github verwendet wird ....
+sonst kein plan wie die arbeiten, denke mal auch verteilt
+
+|===
+|Randbedingung | Erläuterungen, Hintergrund
+|github
+|Quellcode ist über github verfügbar.
+|===
 
 === Konventionen
+[cols="e,2e" options="header"]
+|===
+|Konvention | Erläuterungen, Hintergrund
+|Architekturdokumentation
+|Terminologie und Gliederung nach dem deutschen arc42-Template in der Version 6.0
+|Kodierrichtlinien für C++
+|C++ Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle
+|Kodierrichtlinien für Python
+|Python Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle
+|===
