@@ -26,34 +26,34 @@ Apollo Auto bietet unter Andrem Lösungen für Valet Parking, V2X-Kommunikation 
 
 ==== Wesentliche Features:
 
-Valet Parking
-• Software- und Hardware-Integrationslösung.
-• Multifusionslösung bestand aus Fahrzeug, Cloud, HD-Karte und Parkplätzen
-• Bietet hochwertige Dienstleistungen, wie automatische Parkplatzerkennung und autonomes Parken, für Kunden.
+* Valet Parking
+** Software- und Hardware-Integrationslösung.
+ Multifusionslösung bestand aus Fahrzeug, Cloud, HD-Karte und Parkplätzen
+** Bietet hochwertige Dienstleistungen, wie automatische Parkplatzerkennung und autonomes Parken, für Kunden.
 
 
-V2X-Communication
-• Interaktionslösung für intelligente Fahrzeuginfrastruktur
-• Apollo V2X umfasst ein intelligentes Transportsystem für Fahrzeug Straßendatenerfassung und intelligente Verarbeitungsanalyse, Verkehrssicherheit und -effizienz
-• Wahrnehmung aller Verkehrsteilnehmer im Sichtfeld und die bereitgestellten straßenseitigen Sensorinformationen können für die Entscheidungsfindung beim autonomen Fahren auf hohem Niveau verwendet werden
-• Wahrnehmung von Verkehrteilnehmern ausserhalb des Sichtfeldes
-• Bietet einen vollständigen, kontinuierlichen, multimodalen Datendienst mit niedriger Latenz für L4-Autopilot-Fahrzeuge, die in mehreren Szenarien getestet wurden
-• Durch die permanente dynamische Erfassung von Verkehrsinformationen und die Cloud-Integration, wird eine weltweite optimale kollaborative Steuerungsfunktionen für Verkehrsteilnehmer und Verkehrsmanagement erreicht
+* V2X-Communication
+** Interaktionslösung für intelligente Fahrzeuginfrastruktur
+** Apollo V2X umfasst ein intelligentes Transportsystem für Fahrzeug Straßendatenerfassung und intelligente Verarbeitungsanalyse, Verkehrssicherheit und -effizienz
+** Wahrnehmung aller Verkehrsteilnehmer im Sichtfeld und die bereitgestellten straßenseitigen Sensorinformationen können für die Entscheidungsfindung beim autonomen Fahren auf hohem Niveau verwendet werden
+** Wahrnehmung von Verkehrteilnehmern ausserhalb des Sichtfeldes
+** Bietet einen vollständigen, kontinuierlichen, multimodalen Datendienst mit niedriger Latenz für L4-Autopilot-Fahrzeuge, die in mehreren Szenarien getestet wurden
+** Durch die permanente dynamische Erfassung von Verkehrsinformationen und die Cloud-Integration, wird eine weltweite optimale kollaborative Steuerungsfunktionen für Verkehrsteilnehmer und Verkehrsmanagement erreicht
 
-Smart Traffic Signals
-• Holographisches Wahrnehmen und Verstehen, basierend auf dem holografischen Wahrnehmungs- und Erkennungssystem
-• Status von Fußgängern und Fahrzeugen auf jeder Fahrspur genau erkennen und die Leistung des aktuellen Verkehrsflusses wie Volumen, Warteschlangenlänge, Verspätungen usw.
-• Vollständige raum-zeitliche Ableitung und Entscheidungsfindung
-• Echtzeitsteuerung der gesamten Szene
-• Reduzierung der durchschnittlichen Wartezeit um 20-30% während der Rush Hour
+* Smart Traffic Signals
+** Holographisches Wahrnehmen und Verstehen, basierend auf dem holografischen Wahrnehmungs- und Erkennungssystem
+** Status von Fußgängern und Fahrzeugen auf jeder Fahrspur genau erkennen und die Leistung des aktuellen Verkehrsflusses wie Volumen, Warteschlangenlänge, Verspätungen usw.
+** Vollständige raum-zeitliche Ableitung und Entscheidungsfindung
+** Echtzeitsteuerung der gesamten Szene
+** Reduzierung der durchschnittlichen Wartezeit um 20-30% während der Rush Hour
 
-Robotaxi
-• Die Robotaxis, die aus Chinas erstem werkseitig installierten L4-Passagier-Fahrzeug sind zur Zeit auf öffentlichen Straßen im Testbetrieb
-• Sie werden in Kooperation von Baido und FAW an einer gemeinsamen Produktionsline hergstellt
+* Robotaxi
+** Die Robotaxis, die aus Chinas erstem werkseitig installierten L4-Passagier-Fahrzeug sind zur Zeit auf öffentlichen Straßen im Testbetrieb
+** Sie werden in Kooperation von Baido und FAW an einer gemeinsamen Produktionsline hergstellt
 
-Minibus
-• Die Minibusse ermöglichen ebenfall autonomes Fahren der Stufe 4
-• Funktionen sind unter Anderem Hinderniserkennung und -vermeidung, zu einem Zielort Fahren und Kreuzungen überqueren
+* Minibus
+** Die Minibusse ermöglichen ebenfall autonomes Fahren der Stufe 4
+** Funktionen sind unter Anderem Hinderniserkennung und -vermeidung, zu einem Zielort Fahren und Kreuzungen überqueren
 
 
 [role="arc42help"]
@@ -89,11 +89,11 @@ Tabellarische Darstellung der Qualitätsziele mit möglichst konkreten Szenarien
 
 === Stakeholder
 
-• Endnutzer
-• OEM
-• Lieferanten
-• Gesetzgeber + Genehmigungsbehörden
-• Wirtszchafts- und Interessensverbände
+* Endnutzer
+* OEM
+* Lieferanten
+* Gesetzgeber + Genehmigungsbehörden
+* Wirtszchafts- und Interessensverbände
 
 [role="arc42help"]
 ****
