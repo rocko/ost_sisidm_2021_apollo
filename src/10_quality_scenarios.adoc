@@ -21,7 +21,7 @@ Weil Qualitätsanforderungen die Architekturentscheidungen oft maßgeblich beein
 [plantuml, "{plantUMLDir}qualitytree", png]
 ----
 //!pragma graphviz_dot smetana
-left to right direction
+//left to right direction
 
 card Qualität as q
 card Funktionalität as f
