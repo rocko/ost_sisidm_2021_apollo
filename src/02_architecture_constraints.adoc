@@ -1,7 +1,8 @@
 [[section-architecture-constraints]]
 == Randbedingungen
 
-Beim Lösungsentwurf waren zu Beginn verschiedene Randbedingungen zu beachten, sie wirken in der Lösung fort. Dieser Abschnitt stellt sie dar und erklärt auch – wo nötig – deren Motivation.
+Beim Einsatz von Apollo sind verschiedene Randbedingungen zu beachten.
+Dieser Abschnitt stellt sie dar und erklärt auch – wo nötig – deren Motivation.
 
 [role="arc42help"]
 ****
@@ -19,7 +20,34 @@ Bei Bedarf unterscheiden Sie technische, organisatorische und politische Randbed
 ****
 
 === Technische Randbedingungen
+* Ein Fahrzeug, das mit dem By-Wire-System ausgestattet ist, einschließlich, aber nicht beschränkt auf Brake-by-Wire, Steering-by-Wire, Throttle-by-Wire und Shift-by-Wire (Apollo wird derzeit auf Lincoln MKZ getestet).
+
+* Ein Rechner mit einem 4-Kern-Prozessor und mindestens 8 GB Speicher (16 GB für Apollo 3.5 und höher)
+
+* Ubuntu 18.04
+
+* Arbeitskenntnisse über Docker
 
 === Organisatorische Randbedingungen
+[cols="e,2e" options="header"]
+
+hier irgendwas das github verwendet wird ....
+sonst kein plan wie die arbeiten, denke mal auch verteilt
+
+|===
+|Randbedingung | Erläuterungen, Hintergrund
+|github
+|Quellcode ist über github verfügbar.
+|===
 
 === Konventionen
+[cols="e,2e" options="header"]
+|===
+|Konvention | Erläuterungen, Hintergrund
+|Architekturdokumentation
+|Terminologie und Gliederung nach dem deutschen arc42-Template in der Version 6.0
+|Kodierrichtlinien für C++
+|C++ Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle
+|Kodierrichtlinien für Python
+|Python Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle
+|===
