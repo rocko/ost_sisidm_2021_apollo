@@ -1,6 +1,8 @@
 [[section-deployment-view]]
 == Verteilungssicht
 
+image:Hardware_overview_3_5.png["Deployment von Apollo Auto"]
+
 [role="arc42help"]
 ****
 .Inhalt
@@ -76,3 +78,5 @@ _<Diagramm + Erläuterungen>_
 ==== _<Infrastrukturelement n>_
 
 _<Diagramm + Erläuterungen>_
+
+
