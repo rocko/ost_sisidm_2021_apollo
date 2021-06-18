@@ -26,6 +26,16 @@ Apollo Auto bietet unter Andrem Lösungen für Valet Parking, V2X-Kommunikation 
 
 ==== Wesentliche Features:
 
+Valet Parking
+
+
+V2X-Communication
+
+Smart Traffic
+
+Robotaxi
+
+Minibus
 
 
 [role="arc42help"]
@@ -60,6 +70,12 @@ Tabellarische Darstellung der Qualitätsziele mit möglichst konkreten Szenarien
 ****
 
 === Stakeholder
+
+• Endnutzer
+• OEM
+• Lieferanten
+• Gesetzgeber + Genehmigungsbehörden
+• Wirtszchafts- und Interessensverbände
 
 [role="arc42help"]
 ****
