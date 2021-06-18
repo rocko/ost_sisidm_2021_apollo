@@ -17,6 +17,27 @@ Weil Qualitätsanforderungen die Architekturentscheidungen oft maßgeblich beein
 
 === Qualitätsbaum
 
+.Benutzer und Benutzergruppen von VENOM
+[plantuml, "{plantUMLDir}qualitytree", png]
+----
+!pragma graphviz_dot smetana
+left to right direction
+skinparam roundCorner 15
+:card Qualität as q:
+:card Funktionalität as f:
+card Portierbarkeit as p:
+:card Benutzbarkeit as b:
+:label Interoperabilität as I:
+:label Attraktivität as A:
+:label Anpassbarkeit as AN:
+q --> f
+q --> p
+q --> b
+f --> I
+b --> A
+p --> AN
+----
+
 [role="arc42help"]
 ****
 .Inhalt

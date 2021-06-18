@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+skinparam roundCorner 15
+card Qualität as q
+card Funktionalität as f
+'card Zuverlässigkeit as z
+card Portierbarkeit as p
+card Benutzbarkeit as b
+
+q --> f
+'q --> z
+q --> p
+q --> b
+
+label Interoperabilität as I
+label Attraktivität as A
+label Anpassbarkeit as AN
+f --> I
+b --> A
+p --> AN
+
+@enduml
