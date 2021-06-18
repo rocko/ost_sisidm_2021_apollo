@@ -20,7 +20,11 @@ Dazu gehören:
 
 === Aufgabenstellung
 
-==== Was ist Apollo Baidu?
+
+==== Was ist ApolloAuto?
+
+ApolloAuto ist eine offene Plattform für Autonomes Fahren von Baidu.
+Apollo Auto bietet unter Andrem Lösungen für Valet Parking, V2X-Kommunikation und intelligente Lichtsignalanlagen.
 
 ==== Wesentliche Features:
 
