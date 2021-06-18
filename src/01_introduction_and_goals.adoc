@@ -94,7 +94,6 @@ Die folgende Tabelle stellt die Stakeholder von Apollo Auto und ihre jeweilige I
 
 • Wollen Anregungen für eigene Produkte finden
 
-<<<
 
 | _Gesetzgeber & Genehmigungsbehörden_ |
 • Entwickeln einen gesetzlichen Rahmen zur Zulassung von fahrerlosen Fahrzeugen im öffentlichen Straßenverkehr
