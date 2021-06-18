@@ -535,7 +535,13 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_stakeholder">1.3. Stakeholder</a></li>
 </ul>
 </li>
-<li><a href="#section-architecture-constraints">2. Randbedingungen</a></li>
+<li><a href="#section-architecture-constraints">2. Randbedingungen</a>
+<ul class="sectlevel2">
+<li><a href="#_technische_randbedingungen">2.1. Technische Randbedingungen</a></li>
+<li><a href="#_organisatorische_randbedingungen">2.2. Organisatorische Randbedingungen</a></li>
+<li><a href="#_konventionen">2.3. Konventionen</a></li>
+</ul>
+</li>
 <li><a href="#section-system-scope-and-context">3. Kontextabgrenzung</a>
 <ul class="sectlevel2">
 <li><a href="#_fachlicher_kontext">3.1. Fachlicher Kontext</a></li>
@@ -638,6 +644,9 @@ Für die Dokumentation eigener System verwenden Sie besser die <em>plain</em> Ve
 <div class="sect1">
 <h2 id="section-introduction-and-goals">1. Einführung und Ziele</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Dieser Abschnitt führt in die Aufgabenstellung ein und skizziert die Ziele, die Baidu Apollo verfolgt.</p>
+</div>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -669,6 +678,12 @@ Für die Dokumentation eigener System verwenden Sie besser die <em>plain</em> Ve
 </div>
 <div class="sect2">
 <h3 id="_aufgabenstellung">1.1. Aufgabenstellung</h3>
+<div class="sect3">
+<h4 id="_was_ist_apollo_baidu">1.1.1. Was ist Apollo Baidu?</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_wesentliche_features">1.1.2. Wesentliche Features:</h4>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -687,6 +702,7 @@ Sofern vorhanden, sollte die Aufgabenstellung Verweise auf die entsprechenden An
 </div>
 <div class="paragraph">
 <p>Halten Sie diese Auszüge so knapp wie möglich und wägen Sie Lesbarkeit und Redundanzfreiheit gegeneinander ab.</p>
+</div>
 </div>
 </div>
 </div>
@@ -782,6 +798,9 @@ Diese Stakeholder bestimmen unter anderem Umfang und Detaillierungsgrad der von 
 <div class="sect1">
 <h2 id="section-architecture-constraints">2. Randbedingungen</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Beim Lösungsentwurf waren zu Beginn verschiedene Randbedingungen zu beachten, sie wirken in der Lösung fort. Dieser Abschnitt stellt sie dar und erklärt auch – wo nötig – deren Motivation.</p>
+</div>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -801,12 +820,26 @@ Bei Bedarf unterscheiden Sie technische, organisatorische und politische Randbed
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_technische_randbedingungen">2.1. Technische Randbedingungen</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_organisatorische_randbedingungen">2.2. Organisatorische Randbedingungen</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_konventionen">2.3. Konventionen</h3>
 <div style="page-break-after: always;"></div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="section-system-scope-and-context">3. Kontextabgrenzung</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Dieser Abschnitt beschreibt das Umfeld von Baidu Apollo. Für welche Benutzer ist es da, und mit welchen Fremdsystemen interagiert es?</p>
+</div>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -915,6 +948,9 @@ Zusätzlich eine Erklärung (<em>mapping</em>), welche fachlichen Ein- und Ausga
 <div class="sect1">
 <h2 id="section-solution-strategy">4. Lösungsstrategie</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Dieser Abschnitt enthält einen stark verdichteten Architekturüberblick. Eine Gegenüberstellung der wichtigsten Ziele und Lösungsansätze.</p>
+</div>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -1304,6 +1340,9 @@ Normale, einfache oder standardisierte Teile sollten Sie weglassen.</p>
 <div class="sect1">
 <h2 id="section-runtime-view">6. Laufzeitsicht</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Diese Sicht visualisiert im Gegensatz zur statischen Bausteinsicht dynamische Aspekte. Wie spielen die Teile zusammen?</p>
+</div>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -1538,6 +1577,9 @@ Nutzen Sie diese, evtl. auch geschachtelt, wenn Ihre Verteilungsstruktur es verl
 <div class="sect1">
 <h2 id="section-concepts">8. Querschnittliche Konzepte</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Dieser Abschnitt beschreibt allgemeine Strukturen und Aspekte, die systemweit gelten. Darüber hinaus stellt er verschiedene technische Lösungskonzepte vor.</p>
+</div>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -1700,6 +1742,9 @@ Verweisen Sie evtl. auf Abschnitt 4, wo schon grundlegende strategische Entschei
 <div class="sect1">
 <h2 id="section-quality-scenarios">10. Qualitätsanforderungen</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Dieser Abschnitt beinhaltet konkrete Qualitätsszenarien, welche die zentralen Qualitätsziele, aber auch andere geforderte Qualitätseigenschaften besser fassen. Sie ermöglichen es, Entscheidungsoptionen zu bewerten.</p>
+</div>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -1718,6 +1763,12 @@ Die wichtigsten davon haben Sie bereits in Abschnitt 1.2 (Qualitätsziele) hervo
 </div>
 <div class="sect2">
 <h3 id="_qualitätsbaum">10.1. Qualitätsbaum</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/plantUMLqualitytree.png" alt="plantUMLqualitytree" width="668" height="323">
+</div>
+<div class="title">Abbildung 2. Benutzer und Benutzergruppen von VENOM</div>
+</div>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -1785,6 +1836,9 @@ Beispiel: Eine zusätzliche Funktionalität wird implementiert oder die Anforder
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p>Das folgende Bild gibt einen Überblick über die relevanten Qualitätsmerkmale und den ihnen jeweils zugeordneten Szenarien.</p>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -1792,6 +1846,9 @@ Beispiel: Eine zusätzliche Funktionalität wird implementiert oder die Anforder
 <div class="sect1">
 <h2 id="section-technical-risks">11. Risiken und technische Schulden</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Die folgenden Risiken wurden zu Beginn des Vorhabens identifiziert. Sie beeinflussten die Planung der ersten drei Iterationen maßgeblich. Seit Abschluss der dritten Iteration werden sie beherrscht. Dieser Architekturüberblick zeigt die Risiken inklusive der damaligen Eventualfallplanung weiterhin, wegen ihres großen Einflusses auf die Lösung.</p>
+</div>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -1823,6 +1880,9 @@ Risikomanagement ist Projektmanagement für Erwachsene.
 <div class="sect1">
 <h2 id="section-glossary">12. Glossar</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Das folgende Glossar erklärt Begriffe aus dem Bereich Autonomes Fahren.</p>
+</div>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -1886,7 +1946,7 @@ Risikomanagement ist Projektmanagement für Erwachsene.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-02 13:42:26 UTC
+Last updated 2021-06-18 08:57:16 UTC
 </div>
 </div>
 </body>
