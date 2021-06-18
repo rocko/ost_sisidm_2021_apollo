@@ -88,12 +88,14 @@ Tabellarische Darstellung der Qualitätsziele mit möglichst konkreten Szenarien
 ****
 
 === Stakeholder
-
-• Endnutzer
-• OEM
-• Lieferanten
-• Gesetzgeber + Genehmigungsbehörden
-• Wirtszchafts- und Interessensverbände
+[cols="1,1" options="header"]
+|===
+| Rolle | Erwartungshaltung 
+| Endnutzer | _<Erwartung-1>_ 
+| Lieferanten | _<Erwartung-2>_ 
+| Gesetzgeber | xxx
+| Wirtschafts- und Interessensverbände | xxx 
+|===
 
 [role="arc42help"]
 ****
