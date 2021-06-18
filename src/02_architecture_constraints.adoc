@@ -19,6 +19,13 @@ Bei Bedarf unterscheiden Sie technische, organisatorische und politische Randbed
 ****
 
 === Technische Randbedingungen
+* Ein Fahrzeug, das mit dem By-Wire-System ausgestattet ist, einschließlich, aber nicht beschränkt auf Brake-by-Wire, Steering-by-Wire, Throttle-by-Wire und Shift-by-Wire (Apollo wird derzeit auf Lincoln MKZ getestet).
+
+* Ein Rechner mit einem 4-Kern-Prozessor und mindestens 8 GB Speicher (16 GB für Apollo 3.5 und höher)
+
+* Ubuntu 18.04
+
+* Arbeitskenntnisse über Docker
 
 === Organisatorische Randbedingungen
 

@@ -21,6 +21,7 @@ Dazu gehören:
 === Aufgabenstellung
 
 ==== Was ist Apollo Baidu?
+Apollo ist eine hochleistungsfähige, flexible Architektur, die die Entwicklung, das Testen und den Einsatz von autonomen Fahrzeugen beschleunigt.
 
 ==== Wesentliche Features:
 
