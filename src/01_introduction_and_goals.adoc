@@ -65,6 +65,8 @@ Die folgende Tabelle beschreibt die zentralen Qualitätsziele von DokChess, wobe
 • Um die Fahrsicherheit weiter zu erhöhen, wird auf die Sensor- und Zustandsdaten von anderen Verkehrsteilnehmern in Echtzeit zugegriffen
 |===
 
+<<<
+
 === Stakeholder
 
 
@@ -91,6 +93,8 @@ Die folgende Tabelle stellt die Stakeholder von Apollo Auto und ihre jeweilige I
 • Entwickeln neue Produkte auf Grundlage von Apollo Auto
 
 • Wollen Anregungen für eigene Produkte finden
+
+<<<
 
 | _Gesetzgeber & Genehmigungsbehörden_ |
 • Entwickeln einen gesetzlichen Rahmen zur Zulassung von fahrerlosen Fahrzeugen im öffentlichen Straßenverkehr
