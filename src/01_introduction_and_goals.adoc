@@ -20,8 +20,9 @@ Dazu gehören:
 
 === Aufgabenstellung
 
-==== Was ist Apollo Baidu?
+==== Was ist Apollo Auto?
 Apollo ist eine hochleistungsfähige, flexible Architektur, die die Entwicklung, das Testen und den Einsatz von autonomen Fahrzeugen beschleunigt.
+Apollo Auto bietet unter Andrem Lösungen für Valet Parking, V2X-Kommunikation und intelligente Lichtsignalanlagen.
 
 ==== Wesentliche Features:
 
