@@ -25,7 +25,7 @@ left to right direction
 skinparam roundCorner 15
 :card Qualität as q:
 :card Funktionalität as f:
-card Portierbarkeit as p:
+:card Portierbarkeit as p:
 :card Benutzbarkeit as b:
 :label Interoperabilität as I:
 :label Attraktivität as A:
