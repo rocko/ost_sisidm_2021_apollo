@@ -52,7 +52,7 @@ Apollo Auto bietet unter Andrem Lösungen für Valet Parking, V2X-Kommunikation 
 ** Sie werden in Kooperation von Baido und FAW an einer gemeinsamen Produktionsline hergstellt
 
 * Minibus
-** Die Minibusse ermöglichen ebenfall autonomes Fahren der Stufe 4
+** Die Minibusse ermöglichen ebenfalls autonomes Fahren der Stufe 4
 ** Funktionen sind unter Anderem Hinderniserkennung und -vermeidung, zu einem Zielort Fahren und Kreuzungen überqueren
 
 
