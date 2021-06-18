@@ -24,6 +24,60 @@ Verschiedene Optionen:
 
 === Fachlicher Kontext
 
+.Benutzer und Benutzergruppen von VENOM
+[plantuml, "{plantUMLDir}fachkontext", png]
+----
+skinparam rectangle {
+    roundCorner<<Concept>> 25
+}
+rectangle "Apollo Auto" <<system>> as AA
+
+rectangle "Open Vehicle Certification Platform" as OVCP {
+    'component "Apollo Compatible Drive-by-wire vehicle"
+}
+rectangle "Hardware Development Platform" as HDP {
+   ' [GPS]
+   ' [Camera]
+   '[LiDAR]
+   ' [Radar]
+   ' [Ultrasonic]
+   ' [ASU]
+   ' [AXU]
+   ' [V2X OBU]
+}
+rectangle "Open Software Platform" as OSP {
+   ' [Localization]
+   ' [Perception]
+   ' [Prediction]
+   ' [Planning]
+   ' [Control]
+   ' [RTOS]
+   ' [Apollo Cyber RT]
+}
+rectangle "Open Service Platform" as OServiceP {
+   ' [Simulation]
+   ' [Data Pipeline]
+   ' [Security]
+   ' [OTA]
+   ' [DuerOS]
+   ' [V2X]
+}
+
+rectangle "Solutions" as S {
+   ' [Valet Parking]
+   ' [RoboTaxi]
+  '  [CarOS]
+   ' [MiniBus]
+   ' [MicroCar]
+}
+
+AA --> OVCP
+AA --> HDP
+AA --> OSP
+AA --> OServiceP
+AA --> S
+---
+
 [role="arc42help"]
 ****
 .Inhalt
