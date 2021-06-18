@@ -30,6 +30,7 @@ Valet Parking
 
 
 V2X-Communication
+• Interaktionslösung für intelligente Fahrzeuginfrastruktur
 
 Smart Traffic
 • Holographisches Wahrnehmen und Verstehen, basierend auf dem holografischen Wahrnehmungs- und Erkennungssystem
