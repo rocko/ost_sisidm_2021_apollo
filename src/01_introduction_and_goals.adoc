@@ -32,6 +32,11 @@ Valet Parking
 V2X-Communication
 
 Smart Traffic
+• Holographisches Wahrnehmen und Verstehen, basierend auf dem holografischen Wahrnehmungs- und Erkennungssystem
+• Status von Fußgängern und Fahrzeugen auf jeder Fahrspur genau erkennen und die Leistung des aktuellen Verkehrsflusses wie Volumen, Warteschlangenlänge, Verspätungen usw.
+• Vollständige raum-zeitliche Ableitung und Entscheidungsfindung
+• Echtzeitsteuerung der gesamten Szene
+• Reduzierung der durchschnittlichen Wartezeit um 20-30% während der Rush Hour
 
 Robotaxi
 
