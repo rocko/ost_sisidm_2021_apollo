@@ -55,11 +55,7 @@ Die folgende Tabelle beschreibt die zentralen Qualitätsziele von DokChess, wobe
 
 === Stakeholder
 
-• Endnutzer
-• OEM
-• Lieferanten
-• Gesetzgeber + Genehmigungsbehörden
-• Wirtszchafts- und Interessensverbände
+
 
 Die folgende Tabelle stellt die Stakeholder von Apollo Auto und ihre jeweilige Intention dar.
 [cols="1,2" options="header"]
