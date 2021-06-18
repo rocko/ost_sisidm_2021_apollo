@@ -46,11 +46,11 @@ Die folgende Tabelle beschreibt die zentralen Qualitätsziele von DokChess, wobe
 [cols="1,2" options="header"]
 |===
 |Qualitätsziel |Motivation und Erläuterung
-| _<Rolle-1>_ | _<Kontakt-1>_ _
-| _<Rolle-2>_ | _<Kontakt-2>_ _
-| _<Rolle-2>_ | _<Kontakt-2>_ _
-| _<Rolle-2>_ | _<Kontakt-2>_ _
-| _<Rolle-2>_ | _<Kontakt-2>_ _
+| _<Rolle-1>_ | _<Kontakt-1>_
+| _<Rolle-2>_ | _<Kontakt-2>_
+| _<Rolle-2>_ | _<Kontakt-2>_
+| _<Rolle-2>_ | _<Kontakt-2>_
+| _<Rolle-2>_ | _<Kontakt-2>_
 |===
 
 === Stakeholder
@@ -61,10 +61,39 @@ Die folgende Tabelle stellt die Stakeholder von Apollo Auto und ihre jeweilige I
 [cols="1,2" options="header"]
 |===
 |Rolle |Interesse, Bezug
-| _Softwarearchitekten_ | _<Erwartung-1>
-| _Entwickler_ | _<Kontakt-2>_
-| _OEM & Lieferanten_ | _<Kontakt-2>_
-| _Gesetzgeber & Genehmigungsbehörden_ | _<Kontakt-2>_
-| _Universitäten_ | _<Kontakt-2>_
-| _Studenten_ | _<Kontakt-2>_
+| _Softwarearchitekten_ |
+• Wollen ein Gefühl bekommen, wie Architekturdokumentation für ein konkretes System aussehen kann
+
+• Möchten sich Dinge (z.B. Form, Notation) für Ihre tägliche Arbeit abgucken
+
+• Gewinnen Sicherheit für Ihre eigenen
+
+• Haben in der Regel keine tiefen Schachkenntnisse
+
+
+| _Entwickler_ |
+• Nehmen Architekturaufgaben im Team wahr
+• Brauchen ein generelles Verständnis für die Architektur
+
+| _OEM & Lieferanten_ |
+• Entwickeln neue Produkte auf Grundlage von Apollo Auto
+
+• Wollen Anregungen für eigene Produkte finden
+
+| _Gesetzgeber & Genehmigungsbehörden_ |
+• Entwickeln einen gesetzlichen Rahmen zur Zulassung von fahrerlosen Fahrzeugen im öffentlichen Straßenverkehr
+
+• Etablieren Prüfvorschriften und Tests für Genehmigungsverfahren
+
+| _Universitäten_ |
+• Entwickeln eigene Forschungsprojekte auf Grundlage von Apollo Auto
+
+• Wollen Anregungen für weitere Forschungsprojekte und studentische Arbeiten finden
+
+| _Studenten_ |
+• Interessieren sich aufgrund ihres Studiums für die verschiedenen
+
+• Setzen eigene Projekte (z.B. Masterarbeit) zum Thema autonomes Fahren mit Apollo Auto um
+
+• Schreiben eine Architektur Dokumentation zu Apollo Auto
 |===
