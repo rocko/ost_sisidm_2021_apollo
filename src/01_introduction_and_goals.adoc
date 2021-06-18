@@ -24,7 +24,7 @@ Apollo Auto bietet unter Andrem Lösungen für Valet Parking, V2X-Kommunikation 
 ** Wahrnehmung aller Verkehrsteilnehmer im Sichtfeld und die bereitgestellten straßenseitigen Sensorinformationen können für die Entscheidungsfindung beim autonomen Fahren auf hohem Niveau verwendet werden
 ** Wahrnehmung von Verkehrteilnehmern ausserhalb des Sichtfeldes
 
-'''
+<<<
 
 ** Bietet einen vollständigen, kontinuierlichen, multimodalen Datendienst mit niedriger Latenz für L4-Autopilot-Fahrzeuge, die in mehreren Szenarien getestet wurden
 ** Durch die permanente dynamische Erfassung von Verkehrsinformationen und die Cloud-Integration, wird eine weltweite optimale kollaborative Steuerungsfunktionen für Verkehrsteilnehmer und Verkehrsmanagement erreicht
@@ -44,7 +44,7 @@ Apollo Auto bietet unter Andrem Lösungen für Valet Parking, V2X-Kommunikation 
 ** Die Minibusse ermöglichen ebenfalls autonomes Fahren der Stufe 4
 ** Funktionen sind unter Anderem Hinderniserkennung und -vermeidung, zu einem Zielort Fahren und Kreuzungen überqueren
 
-'''
+<<<
 
 === Qualitätsziele
 Die folgende Tabelle beschreibt die zentralen Qualitätsziele von DokChess, wobei die Reihenfolge eine grobe Orientierung bezüglich der Wichtigkeit vorgibt.
