@@ -1141,15 +1141,10 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 <div class="sect3">
 <h4 id="_zweckverantwortung">5.2.1. Zweck/Verantwortung</h4>
 <div class="paragraph">
-<p>Ein Sicherheitsmodul, dass die Funktion eines "Action Centers" übernimmt und eingreift, wenn das Modul Monitor einen Fehler erkennt.</p>
+<p>Ein Sicherheitsmodul, dass die Funktion eines "Action Centers" übernimmt und eingreift, wenn das Modul Monitor einen Fehler erkennt.
+==== Schnittstelle(n)
+==== Qualitäts-/Leistungsmerkmale</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_schnittstellen">5.2.2. Schnittstelle(n)</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale">5.2.3. Qualitäts-/Leistungsmerkmale</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1175,7 +1170,7 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_ablageortdateien">5.2.4. Ablageort/Datei(en)</h4>
+<h4 id="_ablageortdateien">5.2.2. Ablageort/Datei(en)</h4>
 <div class="paragraph">
 <p><a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/guardian" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/guardian</a></p>
 </div>
@@ -1190,7 +1185,7 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_schnittstellen_2">5.3.2. Schnittstelle(n)</h4>
+<h4 id="_schnittstellen">5.3.2. Schnittstelle(n)</h4>
 
 </div>
 <div class="sect3">
@@ -1204,14 +1199,16 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 <h3 id="_hmidreamview">5.4. HMI/Dreamview</h3>
 <div class="sect3">
 <h4 id="_zweckverantwortung_3">5.4.1. Zweck/Verantwortung</h4>
+<div class="paragraph">
+<p>Human Machine Interface oder DreamView in Apollo ist eine Web-Anwendung, die: - die aktuelle Ausgabe relevanter autonomer Fahrmodule visualisiert, z. B. Planung der Trajektorie, Fahrzeuglokalisierung, Fahrwerkstatus usw. - eine Mensch-Maschine-Schnittstelle bietet, über die der Benutzer den Hardwarestatus einsehen, Module ein- und ausschalten und das autonom fahrende Auto starten kann. - bietet Debugging-Tools, wie z. B. PnC-Monitor, zur effizienten Verfolgung von Modulproblemen.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_schnittstellen_2">5.4.2. Schnittstelle(n)</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_schnittstellen_3">5.4.2. Schnittstelle(n)</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale_2">5.4.3. Qualitäts-/Leistungsmerkmale</h4>
+<h4 id="_qualitäts_leistungsmerkmale">5.4.3. Qualitäts-/Leistungsmerkmale</h4>
 
 </div>
 <div class="sect3">
@@ -1225,18 +1222,27 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 <h3 id="_canbus">5.5. CANBus</h3>
 <div class="sect3">
 <h4 id="_zweckverantwortung_4">5.5.1. Zweck/Verantwortung</h4>
-
+<div class="paragraph">
+<p>Der CanBus ist die Schnittstelle, die Steuerbefehle an die Fahrzeughardware weitergibt. Außerdem gibt er die Fahrwerksinformationen an das Softwaresystem weiter.</p>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_schnittstellen_4">5.5.2. Schnittstelle(n)</h4>
-
+<h4 id="_schnittstellen_3">5.5.2. Schnittstelle(n)</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>OnControlCommand -
+ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird, wenn das CANBus-Modul Steuerbefehle empfängt</p>
+</li>
+<li>
+<p>OnGuardianCommand -
+ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird, wenn das Guardian-Modul Steuerbefehle empfängt</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale_3">5.5.3. Qualitäts-/Leistungsmerkmale</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_ablageortdateien_4">5.5.4. Ablageort/Datei(en)</h4>
+<h4 id="_ablageortdateien_4">5.5.3. Ablageort/Datei(en)</h4>
 <div class="paragraph">
 <p><a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/canbus" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/canbus</a></p>
 </div>
@@ -1246,18 +1252,37 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 <h3 id="_control">5.6. Control</h3>
 <div class="sect3">
 <h4 id="_zweckverantwortung_5">5.6.1. Zweck/Verantwortung</h4>
-
+<div class="paragraph">
+<p>Die Control nimmt die geplante Trajektorie als Eingabe und generiert den Steuerbefehl zur Weitergabe an den CANBus.</p>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_schnittstellen_5">5.6.2. Schnittstelle(n)</h4>
-
+<h4 id="_schnittstellen_4">5.6.2. Schnittstelle(n)</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>OnPad</p>
+</li>
+<li>
+<p>OnMonitor</p>
+</li>
+<li>
+<p>OnChassis</p>
+</li>
+<li>
+<p>OnPlanning</p>
+</li>
+<li>
+<p>OnLocalization</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>OnPad und OnMonitor sind Routineinteraktionen mit der PAD-basierten Benutzeroberfläche und Simulationen.</p>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale_4">5.6.3. Qualitäts-/Leistungsmerkmale</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_ablageortdateien_5">5.6.4. Ablageort/Datei(en)</h4>
+<h4 id="_ablageortdateien_5">5.6.3. Ablageort/Datei(en)</h4>
 <div class="paragraph">
 <p><a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/control" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/control</a></p>
 </div>
@@ -1267,14 +1292,25 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 <h3 id="_planning">5.7. Planning</h3>
 <div class="sect3">
 <h4 id="_zweckverantwortung_6">5.7.1. Zweck/Verantwortung</h4>
+<div class="paragraph">
+<p>Apollo 3.5 verwendet mehrere Informationsquellen, um eine sichere und kollisionsfreie Trajektorie zu planen, daher interagiert das Planning-Modul mit fast jedem anderen Modul.</p>
+</div>
+<div class="paragraph">
+<p>Zunächst nimmt das Planning-Modul die Vorhersageausgabe. Da die Vorhersageausgabe das ursprünglich wahrgenommene Hindernis umschließt, abonniert das Planning-Modul die Ausgabe der Ampelerkennung und nicht die Ausgabe der wahrgenommenen Hindernisse.</p>
+</div>
+<div class="paragraph">
+<p>Dann nimmt das Planning-Modul die Routing-Ausgabe. In bestimmten Szenarien kann das Planning-Modul auch eine neue Routing-Berechnung auslösen, indem es eine Routing-Anforderung sendet, wenn der aktuellen Route nicht treu gefolgt werden kann.</p>
+</div>
+<div class="paragraph">
+<p>Schließlich muss das Planning-Modul den Standort (Lokalisierung: wo bin ich) sowie die aktuellen autonomen Fahrzeuginformationen (Fahrwerk: wie ist mein Status) kennen.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_schnittstellen_5">5.7.2. Schnittstelle(n)</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_schnittstellen_6">5.7.2. Schnittstelle(n)</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale_5">5.7.3. Qualitäts-/Leistungsmerkmale</h4>
+<h4 id="_qualitäts_leistungsmerkmale_2">5.7.3. Qualitäts-/Leistungsmerkmale</h4>
 
 </div>
 <div class="sect3">
@@ -1288,20 +1324,12 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 <h3 id="_routing">5.8. Routing</h3>
 <div class="sect3">
 <h4 id="_zweckverantwortung_7">5.8.1. Zweck/Verantwortung</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_schnittstellen_7">5.8.2. Schnittstelle(n)</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale_6">5.8.3. Qualitäts-/Leistungsmerkmale</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_ablageortdateien_7">5.8.4. Ablageort/Datei(en)</h4>
 <div class="paragraph">
-<p><a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/routing" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/routing</a></p>
+<p>Das Routing-Modul muss den Start- und Endpunkt des Routings kennen, um die Durchfahrtsspuren und Straßen zu berechnen. Normalerweise ist der Startpunkt der Standort des autonomen Fahrzeugs. Die RoutingResponse wird wie unten gezeigt berechnet und veröffentlicht.
+==== Schnittstelle(n)
+==== Qualitäts-/Leistungsmerkmale
+==== Ablageort/Datei(en)
+<a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/routing" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/routing</a></p>
 </div>
 </div>
 </div>
@@ -1309,20 +1337,18 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 <h3 id="_localization">5.9. Localization</h3>
 <div class="sect3">
 <h4 id="_zweckverantwortung_8">5.9.1. Zweck/Verantwortung</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_schnittstellen_8">5.9.2. Schnittstelle(n)</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale_7">5.9.3. Qualitäts-/Leistungsmerkmale</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_ablageortdateien_8">5.9.4. Ablageort/Datei(en)</h4>
 <div class="paragraph">
-<p><a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/localization" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/localization</a></p>
+<p>Das Lokalisierungsmodul aggregiert verschiedene Daten, um das autonome Fahrzeug zu lokalisieren. Es gibt zwei Arten von Lokalisierungsmodi: OnTimer und Multiple SensorFusion.</p>
+</div>
+<div class="paragraph">
+<p>Die erste Lokalisierungsmethode ist RTK-basiert, mit einer Timer-basierten Callback-Funktion OnTimer, wie unten gezeigt.</p>
+</div>
+<div class="paragraph">
+<p>Die andere Lokalisierungsmethode ist die Multiple Sensor Fusion (MSF)-Methode, bei der eine Reihe von ereignisgesteuerten Callback-Funktionen registriert werden, wie unten gezeigt.
+==== Schnittstelle(n)
+==== Qualitäts-/Leistungsmerkmale
+==== Ablageort/Datei(en)
+<a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/localization" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/localization</a></p>
 </div>
 </div>
 </div>
@@ -1330,18 +1356,17 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 <h3 id="_prediction">5.10. Prediction</h3>
 <div class="sect3">
 <h4 id="_zweckverantwortung_9">5.10.1. Zweck/Verantwortung</h4>
+<div class="paragraph">
+<p>Das Prediction-Modul schätzt die zukünftigen Bewegungstrajektorien für alle wahrgenommenen Hindernisse. Die ausgegebene Vorhersagemeldung beinhaltet die Informationen zur Hinderniserkennung. Prediction abonniert Lokalisierungs-, Planungs- und Wahrnehmungs-Hindernis-Nachrichten wie unten dargestellt.
+Wenn ein Lokalisierungsupdate empfangen wird, aktualisiert das Prediction-Modul seinen internen Status. Die eigentliche Vorhersage wird ausgelöst, wenn Perception ihre Perception-Hindernismeldung aussendet.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_schnittstellen_6">5.10.2. Schnittstelle(n)</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_schnittstellen_9">5.10.2. Schnittstelle(n)</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale_8">5.10.3. Qualitäts-/Leistungsmerkmale</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_ablageortdateien_9">5.10.4. Ablageort/Datei(en)</h4>
+<h4 id="_ablageortdateien_7">5.10.3. Ablageort/Datei(en)</h4>
 <div class="paragraph">
 <p><a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/prediction" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/prediction</a></p>
 </div>
@@ -1351,30 +1376,21 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 <h3 id="_perception">5.11. Perception</h3>
 <div class="sect3">
 <h4 id="_zweckverantwortung_10">5.11.1. Zweck/Verantwortung</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_schnittstellen_10">5.11.2. Schnittstelle(n)</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale_9">5.11.3. Qualitäts-/Leistungsmerkmale</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_ablageortdateien_10">5.11.4. Ablageort/Datei(en)</h4>
 <div class="paragraph">
-<p><a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/perception" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/perception</a></p>
+<p>Das Perception-Modul verfügt über die Fähigkeit, 5 Kameras (2 vorne, 2 seitlich und 1 hinten) und 2 Radare (vorne und hinten) zusammen mit 3 16-Linien-LiDARs (2 hinten und 1 vorne) und 1 128-Linien-LiDAR zu verwenden, um Hindernisse zu erkennen und ihre individuellen Spuren zu einer endgültigen Spurliste zu verschmelzen. Das Hindernis-Submodul erkennt, klassifiziert und verfolgt Hindernisse. Dieses Teilmodul sagt auch die Bewegung und Positionsinformationen des Hindernisses voraus (z. B. Richtung und Geschwindigkeit). Für die Fahrspur werden Fahrspurinstanzen durch Nachbearbeitung von Fahrspur-Parsing-Pixeln konstruiert und die relative Position der Fahrspur zum Ego-Fahrzeug berechnet (L0, L1, R0, R1, usw.).
+==== Schnittstelle(n)
+==== Ablageort/Datei(en)
+<a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/perception" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/perception</a></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_name_schnittstelle_1">5.11.5. &lt;Name Schnittstelle 1&gt;</h4>
+<h4 id="_name_schnittstelle_1">5.11.2. &lt;Name Schnittstelle 1&gt;</h4>
 <div class="paragraph">
 <p>&#8230;&#8203;</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_name_schnittstelle_m">5.11.6. &lt;Name Schnittstelle m&gt;</h4>
+<h4 id="_name_schnittstelle_m">5.11.3. &lt;Name Schnittstelle m&gt;</h4>
 
 </div>
 </div>
@@ -2007,7 +2023,7 @@ Introduction：The compact housing of RS-LiDAR-16 mounted with 16 laser/detector
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-19 21:40:39 UTC
+Last updated 2021-06-19 22:02:36 UTC
 </div>
 </div>
 </body>
