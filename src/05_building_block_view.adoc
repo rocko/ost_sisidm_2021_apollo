@@ -80,13 +80,13 @@ Tabelle: Überblick über Subsysteme von DokChess
 //Im besten Fall kommen Sie mit Beispielen oder einfachen Signaturen zurecht.
 //****
 
-//_**<Übersichtsdiagramm>**_
+_**<Übersichtsdiagramm>**_
 
-//Begründung:: _<Erläuternder Text>_
+Begründung:: _<Erläuternder Text>_
 
-//Enthaltene Bausteine:: _<Beschreibung der enthaltenen Bausteine (Blackboxen)>_
+Enthaltene Bausteine:: _<Beschreibung der enthaltenen Bausteine (Blackboxen)>_
 
-//Wichtige Schnittstellen:: _<Beschreibung wichtiger Schnittstellen>_
+Wichtige Schnittstellen:: _<Beschreibung wichtiger Schnittstellen>_
 
 //[role="arc42help"]
 //****
@@ -105,7 +105,7 @@ Tabelle: Überblick über Subsysteme von DokChess
 //Dessen Überschrift ist jeweils der Namen dieser Blackbox.
 //****
 
-//==== <Name Blackbox 1>
+==== <Name Blackbox 1>
 
 //[role="arc42help"]
 //****
@@ -120,34 +120,34 @@ Tabelle: Überblick über Subsysteme von DokChess
 //* (Optional) Offene Punkte/Probleme/Risiken
 //****
 
-//_<Zweck/Verantwortung>_
+_<Zweck/Verantwortung>_
 
-//_<Schnittstelle(n)>_
+_<Schnittstelle(n)>_
 
-//_<(Optional) Qualitäts-/Leistungsmerkmale>_
+_<(Optional) Qualitäts-/Leistungsmerkmale>_
 
-//_<(Optional) Ablageort/Datei(en)>_
+_<(Optional) Ablageort/Datei(en)>_
 
-//_<(Optional) Erfüllte Anforderungen>_
+_<(Optional) Erfüllte Anforderungen>_
 
-//_<(optional) Offene Punkte/Probleme/Risiken>_
+_<(optional) Offene Punkte/Probleme/Risiken>_
 
-//==== <Name Blackbox 2>
+==== <Name Blackbox 2>
 
-//_<Blackbox-Template>_
+_<Blackbox-Template>_
 
-//==== <Name Blackbox n>
+==== <Name Blackbox n>
 
-//_<Blackbox-Template>_
+_<Blackbox-Template>_
 
 
-//==== <Name Schnittstelle 1>
+==== <Name Schnittstelle 1>
 
-//...
+...
 
-//==== <Name Schnittstelle m>
+==== <Name Schnittstelle m>
 
-//=== Ebene 2
+=== Ebene 2
 
 //[role="arc42help"]
 //****
@@ -159,26 +159,26 @@ Tabelle: Überblick über Subsysteme von DokChess
 //Normale, einfache oder standardisierte Teile sollten Sie weglassen.
 //****
 
-//==== Whitebox _<Baustein 1>_
+==== Whitebox _<Baustein 1>_
 
 //[role="arc42help"]
 //****
 //...zeigt das Innenleben von _Baustein 1_.
 //****
 
-//_<Whitebox-Template>_
+_<Whitebox-Template>_
 
-//==== Whitebox _<Baustein 2>_
+==== Whitebox _<Baustein 2>_
 
-//_<Whitebox-Template>_
+_<Whitebox-Template>_
 
-//...
+...
 
-//==== Whitebox _<Baustein m>_
+==== Whitebox _<Baustein m>_
 
-//_<Whitebox-Template>_
+_<Whitebox-Template>_
 
-//=== Ebene 3
+=== Ebene 3
 
 //[role="arc42help"]
 //****
@@ -187,19 +187,19 @@ Tabelle: Überblick über Subsysteme von DokChess
 //Bei tieferen Gliederungen der Architektur kopieren Sie diesen Teil von arc42 für die weiteren Ebenen.
 //****
 
-//==== Whitebox <_Baustein x.1_>
+==== Whitebox <_Baustein x.1_>
 
 //[role="arc42help"]
 //****
 //...zeigt das Innenleben von _Baustein x.1_.
 //****
 
-//_<Whitebox-Template>_
+_<Whitebox-Template>_
 
-//==== Whitebox <_Baustein x.2_>
+==== Whitebox <_Baustein x.2_>
 
-//_<Whitebox-Template>_
+_<Whitebox-Template>_
 
-//==== Whitebox <_Baustein y.1_>
+==== Whitebox <_Baustein y.1_>
 
-//_<Whitebox-Template>_
+_<Whitebox-Template>_
