@@ -53,6 +53,12 @@ Die Dynamik von autonomen Fahrzeugen (AV) wird von der Planungs-Engine über den
 Apollo Auto verwendet ROS1 als zugrunde liegendes Netzwerk, was bedeutet, dass Apollo Auto das Master-Nodes-Framework von ROS1 entlehnt. Da xmlRPC von ROS1 wirklich alt ist (im Vergleich zu den neueren brpc und grpc), hat Baidu seine eigene protobuf-Version von RPC entwickelt.
 //https://github.com/ApolloAuto/apollo/blob/r5.5.0/docs/howto/how_to_understand_architecture_and_workflow.md
 
+//https://github.com/ApolloAuto/apollo-platform/blob/master/ros/docs/design/native_support_with_protobuf.md
+
+//https://github.com/ApolloAuto/apollo-platform/blob/master/ros/docs/design/ros_decentralization.md
+
+//https://github.com/ApolloAuto/apollo-platform/blob/master/ros/docs/design/shm_transport.md
+
 === _<Konzept 2>_
 
 _<Erklärung>_
