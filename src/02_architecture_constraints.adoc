@@ -18,6 +18,8 @@ Dieser Abschnitt stellt sie dar und erklärt auch – wo nötig – deren Motiva
 
 * Arbeitskenntnisse über Docker
 
+<<<
+
 === Organisatorische Randbedingungen
 [cols="e,2e" options="header"]
 
@@ -42,6 +44,8 @@ Die von Partnern hochgeladenen Daten gelten standardmäßig als privat.#
 |[small]#Grundsätzlich handelt es sich bei Apollo Auto um eine offene Plattform.
 Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverlässigkeit und die schnelle Entwicklung von Apollo zu gewährleisten, bei Bedarf wichtige Entscheidungen treffen, während die aktive Beteiligung der breiteren Gemeinschaft erhalten bleibt.#
 |===
+
+<<<
 
 === Konventionen
 [cols="e,2e" options="header"]
