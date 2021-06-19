@@ -552,8 +552,9 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#section-building-block-view">5. Bausteinsicht</a>
 <ul class="sectlevel2">
 <li><a href="#_whitebox_gesamtsystem">5.1. Whitebox Gesamtsystem</a></li>
-<li><a href="#_ebene_2">5.2. Ebene 2</a></li>
-<li><a href="#_ebene_3">5.3. Ebene 3</a></li>
+<li><a href="#_monitor">5.2. Monitor</a></li>
+<li><a href="#_ebene_2">5.3. Ebene 2</a></li>
+<li><a href="#_ebene_3">5.4. Ebene 3</a></li>
 </ul>
 </li>
 <li><a href="#section-runtime-view">6. Laufzeitsicht</a></li>
@@ -980,19 +981,28 @@ Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverläss
 <div class="sect3">
 <h4 id="_hardware_development_platform">3.1.2. Hardware Development Platform</h4>
 <div class="paragraph">
-<p>Unter der Hardware Development Platform werden einige durch Apollo Auto unterstütze Hardwarekomponenten zusammengefasst. Diese sind beispielsweise Sensoren wie Kamera und Lidar-Systeme und Komponenten wie Rechen- und Adaptersysteme.</p>
+<p>Unter der Hardware Development Platform werden einige durch Apollo Auto unterstütze Hardwarekomponenten zusammengefasst.</p>
+</div>
+<div class="paragraph">
+<p>Diese sind beispielsweise Sensoren wie Kamera und Lidar sowie Rechen- und Adaptersysteme.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_open_software_platform">3.1.3. Open Software Platform</h4>
 <div class="paragraph">
-<p>Die Open Software Platform fasst alle Softwaremodule zusammen die von Apollo Auto verwendet werden, um ein autonomes Fahren zu ermöglichen.</p>
+<p>Die Open Software Platform fasst alle Softwaremodule zusammen, die von Apollo Auto verwendet werden, um ein autonomes Fahren zu ermöglichen.</p>
+</div>
+<div class="paragraph">
+<p>Hierzu zählen beispielsweise Module zur Routenplanung, Vorhersage und Wahrneh</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_cloud_service_platform">3.1.4. Cloud Service Platform</h4>
 <div class="paragraph">
 <p>Die Cloud Service Platform fasst ergänzende cloud-basierte Module zusammen die von Apollo Auto verwendet werden.</p>
+</div>
+<div class="paragraph">
+<p>Hierzu zählen beispielsweise Security, V2X und OTA.</p>
 </div>
 </div>
 </div>
@@ -1062,59 +1072,87 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 </dl>
 </div>
 <div class="sect3">
-<h4 id="_name_blackbox_1">5.1.1. &lt;Name Blackbox 1&gt;</h4>
+<h4 id="_guardian">5.1.1. Guardian</h4>
 <div class="paragraph">
-<p><em>&lt;Zweck/Verantwortung&gt;</em></p>
-</div>
-<div class="paragraph">
-<p><em>&lt;Schnittstelle(n)&gt;</em></p>
-</div>
-<div class="paragraph">
-<p><em>&lt;(Optional) Qualitäts-/Leistungsmerkmale&gt;</em></p>
-</div>
-<div class="paragraph">
-<p><em>&lt;(Optional) Ablageort/Datei(en)&gt;</em></p>
-</div>
-<div class="paragraph">
-<p><em>&lt;(Optional) Erfüllte Anforderungen&gt;</em></p>
-</div>
-<div class="paragraph">
-<p><em>&lt;(optional) Offene Punkte/Probleme/Risiken&gt;</em></p>
+<p>Ablageort/Datei(en)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_name_blackbox_2">5.1.2. &lt;Name Blackbox 2&gt;</h4>
+<h4 id="_zweckverantwortung">5.1.2. Zweck/Verantwortung</h4>
+<div class="paragraph">
+<p>Ein Sicherheitsmodul, dass die Funktion eines "Action Centers" übernimmt und eingreift, wenn das Modul Monitor einen Fehler erkennt.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_schnittstellen">5.1.3. Schnittstelle(n)</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_qualitäts_leistungsmerkmale">5.1.4. Qualitäts-/Leistungsmerkmale</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Alle Module funktionieren einwandfrei - Guardian lässt den Steuerfluss normal funktionieren. Steuersignale werden an den CANBus gesendet, als ob Guardian nicht vorhanden wäre.</p>
+</li>
+<li>
+<p>Wenn ein Fehler von Monitor erkannt wird, verhindert Guardian, dass Steuersignale den CANBus erreichen und bringt das Auto zum Stillstand. Es gibt 3 Möglichkeiten, wie Guardian entscheidet, wie das Fahrzeug anzuhalten ist. Dazu verwendet Guardian die Ultraschallsensoren</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Wenn der Ultraschallsensor einwandfrei funktioniert, ohne ein Hindernis zu erkennen, bringt Guardian das Auto langsam zum Stehen</p>
+</li>
+<li>
+<p>Reagieren die Ultraschallsensoren nicht, bremst Guardian hart ab, um das Auto sofort zum Stillstand zu bringen.</p>
+</li>
+<li>
+<p>Ein Sonderfall liegt vor, wenn das HMI den Fahrer über einen drohenden Unfall informiert und der Fahrer 10 Sekunden lang nicht eingreift, führt Guardian eine Vollbremsung durch, um das Fahrzeug sofort zum Stehen zu bringen.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_monitor">5.2. Monitor</h3>
+<div class="sect3">
+<h4 id="_zweckverantwortung_2">5.2.1. Zweck/Verantwortung</h4>
+<div class="paragraph">
+<p>Das Überwachungssystem für alle Module im Fahrzeug einschließlich der Hardware. Monitor empfängt Daten von verschiedenen Modulen und leitet sie an die HMI weiter, damit der Fahrer sie sehen und sicherstellen kann, dass alle Module ohne Probleme funktionieren. Im Falle eines Modul- oder Hardwarefehlers sendet Monitor eine Warnung an Guardian, das dann entscheidet, welche Maßnahmen ergriffen werden müssen, um einen Unfall zu verhindern.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_schnittstellen_2">5.2.2. Schnittstelle(n)</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_hmi">5.2.3. HMI</h4>
 <div class="paragraph">
 <p><em>&lt;Blackbox-Template&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_name_blackbox_n">5.1.3. &lt;Name Blackbox n&gt;</h4>
-<div class="paragraph">
-<p><em>&lt;Blackbox-Template&gt;</em></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_name_schnittstelle_1">5.1.4. &lt;Name Schnittstelle 1&gt;</h4>
+<h4 id="_name_schnittstelle_1">5.2.4. &lt;Name Schnittstelle 1&gt;</h4>
 <div class="paragraph">
 <p>&#8230;&#8203;</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_name_schnittstelle_m">5.1.5. &lt;Name Schnittstelle m&gt;</h4>
+<h4 id="_name_schnittstelle_m">5.2.5. &lt;Name Schnittstelle m&gt;</h4>
 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ebene_2">5.2. Ebene 2</h3>
+<h3 id="_ebene_2">5.3. Ebene 2</h3>
 <div class="sect3">
-<h4 id="_whitebox_baustein_1">5.2.1. Whitebox <em>&lt;Baustein 1&gt;</em></h4>
+<h4 id="_whitebox_baustein_1">5.3.1. Whitebox <em>&lt;Baustein 1&gt;</em></h4>
 <div class="paragraph">
 <p><em>&lt;Whitebox-Template&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_whitebox_baustein_2">5.2.2. Whitebox <em>&lt;Baustein 2&gt;</em></h4>
+<h4 id="_whitebox_baustein_2">5.3.2. Whitebox <em>&lt;Baustein 2&gt;</em></h4>
 <div class="paragraph">
 <p><em>&lt;Whitebox-Template&gt;</em></p>
 </div>
@@ -1123,28 +1161,28 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_whitebox_baustein_m">5.2.3. Whitebox <em>&lt;Baustein m&gt;</em></h4>
+<h4 id="_whitebox_baustein_m">5.3.3. Whitebox <em>&lt;Baustein m&gt;</em></h4>
 <div class="paragraph">
 <p><em>&lt;Whitebox-Template&gt;</em></p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ebene_3">5.3. Ebene 3</h3>
+<h3 id="_ebene_3">5.4. Ebene 3</h3>
 <div class="sect3">
-<h4 id="_whitebox_baustein_x_1">5.3.1. Whitebox &lt;_Baustein x.1_&gt;</h4>
+<h4 id="_whitebox_baustein_x_1">5.4.1. Whitebox &lt;_Baustein x.1_&gt;</h4>
 <div class="paragraph">
 <p><em>&lt;Whitebox-Template&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_whitebox_baustein_x_2">5.3.2. Whitebox &lt;_Baustein x.2_&gt;</h4>
+<h4 id="_whitebox_baustein_x_2">5.4.2. Whitebox &lt;_Baustein x.2_&gt;</h4>
 <div class="paragraph">
 <p><em>&lt;Whitebox-Template&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_whitebox_baustein_y_1">5.3.3. Whitebox &lt;_Baustein y.1_&gt;</h4>
+<h4 id="_whitebox_baustein_y_1">5.4.3. Whitebox &lt;_Baustein y.1_&gt;</h4>
 <div class="paragraph">
 <p><em>&lt;Whitebox-Template&gt;</em></p>
 </div>
@@ -1490,7 +1528,7 @@ Introduction：The compact housing of RS-LiDAR-16 mounted with 16 laser/detector
 <h2 id="section-runtime-view">6. Laufzeitsicht</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Diese Sicht visualisiert im Gegensatz zur statischen Bausteinsicht dynamische Aspekte. Wie spielen die Teile zusammen?</p>
+<p>TBD</p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -1501,8 +1539,7 @@ Introduction：The compact housing of RS-LiDAR-16 mounted with 16 laser/detector
 <div class="sect2">
 <h3 id="_infrastruktur_ebene_1">7.1. Infrastruktur Ebene 1</h3>
 <div class="paragraph">
-<p><em><strong>&lt;Übersichtsdiagramm&gt;</strong></em>
-<span class="image"><img src="./images/Hardware_overview_3_5.png" alt="Deployment von Apollo Auto"></span></p>
+<p><span class="image"><img src="./images/Hardware_overview_3_5.png" alt="Deployment von Apollo Auto"></span></p>
 </div>
 <div class="dlist">
 <dl>
@@ -1647,6 +1684,14 @@ Introduction：The compact housing of RS-LiDAR-16 mounted with 16 laser/detector
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>RADAR</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>ist die Bezeichnung für verschiedene Erkennungs- und Ortungsverfahren und -geräte auf der Basis elektromagnetischer Wellen im Radiofrequenzbereich (Funkwellen).</em></p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>P2P</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Peer-to-Peer und Rechner-Rechner-Verbindung sind synonyme Bezeichnungen für eine Kommunikation unter Gleichen, hier bezogen auf ein Rechnernetz.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>RPC</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Remote Procedure Call ist eine Technik zur Realisierung von Interprozesskommunikation. Sie ermöglicht den Aufruf von Funktionen in anderen Adressräumen. Im Normalfall werden die aufgerufenen Funktionen auf einem anderen Computer als das aufrufende Programm ausgeführt.</em></p></td>
+</tr>
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
@@ -1727,7 +1772,7 @@ Introduction：The compact housing of RS-LiDAR-16 mounted with 16 laser/detector
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-19 18:57:08 UTC
+Last updated 2021-06-19 21:13:40 UTC
 </div>
 </div>
 </body>
