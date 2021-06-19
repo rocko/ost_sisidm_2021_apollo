@@ -6,11 +6,15 @@ Dieser Abschnitt stellt sie dar und erklärt auch – wo nötig – deren Motiva
 
 
 === Technische Randbedingungen
-* Ein Fahrzeug, das mit dem By-Wire-System ausgestattet ist, einschließlich, aber nicht beschränkt auf Brake-by-Wire, Steering-by-Wire, Throttle-by-Wire und Shift-by-Wire (Apollo wird derzeit auf Lincoln MKZ getestet).
+* Für den Einsatz von Apollo Auto wird eine anspruchsvolle Hardwareausstattung benötigt, eine Lösung mit einem marktüblichen Standard-Notebook allein ist nicht möglich
+
+* Ein Fahrzeug, das mit By-Wire-Systemen ausgestattet ist, zum Beispiel Brake-by-Wire, Steering-by-Wire, Throttle-by-Wire oder Shift-by-Wire (Apollo wird derzeit auf Lincoln MKZ getestet).
 
 * Ein Rechner mit einem 4-Kern-Prozessor und mindestens 8 GB Speicher (16 GB für Apollo 3.5 und höher)
 
 * Ubuntu 18.04
+
+* Zusätzlich wird eine umfangreiche Sensorik benötigt die Bild- und Abstandsinformationen aus dem Umfeld aufnehmen
 
 * Arbeitskenntnisse über Docker
 
