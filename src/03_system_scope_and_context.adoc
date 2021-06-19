@@ -67,9 +67,11 @@ AA --> CSP
 ==== Open Vehicle Certification Platform
 Certified Apollo Compatible Drive-by-wire Vehicle
 Open Vehicle Interface Standard
+
 ==== Hardware Development Platform
-Computing Unit
-GPS/IMU
+===== Computing Unit
+
+===== GPS/IMU
 
 You could integrate 2 types of Navigation Hardware with Apollo. Refer to their individual Installation guides for more information.
 
@@ -78,7 +80,7 @@ You could integrate 2 types of Navigation Hardware with Apollo. Refer to their i
 ** SPAN-IGM-A1
 *Navtech NV-GI120
 
-Camera
+===== Camera
 
 You could integrate 3 types of Camera's with Apollo. 
 
@@ -90,7 +92,7 @@ Refer to their individual Installation guides for more information. If you curre
 
 
 
-LiDAR
+===== LiDAR
 
 You could integrate 3 types of LiDAR's with Apollo. Refer to their individual Installation guides for more information.
 
@@ -101,18 +103,18 @@ You could integrate 3 types of LiDAR's with Apollo. Refer to their individual In
 * Hesai
 * Innovusion
 
-Radar
+===== Radar
 
 You could integrate 3 types of Radar's with Apollo. Refer to their individual Installation guides for more information.
 
 * Continental ARS408-21 Radar
 * Racobit B01HC Radar
 
-Ultrasonic Radar
-HMI Device
-Black Box
+===== Ultrasonic Radar
+===== HMI Device
+===== Black Box
 
-ASU
+===== ASU
 Apollo Sensor Unit (ASU) is designed to work with Industrial PC (IPC) to implement sensor fusion, vehicle control and network access in Apollo's autonomous driving platform.
 
 The ASU system provides sensor interfaces to collect data from various sensors, including cameras, Lidars, Radars, and Ultrasonic Sensors. The system also utilizes pulse per second (PPS) and GPRMC signals from GNSS receiver to implement data collection synchronization for the camera and LiDAR sensors.
@@ -122,11 +124,11 @@ The communication between the ASU and the IPC is through PCI Express Interface. 
 In addition, Lidar connectivity via Ethernet, WWAN gateway via 4G LTE module, and WiFi access point via WiFi module will be enabled in the future releases.
 
 
-AXU
+===== AXU
 
 Apollo Extension Unit (AXU) is designed to boost computation capability and expand storage capacity by enabling developers to plug-in additional accelerators including GPU, FPGA modules, and etc.
 
-V2X OBU
+===== V2X OBU
 
 ==== Open Software Platform
 Map Engine
