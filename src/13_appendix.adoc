@@ -8,7 +8,6 @@
 
 === Arc42
 
-
 * die Dokumentation muss bereits zu Beginn der Arbeiten an der Architektur/am Quellcode erfolgen um stets den aktuellen Stand abbilden zu können.
 
 * die Dokumentation soll mit dem Projekt wachsen!
