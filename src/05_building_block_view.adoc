@@ -152,7 +152,15 @@ Das Überwachungssystem für alle Module im Fahrzeug einschließlich der Hardwar
 
 ==== Schnittstelle(n)
 
-//==== Qualitäts-/Leistungsmerkmale
+==== Qualitäts-/Leistungsmerkmale
+Dieses Modul enthält Software auf Systemebene, wie z. B. Code zur Überprüfung des Hardwarestatus und zur Überwachung des Systemzustands. In Apollo 5.5 führt das Monitor-Modul nun u. a. die folgenden Prüfungen durch:
+
+* Status der laufenden Module
+* Überwachung der Datenintegrität
+* Überwachung der Datenfrequenz
+* Überwachung des Systemzustands (z. B. CPU-, Speicher-, Festplattennutzung usw.)
+* Erzeugen eines End-to-End-Latenz-Statistikberichts
+
 ==== Ablageort/Datei(en)
 https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/monitor
 
@@ -218,14 +226,17 @@ Schließlich muss das Planning-Modul den Standort (Lokalisierung: wo bin ich) so
 
 ==== Schnittstelle(n)
 ==== Qualitäts-/Leistungsmerkmale
+
 ==== Ablageort/Datei(en)
 https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/planning
 
 === Routing
 ==== Zweck/Verantwortung
 Das Routing-Modul muss den Start- und Endpunkt des Routings kennen, um die Durchfahrtsspuren und Straßen zu berechnen. Normalerweise ist der Startpunkt der Standort des autonomen Fahrzeugs. Die RoutingResponse wird wie unten gezeigt berechnet und veröffentlicht.
+
 ==== Schnittstelle(n)
 ==== Qualitäts-/Leistungsmerkmale
+
 ==== Ablageort/Datei(en)
 https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/routing
 
@@ -236,6 +247,7 @@ Das Lokalisierungsmodul aggregiert verschiedene Daten, um das autonome Fahrzeug 
 Die erste Lokalisierungsmethode ist RTK-basiert, mit einer Timer-basierten Callback-Funktion OnTimer, wie unten gezeigt.
 
 Die andere Lokalisierungsmethode ist die Multiple Sensor Fusion (MSF)-Methode, bei der eine Reihe von ereignisgesteuerten Callback-Funktionen registriert werden, wie unten gezeigt.
+
 ==== Schnittstelle(n)
 ==== Qualitäts-/Leistungsmerkmale
 ==== Ablageort/Datei(en)
@@ -254,8 +266,10 @@ https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/prediction
 === Perception
 ==== Zweck/Verantwortung
 Das Perception-Modul verfügt über die Fähigkeit, 5 Kameras (2 vorne, 2 seitlich und 1 hinten) und 2 Radare (vorne und hinten) zusammen mit 3 16-Linien-LiDARs (2 hinten und 1 vorne) und 1 128-Linien-LiDAR zu verwenden, um Hindernisse zu erkennen und ihre individuellen Spuren zu einer endgültigen Spurliste zu verschmelzen. Das Hindernis-Submodul erkennt, klassifiziert und verfolgt Hindernisse. Dieses Teilmodul sagt auch die Bewegung und Positionsinformationen des Hindernisses voraus (z. B. Richtung und Geschwindigkeit). Für die Fahrspur werden Fahrspurinstanzen durch Nachbearbeitung von Fahrspur-Parsing-Pixeln konstruiert und die relative Position der Fahrspur zum Ego-Fahrzeug berechnet (L0, L1, R0, R1, usw.).
-==== Schnittstelle(n)
+
+//==== Schnittstelle(n)
 //==== Qualitäts-/Leistungsmerkmale
+
 ==== Ablageort/Datei(en)
 https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/perception
 
@@ -265,7 +279,8 @@ https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/perception
 
 ==== <Name Schnittstelle m>
 
-=== Ebene 2
+// Ebene 2 muss nicht
+//=== Ebene 2
 
 //[role="arc42help"]
 //****
@@ -277,26 +292,26 @@ https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/perception
 //Normale, einfache oder standardisierte Teile sollten Sie weglassen.
 //****
 
-==== Whitebox _<Baustein 1>_
+//==== Whitebox _<Baustein 1>_
 
 //[role="arc42help"]
 //****
 //...zeigt das Innenleben von _Baustein 1_.
 //****
 
-_<Whitebox-Template>_
+//_<Whitebox-Template>_
 
-==== Whitebox _<Baustein 2>_
+//==== Whitebox _<Baustein 2>_
 
-_<Whitebox-Template>_
+//_<Whitebox-Template>_
 
-...
+//...
 
-==== Whitebox _<Baustein m>_
+//==== Whitebox _<Baustein m>_
 
-_<Whitebox-Template>_
+//_<Whitebox-Template>_
 
-=== Ebene 3
+//=== Ebene 3
 
 //[role="arc42help"]
 //****
@@ -305,26 +320,28 @@ _<Whitebox-Template>_
 //Bei tieferen Gliederungen der Architektur kopieren Sie diesen Teil von arc42 für die weiteren Ebenen.
 //****
 
-==== Whitebox <_Baustein x.1_>
+//==== Whitebox <_Baustein x.1_>
 
 //[role="arc42help"]
 //****
 //...zeigt das Innenleben von _Baustein x.1_.
 //****
 
-_<Whitebox-Template>_
+//_<Whitebox-Template>_
 
-==== Whitebox <_Baustein x.2_>
+//==== Whitebox <_Baustein x.2_>
 
-_<Whitebox-Template>_
+//_<Whitebox-Template>_
 
-==== Whitebox <_Baustein y.1_>
+//==== Whitebox <_Baustein y.1_>
 
-_<Whitebox-Template>_
+//_<Whitebox-Template>_
 
 
 
-===== Hardware Development Platform
+//===== Hardware Development Platform
+////
+
 
 STUFF  
 
@@ -481,4 +498,4 @@ Introduction：LeiShen’s developing 3D Multi-channel LiDARs including 2/4/8/16
 Link
 Rs-LiDAR-16
 Vendor：RobosenseApollo Hardware Development Platform Supported
-Introduction：The compact housing of RS-LiDAR-16 mounted with 16 laser/detector pairs rapidly spins and sends out high-frequency laser beams to continuously scan the Surrounding environment. Advanced digital signal processing and ranging algorithms calculate point cloud data and reflectivity of objects to enable machine to 'see' the world and providing reliable data for localization, navigation and obstacle avoidance.
+Introduction：The compact housing of RS-LiDAR-16 mounted with 16 laser/detector pairs rapidly spins and sends out high-frequency laser beams to continuously scan the Surrounding environment. Advanced digital signal processing and ranging algorithms calculate point cloud data and reflectivity of objects to enable machine to 'see' the world and providing reliable data for localization, navigation and obstacle avoidance.////
