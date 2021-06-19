@@ -71,7 +71,11 @@ Die Open Vehicle Certification Platform schlug eine standardisierte Schnittstell
 
 ==== Hardware Development Platform
 
-Unter der Hardware Development Platform werden einige durch Apollo Auto unterstütze Hardwarekomponenten zusammengefasst. Diese sind beispielsweise Sensoren wie Kamera und Lidar-Systeme und Komponenten wie Rechen- und Adaptersysteme. 
+Unter der Hardware Development Platform werden einige durch Apollo Auto unterstütze Hardwarekomponenten zusammengefasst. 
+
+Diese sind beispielsweise Sensoren wie Kamera und Lidar sowie Rechen- und Adaptersysteme. 
+
+
 
 //===== Computing Unit
 //===== GPS/IMU
@@ -131,7 +135,9 @@ Unter der Hardware Development Platform werden einige durch Apollo Auto unterst�
 //
 ==== Open Software Platform
 
-Die Open Software Platform fasst alle Softwaremodule zusammen die von Apollo Auto verwendet werden, um ein autonomes Fahren zu ermöglichen.
+Die Open Software Platform fasst alle Softwaremodule zusammen, die von Apollo Auto verwendet werden, um ein autonomes Fahren zu ermöglichen.
+
+Hierzu zählen beispielsweise Module zur Routenplanung, Vorhersage und Wahrneh
 
 //Map Engine
 //Localization
@@ -147,6 +153,8 @@ Die Open Software Platform fasst alle Softwaremodule zusammen die von Apollo Aut
 ==== Cloud Service Platform
 
 Die Cloud Service Platform fasst ergänzende cloud-basierte Module zusammen die von Apollo Auto verwendet werden.
+
+Hierzu zählen beispielsweise Security, V2X und OTA. 
 
 //HD Map
 //Simulation
