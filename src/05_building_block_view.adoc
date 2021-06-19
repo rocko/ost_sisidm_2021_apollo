@@ -128,12 +128,9 @@ Enthaltene Bausteine::
 Wichtige Schnittstellen:: _<Beschreibung wichtiger Schnittstellen>_
 
 === Guardian
-
 ==== Zweck/Verantwortung
 Ein Sicherheitsmodul, dass die Funktion eines "Action Centers" übernimmt und eingreift, wenn das Modul Monitor einen Fehler erkennt.
-
 ==== Schnittstelle(n)
-
 ==== Qualitäts-/Leistungsmerkmale
 
 * Alle Module funktionieren einwandfrei - Guardian lässt den Steuerfluss normal funktionieren. Steuersignale werden an den CANBus gesendet, als ob Guardian nicht vorhanden wäre.
@@ -164,27 +161,61 @@ https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/monitor
 
 === HMI/Dreamview
 ==== Zweck/Verantwortung
+Human Machine Interface oder DreamView in Apollo ist eine Web-Anwendung, die: - die aktuelle Ausgabe relevanter autonomer Fahrmodule visualisiert, z. B. Planung der Trajektorie, Fahrzeuglokalisierung, Fahrwerkstatus usw. - eine Mensch-Maschine-Schnittstelle bietet, über die der Benutzer den Hardwarestatus einsehen, Module ein- und ausschalten und das autonom fahrende Auto starten kann. - bietet Debugging-Tools, wie z. B. PnC-Monitor, zur effizienten Verfolgung von Modulproblemen.
+
 ==== Schnittstelle(n)
 ==== Qualitäts-/Leistungsmerkmale
+
 ==== Ablageort/Datei(en)
 https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/dreamview
 
 === CANBus
 ==== Zweck/Verantwortung
+Der CanBus ist die Schnittstelle, die Steuerbefehle an die Fahrzeughardware weitergibt. Außerdem gibt er die Fahrwerksinformationen an das Softwaresystem weiter.
+
 ==== Schnittstelle(n)
-==== Qualitäts-/Leistungsmerkmale
+
+* OnControlCommand -
+ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird, wenn das CANBus-Modul Steuerbefehle empfängt
+
+* OnGuardianCommand - 
+ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird, wenn das Guardian-Modul Steuerbefehle empfängt
+
+//==== Qualitäts-/Leistungsmerkmale
+
 ==== Ablageort/Datei(en)
 https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/canbus
 
 === Control
 ==== Zweck/Verantwortung
+Die Control nimmt die geplante Trajektorie als Eingabe und generiert den Steuerbefehl zur Weitergabe an den CANBus.
+
 ==== Schnittstelle(n)
-==== Qualitäts-/Leistungsmerkmale
+
+* OnPad
+* OnMonitor
+* OnChassis
+* OnPlanning
+* OnLocalization
+
+OnPad und OnMonitor sind Routineinteraktionen mit der PAD-basierten Benutzeroberfläche und Simulationen.
+
+//==== Qualitäts-/Leistungsmerkmale
 ==== Ablageort/Datei(en)
 https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/control
 
 === Planning
 ==== Zweck/Verantwortung
+
+Apollo 3.5 verwendet mehrere Informationsquellen, um eine sichere und kollisionsfreie Trajektorie zu planen, daher interagiert das Planning-Modul mit fast jedem anderen Modul. 
+//Mit zunehmender Reife von Apollo und der Übernahme unterschiedlicher Straßenbedingungen und Fahranwendungsfälle hat sich die Planung zu einem modulareren, szenariospezifischen und ganzheitlichen Ansatz entwickelt. Bei diesem Ansatz wird jeder Fahranwendungsfall als ein anderes Fahrszenario behandelt. Dies ist nützlich, weil ein Problem, das jetzt in einem bestimmten Szenario gemeldet wird, behoben werden kann, ohne die Arbeit anderer Szenarien zu beeinträchtigen, im Gegensatz zu den früheren Versionen, in denen eine Problembehebung andere Fahranwendungsfälle betraf, da sie alle als ein einziges Fahrszenario behandelt wurden.
+
+Zunächst nimmt das Planning-Modul die Vorhersageausgabe. Da die Vorhersageausgabe das ursprünglich wahrgenommene Hindernis umschließt, abonniert das Planning-Modul die Ausgabe der Ampelerkennung und nicht die Ausgabe der wahrgenommenen Hindernisse.
+
+Dann nimmt das Planning-Modul die Routing-Ausgabe. In bestimmten Szenarien kann das Planning-Modul auch eine neue Routing-Berechnung auslösen, indem es eine Routing-Anforderung sendet, wenn der aktuellen Route nicht treu gefolgt werden kann.
+
+Schließlich muss das Planning-Modul den Standort (Lokalisierung: wo bin ich) sowie die aktuellen autonomen Fahrzeuginformationen (Fahrwerk: wie ist mein Status) kennen.
+
 ==== Schnittstelle(n)
 ==== Qualitäts-/Leistungsmerkmale
 ==== Ablageort/Datei(en)
@@ -192,6 +223,7 @@ https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/planning
 
 === Routing
 ==== Zweck/Verantwortung
+Das Routing-Modul muss den Start- und Endpunkt des Routings kennen, um die Durchfahrtsspuren und Straßen zu berechnen. Normalerweise ist der Startpunkt der Standort des autonomen Fahrzeugs. Die RoutingResponse wird wie unten gezeigt berechnet und veröffentlicht.
 ==== Schnittstelle(n)
 ==== Qualitäts-/Leistungsmerkmale
 ==== Ablageort/Datei(en)
@@ -199,6 +231,11 @@ https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/routing
 
 === Localization
 ==== Zweck/Verantwortung
+Das Lokalisierungsmodul aggregiert verschiedene Daten, um das autonome Fahrzeug zu lokalisieren. Es gibt zwei Arten von Lokalisierungsmodi: OnTimer und Multiple SensorFusion.
+
+Die erste Lokalisierungsmethode ist RTK-basiert, mit einer Timer-basierten Callback-Funktion OnTimer, wie unten gezeigt.
+
+Die andere Lokalisierungsmethode ist die Multiple Sensor Fusion (MSF)-Methode, bei der eine Reihe von ereignisgesteuerten Callback-Funktionen registriert werden, wie unten gezeigt.
 ==== Schnittstelle(n)
 ==== Qualitäts-/Leistungsmerkmale
 ==== Ablageort/Datei(en)
@@ -206,15 +243,19 @@ https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/localization
 
 === Prediction
 ==== Zweck/Verantwortung
+Das Prediction-Modul schätzt die zukünftigen Bewegungstrajektorien für alle wahrgenommenen Hindernisse. Die ausgegebene Vorhersagemeldung beinhaltet die Informationen zur Hinderniserkennung. Prediction abonniert Lokalisierungs-, Planungs- und Wahrnehmungs-Hindernis-Nachrichten wie unten dargestellt.
+Wenn ein Lokalisierungsupdate empfangen wird, aktualisiert das Prediction-Modul seinen internen Status. Die eigentliche Vorhersage wird ausgelöst, wenn Perception ihre Perception-Hindernismeldung aussendet.
+
 ==== Schnittstelle(n)
-==== Qualitäts-/Leistungsmerkmale
+//==== Qualitäts-/Leistungsmerkmale
 ==== Ablageort/Datei(en)
 https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/prediction
 
 === Perception
 ==== Zweck/Verantwortung
+Das Perception-Modul verfügt über die Fähigkeit, 5 Kameras (2 vorne, 2 seitlich und 1 hinten) und 2 Radare (vorne und hinten) zusammen mit 3 16-Linien-LiDARs (2 hinten und 1 vorne) und 1 128-Linien-LiDAR zu verwenden, um Hindernisse zu erkennen und ihre individuellen Spuren zu einer endgültigen Spurliste zu verschmelzen. Das Hindernis-Submodul erkennt, klassifiziert und verfolgt Hindernisse. Dieses Teilmodul sagt auch die Bewegung und Positionsinformationen des Hindernisses voraus (z. B. Richtung und Geschwindigkeit). Für die Fahrspur werden Fahrspurinstanzen durch Nachbearbeitung von Fahrspur-Parsing-Pixeln konstruiert und die relative Position der Fahrspur zum Ego-Fahrzeug berechnet (L0, L1, R0, R1, usw.).
 ==== Schnittstelle(n)
-==== Qualitäts-/Leistungsmerkmale
+//==== Qualitäts-/Leistungsmerkmale
 ==== Ablageort/Datei(en)
 https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/perception
 
