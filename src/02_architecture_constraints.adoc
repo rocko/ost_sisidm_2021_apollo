@@ -6,9 +6,9 @@ Dieser Abschnitt stellt sie dar und erklärt auch – wo nötig – deren Motiva
 
 
 === Technische Randbedingungen
-* Für den Einsatz von Apollo Auto wird eine anspruchsvolle Hardwareausstattung benötigt, eine Lösung mit einem marktüblichen Standard-Notebook allein ist nicht möglich
+* Für den Einsatz von Apollo Auto wird eine anspruchsvolle Hardwareausstattung benötigt. Eine Umsetzung mit einem marktüblichen Standard-Notebook allein ist nicht möglich.
 
-* Ein Fahrzeug, das mit By-Wire-Systemen ausgestattet ist, zum Beispiel Brake-by-Wire, Steering-by-Wire, Throttle-by-Wire oder Shift-by-Wire (Apollo wird derzeit auf Lincoln MKZ getestet).
+* Es wird ein Fahrzeug benötigt, dass mit By-Wire-Systemen ausgestattet ist, zum Beispiel Brake-by-Wire, Steering-by-Wire, Throttle-by-Wire oder Shift-by-Wire (Apollo wird derzeit auf Lincoln MKZ getestet).
 
 * Ein Rechner mit einem 4-Kern-Prozessor und mindestens 8 GB Speicher (16 GB für Apollo 3.5 und höher)
 
@@ -21,27 +21,26 @@ Dieser Abschnitt stellt sie dar und erklärt auch – wo nötig – deren Motiva
 === Organisatorische Randbedingungen
 [cols="e,2e" options="header"]
 
-hier irgendwas das github verwendet wird ....
-sonst kein plan wie die arbeiten, denke mal auch verteilt
-
+//hier irgendwas das github verwendet wird .... sonst kein plan wie die 
+//arbeiten, denke mal auch verteilt
 
 |===
 |Randbedingung | Erläuterungen, Hintergrund
 |github
-|Quellcode ist über github verfügbar.
+|[small]#Quellcode ist über github verfügbar.#
 |Bereitstellung von Daten
-|Alle Daten müssen in einem Format hochgeladen werden, das den Apollo-Datenspezifikationen entspricht.
+|[small]#Alle Daten müssen in einem Format hochgeladen werden, das den Apollo-Datenspezifikationen entspricht.#
 |Speicherung von Daten
-|Daten, die in China gesammelt wurden, dürfen nur auf Servern in China gespeichert werden. Daten, die in anderen Ländern und Regionen erhoben werden, unterliegen den Beschränkungen der Datenspeicherung, die durch die Gesetze der jeweiligen Länder festgelegt sind.
+|[small]#Daten, die in China gesammelt wurden, dürfen nur auf Servern in China gespeichert werden. Daten, die in anderen Ländern und Regionen erhoben werden, unterliegen den Beschränkungen der Datenspeicherung, die durch die Gesetze der jeweiligen Länder festgelegt sind.#
 |Bereitstellung von Daten
-|Als Initiator dieser Plattform stellt Baidu die Ausgangsdaten für diese Plattform bereit. Die Daten stehen allen Partnern dieser Plattform offen.
-Das Prinzip der fairen Daten stellt sicher, dass Partner mit größeren eigenen Beiträgen mehr Daten und Dienste von dieser Plattform erhalten.
+|[small]#Als Initiator dieser Plattform stellt Baidu die Ausgangsdaten für diese Plattform bereit. Die Daten stehen allen Partnern dieser Plattform offen.
+Das Prinzip der fairen Daten stellt sicher, dass Partner mit größeren eigenen Beiträgen mehr Daten und Dienste von dieser Plattform erhalten.#
 |Datenschutz
-|Jeder Partner kann seine eigenen Daten anzeigen und die Datenschutzeigenschaften der Daten als privat oder öffentlich festlegen.
-Die von Partnern hochgeladenen Daten gelten standardmäßig als privat.
+|[small]#Jeder Partner kann seine eigenen Daten anzeigen und die Datenschutzeigenschaften der Daten als privat oder öffentlich festlegen.
+Die von Partnern hochgeladenen Daten gelten standardmäßig als privat.#
 |Endscheidungsführung
-|Grundsätzlich handelt es sich bei Apollo Auto um eine offene Plattform.
-Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverlässigkeit und die schnelle Entwicklung von Apollo zu gewährleisten, bei Bedarf wichtige Entscheidungen treffen, während die aktive Beteiligung der breiteren Gemeinschaft erhalten bleibt.
+|[small]#Grundsätzlich handelt es sich bei Apollo Auto um eine offene Plattform.
+Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverlässigkeit und die schnelle Entwicklung von Apollo zu gewährleisten, bei Bedarf wichtige Entscheidungen treffen, während die aktive Beteiligung der breiteren Gemeinschaft erhalten bleibt.#
 |===
 
 === Konventionen
@@ -49,11 +48,11 @@ Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverläss
 |===
 |Konvention | Erläuterungen, Hintergrund
 |Dokumentation
-|Terminologie und Gliederung nach dem deutschen arc42-Template in der Version 6.0
+|[small]#Terminologie und Gliederung nach dem deutschen arc42-Template in der Version 6.0#
 |Kodierrichtlinien für C++
-|C++ Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle
+|[small]#C++ Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle#
 |Kodierrichtlinien für Python
-|Python Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle
-|Spezifische Datenformate und Frameworks für autonomes Fahren
-|Verwendung etablierter Standards für autonomes Fahren. zum Beispiel sind alle Softwaremodule als ROS(Robot Operating System)-Knoten zu behandeln.
+|[small]#Python Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle#
+|[small]#Spezifische Datenformate und Frameworks für autonomes Fahren#
+|[small]#Verwendung etablierter Standards für autonomes Fahren. zum Beispiel sind alle Softwaremodule als ROS(Robot Operating System)-Knoten zu behandeln.#
 |===
