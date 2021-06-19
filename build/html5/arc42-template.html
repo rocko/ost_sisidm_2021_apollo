@@ -552,17 +552,9 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#section-building-block-view">5. Bausteinsicht</a>
 <ul class="sectlevel2">
 <li><a href="#_whitebox_gesamtsystem">5.1. Whitebox Gesamtsystem</a></li>
-<li><a href="#_ebene_2">5.2. Ebene 2</a></li>
-<li><a href="#_ebene_3">5.3. Ebene 3</a></li>
 </ul>
 </li>
-<li><a href="#section-runtime-view">6. Laufzeitsicht</a>
-<ul class="sectlevel2">
-<li><a href="#_bezeichnung_laufzeitszenario_1">6.1. <em>&lt;Bezeichnung Laufzeitszenario 1&gt;</em></a></li>
-<li><a href="#_bezeichnung_laufzeitszenario_2">6.2. <em>&lt;Bezeichnung Laufzeitszenario 2&gt;</em></a></li>
-<li><a href="#_bezeichnung_laufzeitszenario_n">6.3. <em>&lt;Bezeichnung Laufzeitszenario n&gt;</em></a></li>
-</ul>
-</li>
+<li><a href="#section-runtime-view">6. Laufzeitsicht</a></li>
 <li><a href="#section-deployment-view">7. Verteilungssicht</a>
 <ul class="sectlevel2">
 <li><a href="#_infrastruktur_ebene_1">7.1. Infrastruktur Ebene 1</a></li>
@@ -682,7 +674,7 @@ Multifusionslösung bestand aus Fahrzeug, Cloud, HD-Karte und Parkplätzen</p>
 </div>
 </li>
 <li>
-<p>V2X-Communication</p>
+<p>V2X-Kommunikation</p>
 <div class="ulist">
 <ul>
 <li>
@@ -783,21 +775,20 @@ Multifusionslösung bestand aus Fahrzeug, Cloud, HD-Karte und Parkplätzen</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Zugängliches Beispiel (Analysierbarkeit)</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">• Apollo Auto ist eine offene Plattform</p>
-<p class="tableblock">• Daher ist es wichtig, dass sich neue Entwickler möglichst schnell in die Architektur, Entwurf und Implementierung einarbeiten können</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Apollo Auto ist eine offene Plattform, daher ist es wichtig, dass sich neue Entwickler möglichst schnell in die Architektur, Entwurf und Implementierung einarbeiten können</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Echzeitsteuerung von einzelnen Fahrzeugen und Verkehrströmen</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">• Apollo Auto übernimmt zuverlässig und sicher die autonome Steuerung von Fashrzeugen auf Level 4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Apollo Auto übernimmt zuverlässig und sicher die autonome Steuerung von Fashrzeugen auf Level 4</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Echtzeit Umfelderkennung</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">• Für die Steuerung von Fahrzeugen wird ein Modell des Umfelds benötigt</p>
-<p class="tableblock">• Aus den Sensoprdaten wird ein digitales Abbild des Fahrweges, von beweglichen und unbeweglichen Hindernissen und von Signalen geschaffen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Für die Steuerung von Fahrzeugen wird ein Modell des Umfelds benötigt.
+Aus den Sensoprdaten wird ein digitales Abbild des Fahrweges, von beweglichen und unbeweglichen Hindernissen und von Signalen geschaffen</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Prediction</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">• Um die Fahrsicherheit weiter zu erhöhen, wird auf die Sensor- und Zustandsdaten von anderen Verkehrsteilnehmern in Echtzeit zugegriffen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Um die Fahrsicherheit weiter zu erhöhen, wird auf die Sensor- und Zustandsdaten von anderen Verkehrsteilnehmern in Echtzeit zugegriffen</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -822,36 +813,35 @@ Multifusionslösung bestand aus Fahrzeug, Cloud, HD-Karte und Parkplätzen</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Softwarearchitekten</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">• Wollen ein Gefühl bekommen, wie Architekturdokumentation für ein konkretes System aussehen kann</p>
-<p class="tableblock">• Möchten sich Dinge (z.B. Form, Notation) für Ihre tägliche Arbeit abgucken</p>
-<p class="tableblock">• Gewinnen Sicherheit für Ihre eigenen</p>
-<p class="tableblock">• Haben in der Regel keine tiefen Schachkenntnisse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Wollen ein Gefühl bekommen, wie Architekturdokumentation für ein konkretes System aussehen kann.
+Möchten sich Dinge (z.B. Form, Notation) für Ihre tägliche Arbeit abgucken.
+Gewinnen Sicherheit für Ihre eigenen Projekte.</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Entwickler</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">• Nehmen Architekturaufgaben im Team wahr
-• Brauchen ein generelles Verständnis für die Architektur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Nehmen Architekturaufgaben im Team wahr.
+Brauchen ein generelles Verständnis für die Architektur.</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>OEM &amp; Lieferanten</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">• Entwickeln neue Produkte auf Grundlage von Apollo Auto</p>
-<p class="tableblock">• Wollen Anregungen für eigene Produkte finden</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Entwickeln neue Produkte auf Grundlage von Apollo Auto.
+Wollen Anregungen für eigene Produkte finden.</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Gesetzgeber &amp; Genehmigungsbehörden</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">• Entwickeln einen gesetzlichen Rahmen zur Zulassung von fahrerlosen Fahrzeugen im öffentlichen Straßenverkehr</p>
-<p class="tableblock">• Etablieren Prüfvorschriften und Tests für Genehmigungsverfahren</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Entwickeln einen gesetzlichen Rahmen zur Zulassung von fahrerlosen Fahrzeugen im öffentlichen Straßenverkehr.
+Etablieren Prüfvorschriften und Tests für Genehmigungsverfahren.</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Universitäten</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">• Entwickeln eigene Forschungsprojekte auf Grundlage von Apollo Auto</p>
-<p class="tableblock">• Wollen Anregungen für weitere Forschungsprojekte und studentische Arbeiten finden</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Entwickeln eigene Forschungsprojekte auf Grundlage von Apollo Auto.
+Wollen Anregungen für weitere Forschungsprojekte und studentische Arbeiten finden.</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Studenten</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">• Interessieren sich aufgrund ihres Studiums für die verschiedenen</p>
-<p class="tableblock">• Setzen eigene Projekte (z.B. Masterarbeit) zum Thema autonomes Fahren mit Apollo Auto um</p>
-<p class="tableblock">• Schreiben eine Architektur Dokumentation zu Apollo Auto</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Interessieren sich aufgrund ihres Studiums für die verschiedenen Aspekte einer Architekturdokumentation.
+Setzen eigene Projekte (z.B. Masterarbeit) zum Thema autonomes Fahren mit Apollo Auto um.
+Schreiben eine Architekturdokumentation zu Apollo Auto.</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -871,10 +861,10 @@ Dieser Abschnitt stellt sie dar und erklärt auch – wo nötig – deren Motiva
 <div class="ulist">
 <ul>
 <li>
-<p>Für den Einsatz von Apollo Auto wird eine anspruchsvolle Hardwareausstattung benötigt, eine Lösung mit einem marktüblichen Standard-Notebook allein ist nicht möglich</p>
+<p>Für den Einsatz von Apollo Auto wird eine anspruchsvolle Hardwareausstattung benötigt. Eine Umsetzung mit einem marktüblichen Standard-Notebook allein ist nicht möglich.</p>
 </li>
 <li>
-<p>Ein Fahrzeug, das mit By-Wire-Systemen ausgestattet ist, zum Beispiel Brake-by-Wire, Steering-by-Wire, Throttle-by-Wire oder Shift-by-Wire (Apollo wird derzeit auf Lincoln MKZ getestet).</p>
+<p>Es wird ein Fahrzeug benötigt, dass mit By-Wire-Systemen ausgestattet ist, zum Beispiel Brake-by-Wire, Steering-by-Wire, Throttle-by-Wire oder Shift-by-Wire (Apollo wird derzeit auf Lincoln MKZ getestet).</p>
 </li>
 <li>
 <p>Ein Rechner mit einem 4-Kern-Prozessor und mindestens 8 GB Speicher (16 GB für Apollo 3.5 und höher)</p>
@@ -893,46 +883,44 @@ Dieser Abschnitt stellt sie dar und erklärt auch – wo nötig – deren Motiva
 </div>
 <div class="sect2">
 <h3 id="_organisatorische_randbedingungen">2.2. Organisatorische Randbedingungen</h3>
-<div class="paragraph">
-<p>hier irgendwas das github verwendet wird &#8230;&#8203;.
-sonst kein plan wie die arbeiten, denke mal auch verteilt</p>
-</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Randbedingung</th>
+<th class="tableblock halign-left valign-top">Erläuterungen, Hintergrund</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Randbedingung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterungen, Hintergrund</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>github</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">Quellcode ist über github verfügbar.</span></em></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">github</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Quellcode ist über github verfügbar.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Bereitstellung von Daten</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">Alle Daten müssen in einem Format hochgeladen werden, das den Apollo-Datenspezifikationen entspricht.</span></em></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bereitstellung von Daten</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Alle Daten müssen in einem Format hochgeladen werden, das den Apollo-Datenspezifikationen entspricht.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Speicherung von Daten</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">Daten, die in China gesammelt wurden, dürfen nur auf Servern in China gespeichert werden. Daten, die in anderen Ländern und Regionen erhoben werden, unterliegen den Beschränkungen der Datenspeicherung, die durch die Gesetze der jeweiligen Länder festgelegt sind.</span></em></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Speicherung von Daten</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Daten, die in China gesammelt wurden, dürfen nur auf Servern in China gespeichert werden. Daten, die in anderen Ländern und Regionen erhoben werden, unterliegen den Beschränkungen der Datenspeicherung, die durch die Gesetze der jeweiligen Länder festgelegt sind.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Bereitstellung von Daten</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">Als Initiator dieser Plattform stellt Baidu die Ausgangsdaten für diese Plattform bereit. Die Daten stehen allen Partnern dieser Plattform offen.
+Das Prinzip der fairen Daten stellt sicher, dass Partner mit größeren eigenen Beiträgen mehr Daten und Dienste von dieser Plattform erhalten.</span></em></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bereitstellung von Daten</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Als Initiator dieser Plattform stellt Baidu die Ausgangsdaten für diese Plattform bereit. Die Daten stehen allen Partnern dieser Plattform offen.
-Das Prinzip der fairen Daten stellt sicher, dass Partner mit größeren eigenen Beiträgen mehr Daten und Dienste von dieser Plattform erhalten.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Datenschutz</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">Jeder Partner kann seine eigenen Daten anzeigen und die Datenschutzeigenschaften der Daten als privat oder öffentlich festlegen.
+Die von Partnern hochgeladenen Daten gelten standardmäßig als privat.</span></em></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datenschutz</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Jeder Partner kann seine eigenen Daten anzeigen und die Datenschutzeigenschaften der Daten als privat oder öffentlich festlegen.
-Die von Partnern hochgeladenen Daten gelten standardmäßig als privat.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Endscheidungsführung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Grundsätzlich handelt es sich bei Apollo Auto um eine offene Plattform.
-Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverlässigkeit und die schnelle Entwicklung von Apollo zu gewährleisten, bei Bedarf wichtige Entscheidungen treffen, während die aktive Beteiligung der breiteren Gemeinschaft erhalten bleibt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Endscheidungsführung</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">Grundsätzlich handelt es sich bei Apollo Auto um eine offene Plattform.
+Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverlässigkeit und die schnelle Entwicklung von Apollo zu gewährleisten, bei Bedarf wichtige Entscheidungen treffen, während die aktive Beteiligung der breiteren Gemeinschaft erhalten bleibt.</span></em></p></td>
 </tr>
 </tbody>
 </table>
@@ -953,19 +941,19 @@ Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverläss
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Dokumentation</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Terminologie und Gliederung nach dem deutschen arc42-Template in der Version 6.0</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">Terminologie und Gliederung nach dem deutschen arc42-Template in der Version 6.0</span></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Kodierrichtlinien für C++</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>C++ Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">C++ Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle</span></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Kodierrichtlinien für Python</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Python Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">Python Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle</span></em></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Spezifische Datenformate und Frameworks für autonomes Fahren</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Verwendung etablierter Standards für autonomes Fahren. zum Beispiel sind alle Softwaremodule als ROS(Robot Operating System)-Knoten zu behandeln.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">Spezifische Datenformate und Frameworks für autonomes Fahren</span></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">Verwendung etablierter Standards für autonomes Fahren. zum Beispiel sind alle Softwaremodule als ROS(Robot Operating System)-Knoten zu behandeln.</span></em></p></td>
 </tr>
 </tbody>
 </table>
@@ -977,114 +965,24 @@ Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverläss
 <h2 id="section-system-scope-and-context">3. Kontextabgrenzung</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Dieser Abschnitt beschreibt das Umfeld von Baidu Apollo. Für welche Benutzer ist es da, und mit welchen Fremdsystemen interagiert es?</p>
-</div>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Die Kontextabgrenzung grenzt das System von allen Kommunikationsbeziehungen (Nachbarsystemen und Benutzerrollen) ab.
-Sie legt damit die externen Schnittstellen fest.</p>
-</div>
-<div class="paragraph">
-<p>Differenzieren Sie fachliche (fachliche Ein- und Ausgaben) und technische Kontexte (Kanäle, Protokolle, Hardware), falls nötig.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Die fachlichen und technischen Schnittstellen zur Kommunikation gehören zu den kritischsten Aspekten eines Systems.
-Stellen Sie sicher, dass Sie diese komplett verstanden haben.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Verschiedene Optionen:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Diverse Kontextdiagramme</p>
-</li>
-<li>
-<p>Listen von Kommunikationsbeziehungen mit deren Schnittstellen</p>
-</li>
-</ul>
-</div>
-</div>
+<p>Dieser Abschnitt beschreibt das Umfeld von Apollo Auto. Für welche Benutzer ist es da, und mit welchen Fremdsystemen interagiert es?</p>
 </div>
 <div class="sect2">
 <h3 id="_fachlicher_kontext">3.1. Fachlicher Kontext</h3>
 <div class="imageblock">
 <div class="content">
-<img src="./images/plantUMLfachkontext.png" alt="plantUMLfachkontext" width="1020" height="146">
+<img src="./images/plantUMLdemoPlantUML.png" alt="plantUMLdemoPlantUML" width="333" height="340">
 </div>
 <div class="title">Abbildung 1. Benutzer und Benutzergruppen von VENOM</div>
-</div>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Festlegung <strong>aller</strong> Kommunikationsbeziehungen (Nutzer, IT-Systeme, &#8230;&#8203;) mit Erklärung der fachlichen Ein- und Ausgabedaten oder Schnittstellen.
-Zusätzlich (bei Bedarf) fachliche Datenformate oder Protokolle der Kommunikation mit den Nachbarsystemen.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Alle Beteiligten müssen verstehen, welche fachlichen Informationen mit der Umwelt ausgetauscht werden.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Alle Diagrammarten, die das System als Blackbox darstellen und die fachlichen Schnittstellen zu den Nachbarsystemen beschreiben.</p>
-</div>
-<div class="paragraph">
-<p>Alternativ oder ergänzend können Sie eine Tabelle verwenden.
-Der Titel gibt den Namen Ihres Systems wieder; die drei Spalten sind: Kommunikationsbeziehung, Eingabe, Ausgabe.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>&lt;Diagramm und/oder Tabelle&gt;</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>&lt;optional: Erläuterung der externen fachlichen Schnittstellen&gt;</strong></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_technischer_kontext">3.2. Technischer Kontext</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Technische Schnittstellen (Kanäle, Übertragungsmedien) zwischen dem System und seiner Umwelt.
-Zusätzlich eine Erklärung (<em>mapping</em>), welche fachlichen Ein- und Ausgaben über welche technischen Kanäle fließen.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Viele Stakeholder treffen Architekturentscheidungen auf Basis der technischen Schnittstellen des Systems zu seinem Kontext.</p>
-</div>
-<div class="paragraph">
-<p>Insbesondere bei der Entwicklung von Infrastruktur oder Hardware sind diese technischen Schnittstellen durchaus entscheidend.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Beispielsweise UML Deployment-Diagramme mit den Kanälen zu Nachbarsystemen, begleitet von einer Tabelle, die Kanäle auf Ein-/Ausgaben abbildet.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>&lt;Diagramm oder Tabelle&gt;</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>&lt;optional: Erläuterung der externen technischen Schnittstellen&gt;</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>&lt;Mapping fachliche auf technische Schnittstellen&gt;</strong></p>
-</div>
-<div class="paragraph">
-<p>ausführlich</p>
-</div>
 <div class="imageblock">
 <div class="content">
-<img src="./images/plantUMLdemoPlantUML.png" alt="plantUMLdemoPlantUML" width="333" height="340">
+<img src="./images/plantUMLfachkontext.png" alt="plantUMLfachkontext" width="1020" height="146">
 </div>
-<div class="title">Abbildung 2. Benutzer und Benutzergruppen von VENOM</div>
+<div class="title">Abbildung 2. Technischer Kontext von Apollo Auto</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -1096,389 +994,29 @@ Zusätzlich eine Erklärung (<em>mapping</em>), welche fachlichen Ein- und Ausga
 <div class="paragraph">
 <p>Dieser Abschnitt enthält einen stark verdichteten Architekturüberblick. Eine Gegenüberstellung der wichtigsten Ziele und Lösungsansätze.</p>
 </div>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Kurzer Überblick über die grundlegenden Entscheidungen und Lösungsansätze, die Entwurf und Implementierung des Systems prägen.
-Hierzu gehören:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Technologieentscheidungen</p>
-</li>
-<li>
-<p>Entscheidungen über die Top-Level-Zerlegung des Systems, beispielsweise die Verwendung gesamthaft prägender Entwurfs- oder Architekturmuster,</p>
-</li>
-<li>
-<p>Entscheidungen zur Erreichung der wichtigsten Qualitätsanforderungen sowie</p>
-</li>
-<li>
-<p>relevante organisatorische Entscheidungen, beispielsweise für bestimmte Entwicklungsprozesse oder Delegation bestimmter Aufgaben an andere Stakeholder.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Diese wichtigen Entscheidungen bilden wesentliche „Eckpfeiler“ der Architektur.
-Von ihnen hängen viele weitere Entscheidungen oder Implementierungsregeln ab.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Fassen Sie die zentralen Entwurfsentscheidungen <strong>kurz</strong> zusammen.
-Motivieren Sie, ausgehend von Aufgabenstellung, Qualitätszielen und Randbedingungen, was Sie entschieden haben und warum Sie so entschieden haben.
-Vermeiden Sie redundante Beschreibungen und verweisen Sie eher auf weitere Ausführungen in Folgeabschnitten.</p>
-</div>
-</div>
-</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="section-building-block-view">5. Bausteinsicht</h2>
 <div class="sectionbody">
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Diese Sicht zeigt die statische Zerlegung des Systems in Bausteine sowie deren Beziehungen.
-Beispiele für Bausteine sind unter anderem:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Module</p>
-</li>
-<li>
-<p>Komponenten</p>
-</li>
-<li>
-<p>Subsysteme</p>
-</li>
-<li>
-<p>Klassen</p>
-</li>
-<li>
-<p>Interfaces</p>
-</li>
-<li>
-<p>Pakete</p>
-</li>
-<li>
-<p>Bibliotheken</p>
-</li>
-<li>
-<p>Frameworks</p>
-</li>
-<li>
-<p>Schichten</p>
-</li>
-<li>
-<p>Partitionen</p>
-</li>
-<li>
-<p>Tiers</p>
-</li>
-<li>
-<p>Funktionen</p>
-</li>
-<li>
-<p>Makros</p>
-</li>
-<li>
-<p>Operationen</p>
-</li>
-<li>
-<p>Datenstrukturen</p>
-</li>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Diese Sicht sollte in jeder Architekturdokumentation vorhanden sein.
-In der Analogie zum Hausbau bildet die Bausteinsicht den <em>Grundrissplan</em>.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Behalten Sie den Überblick über den Quellcode, indem Sie die statische Struktur des Systems durch Abstraktion verständlich machen.</p>
-</div>
-<div class="paragraph">
-<p>Damit ermöglichen Sie Kommunikation auf abstrakterer Ebene, ohne zu viele Implementierungsdetails offenlegen zu müssen.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Die Bausteinsicht ist eine hierarchische Sammlung von Blackboxen und Whiteboxen (siehe Abbildung unten) und deren Beschreibungen.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/05_building_blocks-DE.png" alt="Baustein Sichten"></span></p>
-</div>
-<div class="paragraph">
-<p><strong>Ebene 1</strong> ist die Whitebox-Beschreibung des Gesamtsystems, zusammen mit Blackbox-Beschreibungen der darin enthaltenen Bausteine.</p>
-</div>
-<div class="paragraph">
-<p><strong>Ebene 2</strong> zoomt in einige Bausteine der Ebene 1 hinein.
-Sie enthält somit die Whitebox-Beschreibungen ausgewählter Bausteine der Ebene 1, jeweils zusammen mit Blackbox-Beschreibungen darin enthaltener Bausteine.</p>
-</div>
-<div class="paragraph">
-<p><strong>Ebene 3</strong> zoomt in einige Bausteine der Ebene 2 hinein, usw.</p>
-</div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_whitebox_gesamtsystem">5.1. Whitebox Gesamtsystem</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
 <div class="paragraph">
-<p>An dieser Stelle beschreiben Sie die Zerlegung des Gesamtsystems anhand des nachfolgenden Whitebox-Templates.
-Dieses enthält:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Ein Übersichtsdiagramm</p>
-</li>
-<li>
-<p>die Begründung dieser Zerlegung</p>
-</li>
-<li>
-<p>Blackbox-Beschreibungen der hier enthaltenen Bausteine.
-Dafür haben Sie verschiedene Optionen:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>in <em>einer</em> Tabelle, gibt einen kurzen und pragmatischen Überblick über die enthaltenen Bausteine sowie deren Schnittstellen.</p>
-</li>
-<li>
-<p>als Liste von Blackbox-Beschreibungen der Bausteine, gemäß dem Blackbox-Template (siehe unten).
-Diese Liste können Sie, je nach Werkzeug, etwa in Form von Unterkapiteln (Text), Unter-Seiten (Wiki) oder geschachtelten Elementen (Modellierungswerkzeug) darstellen.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>(optional:) wichtige Schnittstellen, die nicht bereits im Blackbox-Template eines der Bausteine erläutert werden, aber für das Verständnis der Whitebox von zentraler Bedeutung sind.
-Aufgrund der vielfältigen Möglichkeiten oder Ausprägungen von Schnittstellen geben wir hierzu kein weiteres Template vor.
-Im schlimmsten Fall müssen Sie Syntax, Semantik, Protokolle, Fehlerverhalten, Restriktionen, Versionen, Qualitätseigenschaften, notwendige Kompatibilitäten und vieles mehr spezifizieren oder beschreiben.
-Im besten Fall kommen Sie mit Beispielen oder einfachen Signaturen zurecht.</p>
-</li>
-</ul>
-</div>
-</div>
+<p>DokChess zerfällt wie in Bild unten dargestellt in vier Subsysteme. Die gestrichelten Pfeile stellen fachliche Abhängigkeiten der Subsysteme untereinander dar (“x &#8594; y” für “x ist abhängig von y”). Die Kästchen auf der Membran des Systems sind Interaktionspunkte mit Außenstehenden (→ 3.2 Kontextabgrenzung).</p>
 </div>
 <div class="paragraph">
-<p><em><strong>&lt;Übersichtsdiagramm&gt;</strong></em></p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Begründung</dt>
-<dd>
-<p><em>&lt;Erläuternder Text&gt;</em></p>
-</dd>
-<dt class="hdlist1">Enthaltene Bausteine</dt>
-<dd>
-<p><em>&lt;Beschreibung der enthaltenen Bausteine (Blackboxen)&gt;</em></p>
-</dd>
-<dt class="hdlist1">Wichtige Schnittstellen</dt>
-<dd>
-<p><em>&lt;Beschreibung wichtiger Schnittstellen&gt;</em></p>
-</dd>
-</dl>
-</div>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<p>Hier folgen jetzt Erläuterungen zu Blackboxen der Ebene 1.</p>
+<p><span class="image"><img src="./images/Apollo_3_5_software_architecture.png" alt="Bausteinsicht, Ebene 1"></span></p>
 </div>
 <div class="paragraph">
-<p>Falls Sie die tabellarische Beschreibung wählen, so werden Blackboxen darin nur mit Name und Verantwortung nach folgendem Muster beschrieben:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 66.6667%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Name</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Verantwortung</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Blackbox 1&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"> <em>&lt;Text&gt;</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Blackbox 2&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"> <em>&lt;Text&gt;</em></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Falls Sie die ausführliche Liste von Blackbox-Beschreibungen wählen, beschreiben Sie jede wichtige Blackbox in einem eigenen Blackbox-Template.
-Dessen Überschrift ist jeweils der Namen dieser Blackbox.</p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_name_blackbox_1">5.1.1. &lt;Name Blackbox 1&gt;</h4>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<p>Beschreiben Sie die &lt;Blackbox 1&gt; anhand des folgenden Blackbox-Templates:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Zweck/Verantwortung</p>
-</li>
-<li>
-<p>Schnittstelle(n), sofern diese nicht als eigenständige Beschreibungen herausgezogen sind.
-Hierzu gehören eventuell auch Qualitäts- und Leistungsmerkmale dieser Schnittstelle.</p>
-</li>
-<li>
-<p>(Optional) Qualitäts-/Leistungsmerkmale der Blackbox, beispielsweise Verfügbarkeit, Laufzeitverhalten o. Ä.</p>
-</li>
-<li>
-<p>(Optional) Ablageort/Datei(en)</p>
-</li>
-<li>
-<p>(Optional) Erfüllte Anforderungen, falls Sie Traceability zu Anforderungen benötigen.</p>
-</li>
-<li>
-<p>(Optional) Offene Punkte/Probleme/Risiken</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><em>&lt;Zweck/Verantwortung&gt;</em></p>
-</div>
-<div class="paragraph">
-<p><em>&lt;Schnittstelle(n)&gt;</em></p>
-</div>
-<div class="paragraph">
-<p><em>&lt;(Optional) Qualitäts-/Leistungsmerkmale&gt;</em></p>
-</div>
-<div class="paragraph">
-<p><em>&lt;(Optional) Ablageort/Datei(en)&gt;</em></p>
-</div>
-<div class="paragraph">
-<p><em>&lt;(Optional) Erfüllte Anforderungen&gt;</em></p>
-</div>
-<div class="paragraph">
-<p><em>&lt;(optional) Offene Punkte/Probleme/Risiken&gt;</em></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_name_blackbox_2">5.1.2. &lt;Name Blackbox 2&gt;</h4>
-<div class="paragraph">
-<p><em>&lt;Blackbox-Template&gt;</em></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_name_blackbox_n">5.1.3. &lt;Name Blackbox n&gt;</h4>
-<div class="paragraph">
-<p><em>&lt;Blackbox-Template&gt;</em></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_name_schnittstelle_1">5.1.4. &lt;Name Schnittstelle 1&gt;</h4>
-<div class="paragraph">
-<p>&#8230;&#8203;</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_name_schnittstelle_m">5.1.5. &lt;Name Schnittstelle m&gt;</h4>
-
-</div>
-</div>
-<div class="sect2">
-<h3 id="_ebene_2">5.2. Ebene 2</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<p>Beschreiben Sie den inneren Aufbau (einiger) Bausteine aus Ebene 1 als Whitebox.</p>
-</div>
-<div class="paragraph">
-<p>Welche Bausteine Ihres Systems Sie hier beschreiben, müssen Sie selbst entscheiden.
-Bitte stellen Sie dabei Relevanz vor Vollständigkeit.
-Skizzieren Sie wichtige, überraschende, riskante, komplexe oder besonders volatile Bausteine.
-Normale, einfache oder standardisierte Teile sollten Sie weglassen.</p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_whitebox_baustein_1">5.2.1. Whitebox <em>&lt;Baustein 1&gt;</em></h4>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<p>&#8230;&#8203;zeigt das Innenleben von <em>Baustein 1</em>.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><em>&lt;Whitebox-Template&gt;</em></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_whitebox_baustein_2">5.2.2. Whitebox <em>&lt;Baustein 2&gt;</em></h4>
-<div class="paragraph">
-<p><em>&lt;Whitebox-Template&gt;</em></p>
-</div>
-<div class="paragraph">
-<p>&#8230;&#8203;</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_whitebox_baustein_m">5.2.3. Whitebox <em>&lt;Baustein m&gt;</em></h4>
-<div class="paragraph">
-<p><em>&lt;Whitebox-Template&gt;</em></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_ebene_3">5.3. Ebene 3</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<p>Beschreiben Sie den inneren Aufbau (einiger) Bausteine aus Ebene 2 als Whitebox.</p>
-</div>
-<div class="paragraph">
-<p>Bei tieferen Gliederungen der Architektur kopieren Sie diesen Teil von arc42 für die weiteren Ebenen.</p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_whitebox_baustein_x_1">5.3.1. Whitebox &lt;_Baustein x.1_&gt;</h4>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<p>&#8230;&#8203;zeigt das Innenleben von <em>Baustein x.1</em>.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><em>&lt;Whitebox-Template&gt;</em></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_whitebox_baustein_x_2">5.3.2. Whitebox &lt;_Baustein x.2_&gt;</h4>
-<div class="paragraph">
-<p><em>&lt;Whitebox-Template&gt;</em></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_whitebox_baustein_y_1">5.3.3. Whitebox &lt;_Baustein y.1_&gt;</h4>
-<div class="paragraph">
-<p><em>&lt;Whitebox-Template&gt;</em></p>
+<p>Subsystem	Kurzbeschreibung
+XBoard-Protokoll	Realisiert die Kommunikation mit einem Client mit Hilfe des XBoard-Protokolls.
+Spielregeln	Beinhaltet die Schachregeln und kann z.B. zu einer Stellung alle gültigen Züge ermitteln.
+Engine	Beinhaltet die Ermittlung eines nächsten Zuges ausgehend von einer Spielsituation.
+Eröffnung	Stellt Züge aus der Eröffnungsliteratur zu einer Spielsituation bereit.
+Tabelle: Überblick über Subsysteme von DokChess</p>
 </div>
 <div style="page-break-after: always;"></div>
-</div>
 </div>
 </div>
 </div>
@@ -1488,105 +1026,12 @@ Normale, einfache oder standardisierte Teile sollten Sie weglassen.</p>
 <div class="paragraph">
 <p>Diese Sicht visualisiert im Gegensatz zur statischen Bausteinsicht dynamische Aspekte. Wie spielen die Teile zusammen?</p>
 </div>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Diese Sicht erklärt konkrete Abläufe und Beziehungen zwischen Bausteinen in Form von Szenarien aus den folgenden Bereichen:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Wichtige Abläufe oder <em>Features</em>:
-Wie führen die Bausteine der Architektur die wichtigsten Abläufe durch?</p>
-</li>
-<li>
-<p>Interaktionen an kritischen externen Schnittstellen:
-Wie arbeiten Bausteine mit Nutzern und Nachbarsystemen zusammen?</p>
-</li>
-<li>
-<p>Betrieb und Administration: Inbetriebnahme, Start, Stop.</p>
-</li>
-<li>
-<p>Fehler- und Ausnahmeszenarien</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Anmerkung:
-Das Kriterium für die Auswahl der möglichen Szenarien (d.h. Abläufe) des Systems ist deren Architekturrelevanz.
-Es geht nicht darum, möglichst viele Abläufe darzustellen, sondern eine angemessene Auswahl zu dokumentieren.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Sie sollten verstehen, wie (Instanzen von) Bausteine(n) Ihres Systems ihre jeweiligen Aufgaben erfüllen und zur Laufzeit miteinander kommunizieren.</p>
-</div>
-<div class="paragraph">
-<p>Nutzen Sie diese Szenarien in der Dokumentation hauptsächlich für eine verständlichere Kommunikation mit denjenigen Stakeholdern, die die statischen Modelle (z.B. Bausteinsicht, Verteilungssicht) weniger verständlich finden.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Für die Beschreibung von Szenarien gibt es zahlreiche Ausdrucksmöglichkeiten.
-Nutzen Sie beispielsweise:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Nummerierte Schrittfolgen oder Aufzählungen in Umgangssprache</p>
-</li>
-<li>
-<p>Aktivitäts- oder Flussdiagramme</p>
-</li>
-<li>
-<p>Sequenzdiagramme</p>
-</li>
-<li>
-<p>BPMN (Geschäftsprozessmodell und -notation) oder EPKs (Ereignis-Prozessketten)</p>
-</li>
-<li>
-<p>Zustandsautomaten</p>
-</li>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_bezeichnung_laufzeitszenario_1">6.1. <em>&lt;Bezeichnung Laufzeitszenario 1&gt;</em></h3>
-<div class="ulist">
-<ul>
-<li>
-<p>&lt;hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen&gt;</p>
-</li>
-<li>
-<p>&lt;hier Besonderheiten bei dem Zusammenspiel der Bausteine in diesem Szenario erläutern&gt;</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_bezeichnung_laufzeitszenario_2">6.2. <em>&lt;Bezeichnung Laufzeitszenario 2&gt;</em></h3>
-<div class="paragraph">
-<p>&#8230;&#8203;</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_bezeichnung_laufzeitszenario_n">6.3. <em>&lt;Bezeichnung Laufzeitszenario n&gt;</em></h3>
-<div class="paragraph">
-<p>&#8230;&#8203;</p>
-</div>
 <div style="page-break-after: always;"></div>
-</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="section-deployment-view">7. Verteilungssicht</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><span class="image"><img src="./images/Hardware_overview_3_5.png" alt="Deployment von Apollo Auto"></span></p>
-</div>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -1666,7 +1111,7 @@ Nutzen Sie diese, evtl. auch geschachtelt, wenn Ihre Verteilungsstruktur es verl
 </div>
 </div>
 <div class="paragraph">
-<p><em><strong>&lt;Übersichtsdiagramm&gt;</strong></em></p>
+<p><span class="image"><img src="./images/Hardware_overview_3_5.png" alt="Deployment von Apollo Auto"></span></p>
 </div>
 <div class="dlist">
 <dl>
@@ -1849,41 +1294,6 @@ Hier ist der Platz im Template, wo Sie derartige Themen geschlossen behandeln k�
 <div class="sect1">
 <h2 id="section-design-decisions">9. Entwurfsentscheidungen</h2>
 <div class="sectionbody">
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Wichtige, teure, große oder riskante Architektur- oder Entwurfsentscheidungen inklusive der jeweiligen Begründungen.
-Mit "Entscheidungen" meinen wir hier die Auswahl einer von mehreren Alternativen unter vorgegebenen Kriterien.</p>
-</div>
-<div class="paragraph">
-<p>Wägen Sie ab, inwiefern Sie Entscheidungen hier zentral beschreiben, oder wo eine lokale Beschreibung (z.B. in der Whitebox-Sicht von Bausteinen) sinnvoller ist.
-Vermeiden Sie Redundanz.
-Verweisen Sie evtl. auf Abschnitt 4, wo schon grundlegende strategische Entscheidungen beschrieben wurden.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Stakeholder des Systems sollten wichtige Entscheidungen verstehen und nachvollziehen können.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Verschiedene Möglichkeiten:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Liste oder Tabelle, nach Wichtigkeit und Tragweite der Entscheidungen geordnet</p>
-</li>
-<li>
-<p>ausführlicher in Form einzelner Unterkapitel je Entscheidung</p>
-</li>
-<li>
-<p>ADR (<a href="http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions">Architecture Decision Record</a>) für jede wichtige Entscheidung</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -1893,97 +1303,17 @@ Verweisen Sie evtl. auf Abschnitt 4, wo schon grundlegende strategische Entschei
 <div class="paragraph">
 <p>Dieser Abschnitt beinhaltet konkrete Qualitätsszenarien, welche die zentralen Qualitätsziele, aber auch andere geforderte Qualitätseigenschaften besser fassen. Sie ermöglichen es, Entscheidungsoptionen zu bewerten.</p>
 </div>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Dieser Abschnitt enthält möglichst alle Qualitätsanforderungen als Qualitätsbaum mit Szenarien.
-Die wichtigsten davon haben Sie bereits in Abschnitt 1.2 (Qualitätsziele) hervorgehoben.</p>
-</div>
-<div class="paragraph">
-<p>Nehmen Sie hier auch Qualitätsanforderungen geringerer Priorität auf, deren Nichteinhaltung oder -erreichung geringe Risiken birgt.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Weil Qualitätsanforderungen die Architekturentscheidungen oft maßgeblich beeinflussen, sollten Sie die für Ihre Stakeholder relevanten Qualitätsanforderungen kennen, möglichst konkret und operationalisiert.</p>
-</div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_qualitätsbaum">10.1. Qualitätsbaum</h3>
 <div class="paragraph">
+<p>Das folgende Bild gibt einen Überblick über die relevanten Qualitätsmerkmale und den ihnen jeweils zugeordneten Szenarien.</p>
+</div>
+<div class="paragraph">
 <p><span class="image"><img src="./images/qualitytree.png" alt="Qualitätsbaum"></span></p>
-</div>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Der Qualitätsbaum (à la ATAM) mit Qualitätsszenarien an den Blättern.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Die mit Prioritäten versehene Baumstruktur gibt Überblick über die&#8201;&#8212;&#8201;oftmals zahlreichen&#8201;&#8212;&#8201;Qualitätsanforderungen.</p>
-</div>
-<div class="ulist">
-<div class="title">Form</div>
-<ul>
-<li>
-<p>Baumartige Verfeinerung des Begriffes „Qualität“, mit „Qualität“ oder „Nützlichkeit“ als Wurzel.</p>
-</li>
-<li>
-<p>Mindmap mit Qualitätsoberbegriffen als Hauptzweige</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>In jedem Fall sollten Sie hier Verweise auf die Qualitätsszenarien des folgenden Abschnittes aufnehmen.</p>
-</div>
-</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_qualitätsszenarien">10.2. Qualitätsszenarien</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Konkretisierung der (in der Praxis oftmals vagen oder impliziten) Qualitätsanforderungen durch (Qualitäts-)Szenarien.</p>
-</div>
-<div class="paragraph">
-<p>Diese Szenarien beschreiben, was beim Eintreffen eines Stimulus auf ein System in bestimmten Situationen geschieht.</p>
-</div>
-<div class="paragraph">
-<p>Wesentlich sind zwei Arten von Szenarien:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Nutzungsszenarien (auch bekannt als Anwendungs- oder Anwendungsfallszenarien) beschreiben, wie das System zur Laufzeit auf einen bestimmten Auslöser reagieren soll.
-Hierunter fallen auch Szenarien zur Beschreibung von Effizienz oder Performance.
-Beispiel: Das System beantwortet eine Benutzeranfrage innerhalb einer Sekunde.</p>
-</li>
-<li>
-<p>Änderungsszenarien beschreiben eine Modifikation des Systems oder seiner unmittelbaren Umgebung.
-Beispiel: Eine zusätzliche Funktionalität wird implementiert oder die Anforderung an ein Qualitätsmerkmal ändert sich.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Szenarien operationalisieren Qualitätsanforderungen und machen deren Erfüllung mess- oder entscheidbar.</p>
-</div>
-<div class="paragraph">
-<p>Insbesondere wenn Sie die Qualität Ihrer Architektur mit Methoden wie ATAM überprüfen wollen, bedürfen die in Abschnitt 1.2 genannten Qualitätsziele einer weiteren Präzisierung bis auf die Ebene von diskutierbaren und nachprüfbaren Szenarien.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Entweder tabellarisch oder als Freitext.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Das folgende Bild gibt einen Überblick über die relevanten Qualitätsmerkmale und den ihnen jeweils zugeordneten Szenarien.</p>
-</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -2027,42 +1357,6 @@ Risikomanagement ist Projektmanagement für Erwachsene.
 <div class="sectionbody">
 <div class="paragraph">
 <p>Das folgende Glossar erklärt Begriffe aus dem Bereich Autonomes Fahren.</p>
-</div>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Die wesentlichen fachlichen und technischen Begriffe, die Stakeholder im Zusammenhang mit dem System verwenden.</p>
-</div>
-<div class="paragraph">
-<p>Nutzen Sie das Glossar ebenfalls als Übersetzungsreferenz, falls Sie in mehrsprachigen Teams arbeiten.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Sie sollten relevante Begriffe klar definieren, so dass alle Beteiligten</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>diese Begriffe identisch verstehen, und</p>
-</li>
-<li>
-<p>vermeiden, mehrere Begriffe für die gleiche Sache zu haben.</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Form</div>
-<ul>
-<li>
-<p>Zweispaltige Tabelle mit &lt;Begriff&gt; und &lt;Definition&gt;</p>
-</li>
-<li>
-<p>Eventuell weitere Spalten mit Übersetzungen, falls notwendig.</p>
-</li>
-</ul>
-</div>
-</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2168,7 +1462,7 @@ Risikomanagement ist Projektmanagement für Erwachsene.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-19 12:36:49 UTC
+Last updated 2021-06-19 12:57:06 UTC
 </div>
 </div>
 </body>
