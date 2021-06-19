@@ -42,7 +42,7 @@ Dieser Abschnitt beschreibt das Umfeld von Apollo Auto. Für welche Benutzer ist
 
 //**<Diagramm und/oder Tabelle>**
 .Fachlicher Kontext von Apollo Auto
-[plantuml, "{plantUMLDir}fachkontext", png]
+[plantuml, "{plantUMLDir}FACHkontext", png]
 ----
 !pragma graphviz_dot smetana
 skinparam rectangle {
@@ -58,105 +58,110 @@ AA --> OVCP
 AA --> HDP
 AA --> OSP
 AA --> CSP
-
 ----
 
 
 //**<optional: Erläuterung der externen fachlichen Schnittstellen>**
 
 ==== Open Vehicle Certification Platform
-Certified Apollo Compatible Drive-by-wire Vehicle
-Open Vehicle Interface Standard
+Die Open Vehicle Certification Platform schlug eine standardisierte Schnittstelle zwischen dem Autonomen Fahrsystem und dem Fahrzeug vor. Durch diese Plattform können die Fahrzeuganbieter das Fahrzeug einfach mit der offenen Plattform von Apollo verbinden, mehr Entwickler für autonomes Fahren abdecken und die Entwicklung beschleunigen.
+
+//Certified Apollo Compatible Drive-by-wire Vehicle
+//Open Vehicle Interface Standard
 
 ==== Hardware Development Platform
-===== Computing Unit
 
-===== GPS/IMU
+Unter der Hardware Development Platform werden einige durch Apollo Auto unterstütze Hardwarekomponenten zusammengefasst. Diese sind beispielsweise Sensoren wie Kamera und Lidar-Systeme und Komponenten wie Rechen- und Adaptersysteme. 
 
-You could integrate 2 types of Navigation Hardware with Apollo. Refer to their individual Installation guides for more information.
-
-* Novatel
-** NovAtel Propak6 with NovAtel IMU-IGM-A1
-** SPAN-IGM-A1
-*Navtech NV-GI120
-
-===== Camera
-
-You could integrate 3 types of Camera's with Apollo. 
-
-* Leopard Imaging Inc's Camera - LI-USB30-AZ023WDRB
-* Truly Camera
-* Wissen Camera
-
-Refer to their individual Installation guides for more information. If you currently use the ASU, you could integrate any of the camera's below, if not, only the Leopard Camera would work with Apollo.
-
-
-
-===== LiDAR
-
-You could integrate 3 types of LiDAR's with Apollo. Refer to their individual Installation guides for more information.
-
-* Velodyne - Apollo 3.0 provides support to 2 types of Velodyne LiDARs:
-** HDL64E-S3
-** VLP Series
-** VLS-128
-* Hesai
-* Innovusion
-
-===== Radar
-
-You could integrate 3 types of Radar's with Apollo. Refer to their individual Installation guides for more information.
-
-* Continental ARS408-21 Radar
-* Racobit B01HC Radar
-
-===== Ultrasonic Radar
-===== HMI Device
-===== Black Box
-
-===== ASU
-Apollo Sensor Unit (ASU) is designed to work with Industrial PC (IPC) to implement sensor fusion, vehicle control and network access in Apollo's autonomous driving platform.
-
-The ASU system provides sensor interfaces to collect data from various sensors, including cameras, Lidars, Radars, and Ultrasonic Sensors. The system also utilizes pulse per second (PPS) and GPRMC signals from GNSS receiver to implement data collection synchronization for the camera and LiDAR sensors.
-
-The communication between the ASU and the IPC is through PCI Express Interface. ASU collects sensor data and passes to IPC via PCI Express Interface, and the IPC uses the ASU to send out Vehicle Control commands in the Controller Area Network (CAN) protocol.
-
-In addition, Lidar connectivity via Ethernet, WWAN gateway via 4G LTE module, and WiFi access point via WiFi module will be enabled in the future releases.
-
-
-===== AXU
-
-Apollo Extension Unit (AXU) is designed to boost computation capability and expand storage capacity by enabling developers to plug-in additional accelerators including GPU, FPGA modules, and etc.
-
-===== V2X OBU
-
+//===== Computing Unit
+//===== GPS/IMU
+//You could integrate 2 types of Navigation Hardware with Apollo. Refer to their individual Installation guides for more information.
+//
+//* Novatel
+//** NovAtel Propak6 with NovAtel IMU-IGM-A1
+//** SPAN-IGM-A1
+//*Navtech NV-GI120
+//
+//===== Camera
+//You could integrate 3 types of Camera's with Apollo. 
+//
+//* Leopard Imaging Inc's Camera - LI-USB30-AZ023WDRB
+//* Truly Camera
+//* Wissen Camera
+//
+//Refer to their individual Installation guides for more information. If you currently use the ASU, you could integrate any of the camera's below, if not, only the Leopard Camera would work with Apollo.
+//
+//===== LiDAR
+//
+//You could integrate 3 types of LiDAR's with Apollo. Refer to their individual Installation guides for more information.
+//
+//* Velodyne - Apollo 3.0 provides support to 2 types of Velodyne LiDARs:
+//** HDL64E-S3
+//** VLP Series
+//** VLS-128
+//* Hesai
+//* Innovusion
+//
+//===== Radar
+//
+//You could integrate 3 types of Radar's with Apollo. Refer to their individual Installation guides for more information.
+//
+//* Continental ARS408-21 Radar
+//* Racobit B01HC Radar
+//
+//===== Ultrasonic Radar
+//===== HMI Device
+//===== Black Box
+//
+//===== ASU
+//Apollo Sensor Unit (ASU) is designed to work with Industrial PC (IPC) to implement sensor fusion, vehicle control and network access in Apollo's autonomous driving platform.
+//
+//The ASU system provides sensor interfaces to collect data from various sensors, including cameras, Lidars, Radars, and Ultrasonic Sensors. The system also utilizes pulse per second (PPS) and GPRMC signals from GNSS receiver to implement data collection synchronization for the camera and LiDAR sensors.
+//
+//The communication between the ASU and the IPC is through PCI Express Interface. ASU collects sensor data and passes to IPC via PCI Express Interface, and the IPC uses the ASU to send out Vehicle Control commands in the Controller Area Network (CAN) protocol.
+//
+//In addition, Lidar connectivity via Ethernet, WWAN gateway via 4G LTE module, and WiFi access point via WiFi module will be enabled in the future releases.
+//
+//
+//===== AXU
+//
+//Apollo Extension Unit (AXU) is designed to boost computation capability and expand storage capacity by enabling developers to plug-in additional accelerators including GPU, FPGA modules, and etc.
+//
+//===== V2X OBU
+//
 ==== Open Software Platform
-Map Engine
-Localization
-Perception
-Prediction
-Planning
-Control
-HMI
-V2X Adaptor
-Apollo Cyber RT
-RTOS
+
+Die Open Software Platform fasst alle Softwaremodule zusammen die von Apollo Auto verwendet werden, um ein autonomes Fahren zu ermöglichen.
+
+//Map Engine
+//Localization
+//Perception
+//Prediction
+//Planning
+//Control
+//HMI
+//V2X Adaptor
+//Apollo Cyber RT
+//RTOS
 
 ==== Cloud Service Platform
-HD Map
-Simulation
-Production Components
-Security
-OTA
-DuerOS
-V2X
-Fuel Data Service
+
+Die Cloud Service Platform fasst ergänzende cloud-basierte Module zusammen die von Apollo Auto verwendet werden.
+
+//HD Map
+//Simulation
+//Production Components
+//Security
+//OTA
+//DuerOS
+//V2X
+//Fuel Data Service
 //==== Solutions
 
 === Technischer Kontext
 
 .Technischer Kontext von Apollo Auto
-[plantuml, "{plantUMLDir}fachkontext", png]
+[plantuml, "{plantUMLDir}TECHcontext", png]
 ----
 !pragma graphviz_dot smetana
 skinparam rectangle {
@@ -166,20 +171,18 @@ rectangle "Apollo Auto" <<system>> as AA
 rectangle "Open Vehicle Certification Platform" as OVCP
 rectangle "Hardware Development Platform" as HDP
 rectangle "Open Software Platform" as OSP
-rectangle "Open Service Platform" as OServiceP
-rectangle "Solutions" as S
+rectangle "Cloud Service Platform" as CSP
 
 AA --> OVCP
 AA --> HDP
 AA --> OSP
-AA --> OServiceP
-AA --> S
+AA --> CSP
 ----
 
 //[role="arc42help"]
 //****
 //.Inhalt
-//Technische Schnittstellen (Kanäle, Übertragungsmedien) zwischen dem System und seiner Umwelt.
+//Technische Schnittstellen (Kanäle, Übertragungsmedien) zwischen dem //System und seiner Umwelt.
 //Zusätzlich eine Erklärung (_mapping_), welche fachlichen Ein- und Ausgaben über welche technischen Kanäle fließen.
 
 //.Motivation
