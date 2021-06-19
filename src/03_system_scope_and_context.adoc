@@ -27,6 +27,7 @@ Verschiedene Optionen:
 .Benutzer und Benutzergruppen von VENOM
 [plantuml, "{plantUMLDir}fachkontext", png]
 ----
+!pragma graphviz_dot smetana
 skinparam rectangle {
     roundCorner<<Concept>> 25
 }
