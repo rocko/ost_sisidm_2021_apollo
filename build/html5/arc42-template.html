@@ -585,6 +585,13 @@ table.CodeRay td.code>pre{padding:0}
 </li>
 <li><a href="#section-technical-risks">11. Risiken und technische Schulden</a></li>
 <li><a href="#section-glossary">12. Glossar</a></li>
+<li><a href="#section-appendix">13. Anhang</a>
+<ul class="sectlevel2">
+<li><a href="#_apollo">13.1. Apollo</a></li>
+<li><a href="#_arc42">13.2. Arc42</a></li>
+<li><a href="#_doctoolchain">13.3. docToolChain</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -828,8 +835,7 @@ Multifusionslösung bestand aus Fahrzeug, Cloud, HD-Karte und Parkplätzen</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>OEM &amp; Lieferanten</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">• Entwickeln neue Produkte auf Grundlage von Apollo Auto</p>
-<p class="tableblock">• Wollen Anregungen für eigene Produkte finden</p>
-<p class="tableblock">&lt;&lt;&lt;</p></td>
+<p class="tableblock">• Wollen Anregungen für eigene Produkte finden</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Gesetzgeber &amp; Genehmigungsbehörden</em></p></td>
@@ -936,7 +942,7 @@ sonst kein plan wie die arbeiten, denke mal auch verteilt</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Architekturdokumentation</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Dokumentation</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Terminologie und Gliederung nach dem deutschen arc42-Template in der Version 6.0</em></p></td>
 </tr>
 <tr>
@@ -2066,12 +2072,85 @@ Risikomanagement ist Projektmanagement für Erwachsene.
 </tr>
 </tbody>
 </table>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="section-appendix">13. Anhang</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_apollo">13.1. Apollo</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_arc42">13.2. Arc42</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>die Dokumentation muss bereits zu Beginn der Arbeiten an der Architektur/am Quellcode erfolgen um stets den aktuellen Stand abbilden zu können.</p>
+</li>
+<li>
+<p>die Dokumentation soll mit dem Projekt wachsen!</p>
+</li>
+<li>
+<p>die nachträgliche Dokumentation ist eine Sysiphusarbeit</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Beispiel:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Diagramme in der Laufzeitsicht sind effizienter zu gestalten während ein Modul im Entstehen ist. Änderungen können mit jeder Entwicklungsstufe eingepflegt werden.</p>
+</li>
+<li>
+<p>Ein fertiges Modul in ein Diagramm zu überführen erfordert viel Zeit, da alle beteiligten Module erst identifiziert werden müssen.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_doctoolchain">13.3. docToolChain</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>plantUML ist zwar bei sehr einfachen Diagrammen eine Erleichterung, kommt aber an beispielsweise draw.io oder tikz (in Latex) nicht heran wenn es um komplexe und detailierte Diagramme geht</p>
+<div class="ulist">
+<ul>
+<li>
+<p>teilweise werden bei der inline-Erstellung bei plantUML Diagrammeinstellungen nicht übernommen</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Schriftgrößen sind nicht einstellbar, was an manchen Stellen - z.B Tabellen nötig gewesen wäre</p>
+</li>
+<li>
+<p>Ansonsten ist docToolChain eine interessante Alternative, besonders in Bezug auf den CI-Task in github.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>damit nicht bei jedem Commit die Dokumentation neu erstellt wird, bietet github die Möglichkeit über Commitnachrichten, z.B "[no ci]" oder "[skip ci]" den CI-Task auszusetzen. Hier wäre es sinnvoller über Commitnachrichten explizit die Generierung zu starten.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-18 21:58:58 UTC
+Last updated 2021-06-19 10:41:36 UTC
 </div>
 </div>
 </body>

@@ -30,7 +30,7 @@ sonst kein plan wie die arbeiten, denke mal auch verteilt
 [cols="e,2e" options="header"]
 |===
 |Konvention | Erläuterungen, Hintergrund
-|Architekturdokumentation
+|Dokumentation
 |Terminologie und Gliederung nach dem deutschen arc42-Template in der Version 6.0
 |Kodierrichtlinien für C++
 |C++ Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle

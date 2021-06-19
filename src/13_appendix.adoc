@@ -1,0 +1,33 @@
+[[section-appendix]]
+== Anhang
+
+// Bitte beschreiben Sie im Anhang des erstellten Dokumentes kurz Ihre Erfahrungen mit	
+// (a) Apollo, (b) Arc42 und	(c)	der	docToolchain als CI-Task.
+
+=== Apollo
+
+=== Arc42
+
+
+* die Dokumentation muss bereits zu Beginn der Arbeiten an der Architektur/am Quellcode erfolgen um stets den aktuellen Stand abbilden zu können.
+
+* die Dokumentation soll mit dem Projekt wachsen!
+
+* die nachträgliche Dokumentation ist eine Sysiphusarbeit
+
+** Beispiel: 
+**** Diagramme in der Laufzeitsicht sind effizienter zu gestalten während ein Modul im Entstehen ist. Änderungen können mit jeder Entwicklungsstufe eingepflegt werden. 
+**** Ein fertiges Modul in ein Diagramm zu überführen erfordert viel Zeit, da alle beteiligten Module und deren Funktionsweise erst identifiziert werden müssen.
+
+
+=== docToolChain
+
+* plantUML ist zwar bei sehr einfachen Diagrammen eine Erleichterung, kommt aber an beispielsweise draw.io oder tikz (in Latex) nicht heran wenn es um komplexe und detailierte Diagramme geht
+
+** teilweise werden bei der inline-Erstellung bei plantUML Diagrammeinstellungen nicht übernommen 
+
+* Schriftgrößen sind nicht einstellbar, was an manchen Stellen - z.B Tabellen nötig gewesen wäre
+
+* Ansonsten ist docToolChain eine interessante Alternative, besonders in Bezug auf den CI-Task in github.
+
+** damit nicht bei jedem Commit die Dokumentation neu erstellt wird, bietet github die Möglichkeit über Commitnachrichten, z.B "[no ci]" oder "[skip ci]" den CI-Task auszusetzen. Hier wäre es sinnvoller über Commitnachrichten explizit die Generierung zu starten. 

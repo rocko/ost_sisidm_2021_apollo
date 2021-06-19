@@ -1,20 +1,10 @@
-:Private User: as private
-:User Groups: as groups
-:Corporate Users: as corporate
-:Government Users: as gov
-:Regulation &\nStandard Bodies: as bodies
-:Operations: as ops
-:internal Users: as internal
-(VENOM\ni.B.O.S.S) as venom
-private -right-> venom
-groups --> venom
-corporate --> venom
-gov -up-> venom
-bodies -up-> venom
-ops --> venom
-internal -left-> venom
-
-
+@startuml
+component "Apollo Auto" as A {
+   component "LIDAR" as lidar
+   component "RADAR" as radar 
+   component ""
+}
+@enduml
 
 
 
