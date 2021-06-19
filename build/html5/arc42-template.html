@@ -552,6 +552,8 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#section-building-block-view">5. Bausteinsicht</a>
 <ul class="sectlevel2">
 <li><a href="#_whitebox_gesamtsystem">5.1. Whitebox Gesamtsystem</a></li>
+<li><a href="#_ebene_2">5.2. Ebene 2</a></li>
+<li><a href="#_ebene_3">5.3. Ebene 3</a></li>
 </ul>
 </li>
 <li><a href="#section-runtime-view">6. Laufzeitsicht</a></li>
@@ -1016,7 +1018,114 @@ Engine	Beinhaltet die Ermittlung eines nächsten Zuges ausgehend von einer Spiel
 Eröffnung	Stellt Züge aus der Eröffnungsliteratur zu einer Spielsituation bereit.
 Tabelle: Überblick über Subsysteme von DokChess</p>
 </div>
+<div class="paragraph">
+<p><em><strong>&lt;Übersichtsdiagramm&gt;</strong></em></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Begründung</dt>
+<dd>
+<p><em>&lt;Erläuternder Text&gt;</em></p>
+</dd>
+<dt class="hdlist1">Enthaltene Bausteine</dt>
+<dd>
+<p><em>&lt;Beschreibung der enthaltenen Bausteine (Blackboxen)&gt;</em></p>
+</dd>
+<dt class="hdlist1">Wichtige Schnittstellen</dt>
+<dd>
+<p><em>&lt;Beschreibung wichtiger Schnittstellen&gt;</em></p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="_name_blackbox_1">5.1.1. &lt;Name Blackbox 1&gt;</h4>
+<div class="paragraph">
+<p><em>&lt;Zweck/Verantwortung&gt;</em></p>
+</div>
+<div class="paragraph">
+<p><em>&lt;Schnittstelle(n)&gt;</em></p>
+</div>
+<div class="paragraph">
+<p><em>&lt;(Optional) Qualitäts-/Leistungsmerkmale&gt;</em></p>
+</div>
+<div class="paragraph">
+<p><em>&lt;(Optional) Ablageort/Datei(en)&gt;</em></p>
+</div>
+<div class="paragraph">
+<p><em>&lt;(Optional) Erfüllte Anforderungen&gt;</em></p>
+</div>
+<div class="paragraph">
+<p><em>&lt;(optional) Offene Punkte/Probleme/Risiken&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_name_blackbox_2">5.1.2. &lt;Name Blackbox 2&gt;</h4>
+<div class="paragraph">
+<p><em>&lt;Blackbox-Template&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_name_blackbox_n">5.1.3. &lt;Name Blackbox n&gt;</h4>
+<div class="paragraph">
+<p><em>&lt;Blackbox-Template&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_name_schnittstelle_1">5.1.4. &lt;Name Schnittstelle 1&gt;</h4>
+<div class="paragraph">
+<p>&#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_name_schnittstelle_m">5.1.5. &lt;Name Schnittstelle m&gt;</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ebene_2">5.2. Ebene 2</h3>
+<div class="sect3">
+<h4 id="_whitebox_baustein_1">5.2.1. Whitebox <em>&lt;Baustein 1&gt;</em></h4>
+<div class="paragraph">
+<p><em>&lt;Whitebox-Template&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_whitebox_baustein_2">5.2.2. Whitebox <em>&lt;Baustein 2&gt;</em></h4>
+<div class="paragraph">
+<p><em>&lt;Whitebox-Template&gt;</em></p>
+</div>
+<div class="paragraph">
+<p>&#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_whitebox_baustein_m">5.2.3. Whitebox <em>&lt;Baustein m&gt;</em></h4>
+<div class="paragraph">
+<p><em>&lt;Whitebox-Template&gt;</em></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ebene_3">5.3. Ebene 3</h3>
+<div class="sect3">
+<h4 id="_whitebox_baustein_x_1">5.3.1. Whitebox &lt;_Baustein x.1_&gt;</h4>
+<div class="paragraph">
+<p><em>&lt;Whitebox-Template&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_whitebox_baustein_x_2">5.3.2. Whitebox &lt;_Baustein x.2_&gt;</h4>
+<div class="paragraph">
+<p><em>&lt;Whitebox-Template&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_whitebox_baustein_y_1">5.3.3. Whitebox &lt;_Baustein y.1_&gt;</h4>
+<div class="paragraph">
+<p><em>&lt;Whitebox-Template&gt;</em></p>
+</div>
 <div style="page-break-after: always;"></div>
+</div>
 </div>
 </div>
 </div>
@@ -1032,86 +1141,10 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 <div class="sect1">
 <h2 id="section-deployment-view">7. Verteilungssicht</h2>
 <div class="sectionbody">
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Die Verteilungssicht beschreibt:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>die technische Infrastruktur, auf der Ihr System ausgeführt wird, mit Infrastrukturelementen wie Standorten, Umgebungen, Rechnern, Prozessoren, Kanälen und Netztopologien sowie sonstigen Bestandteilen, und</p>
-</li>
-<li>
-<p>die Abbildung von (Software-)Bausteinen auf diese Infrastruktur.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Häufig laufen Systeme in unterschiedlichen Umgebungen, beispielsweise Entwicklung-/Test- oder Produktionsumgebungen.
-In solchen Fällen sollten Sie alle relevanten Umgebungen aufzeigen.</p>
-</div>
-<div class="paragraph">
-<p>Nutzen Sie die Verteilungssicht insbesondere dann, wenn Ihre Software auf mehr als einem Rechner, Prozessor, Server oder Container abläuft oder Sie Ihre Hardware sogar selbst konstruieren.</p>
-</div>
-<div class="paragraph">
-<p>Aus Softwaresicht genügt es, auf die Aspekte zu achten, die für die Softwareverteilung relevant sind.
-Insbesondere bei der Hardwareentwicklung kann es notwendig sein, die Infrastruktur mit beliebigen Details zu beschreiben.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Software läuft nicht ohne Infrastruktur.
-Diese zugrundeliegende Infrastruktur beeinflusst Ihr System und/oder querschnittliche Lösungskonzepte, daher müssen Sie diese Infrastruktur kennen.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Das oberste Verteilungsdiagramm könnte bereits in Ihrem technischen Kontext enthalten sein, mit Ihrer Infrastruktur als EINE Blackbox.
-Jetzt zoomen Sie in diese Infrastruktur mit weiteren Verteilungsdiagrammen hinein:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Die UML stellt mit Verteilungsdiagrammen (Deployment diagrams) eine Diagrammart zur Verfügung, um diese Sicht auszudrücken.
-Nutzen Sie diese, evtl. auch geschachtelt, wenn Ihre Verteilungsstruktur es verlangt.</p>
-</li>
-<li>
-<p>Falls Ihre Infrastruktur-Stakeholder andere Diagrammarten bevorzugen, die beispielsweise Prozessoren und Kanäle zeigen, sind diese hier ebenfalls einsetzbar.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_infrastruktur_ebene_1">7.1. Infrastruktur Ebene 1</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
 <div class="paragraph">
-<p>An dieser Stelle beschreiben Sie (als Kombination von Diagrammen mit Tabellen oder Texten):</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>die Verteilung des Gesamtsystems auf mehrere Standorte, Umgebungen, Rechner, Prozessoren o. Ä., sowie die physischen Verbindungskanäle zwischen diesen,</p>
-</li>
-<li>
-<p>wichtige Begründungen für diese Verteilungsstruktur,</p>
-</li>
-<li>
-<p>Qualitäts- und/oder Leistungsmerkmale dieser Infrastruktur,</p>
-</li>
-<li>
-<p>Zuordnung von Softwareartefakten zu Bestandteilen der Infrastruktur</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Für mehrere Umgebungen oder alternative Deployments kopieren Sie diesen Teil von arc42 für alle wichtigen Umgebungen/Varianten.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Hardware_overview_3_5.png" alt="Deployment von Apollo Auto"></span></p>
+<p><em><strong>&lt;Übersichtsdiagramm&gt;</strong></em></p>
 </div>
 <div class="dlist">
 <dl>
@@ -1132,16 +1165,6 @@ Nutzen Sie diese, evtl. auch geschachtelt, wenn Ihre Verteilungsstruktur es verl
 </div>
 <div class="sect2">
 <h3 id="_infrastruktur_ebene_2">7.2. Infrastruktur Ebene 2</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<p>An dieser Stelle können Sie den inneren Aufbau (einiger) Infrastrukturelemente aus Ebene 1 beschreiben.</p>
-</div>
-<div class="paragraph">
-<p>Für jedes Infrastrukturelement kopieren Sie die Struktur aus Ebene 1.</p>
-</div>
-</div>
-</div>
 <div class="sect3">
 <h4 id="_infrastrukturelement_1">7.2.1. <em>&lt;Infrastrukturelement 1&gt;</em></h4>
 <div class="paragraph">
@@ -1172,97 +1195,6 @@ Nutzen Sie diese, evtl. auch geschachtelt, wenn Ihre Verteilungsstruktur es verl
 <div class="sectionbody">
 <div class="paragraph">
 <p>Dieser Abschnitt beschreibt allgemeine Strukturen und Aspekte, die systemweit gelten. Darüber hinaus stellt er verschiedene technische Lösungskonzepte vor.</p>
-</div>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Dieser Abschnitt beschreibt übergreifende, prinzipielle Regelungen und Lösungsansätze, die an mehreren Stellen (=<em>querschnittlich</em>) relevant sind.</p>
-</div>
-<div class="paragraph">
-<p>Solche Konzepte betreffen oft mehrere Bausteine.
-Dazu können vielerlei Themen gehören, beispielsweise:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>fachliche Modelle,</p>
-</li>
-<li>
-<p>eingesetzte Architektur- oder Entwurfsmuster,</p>
-</li>
-<li>
-<p>Regeln für den konkreten Einsatz von Technologien,</p>
-</li>
-<li>
-<p>prinzipielle&#8201;&#8212;&#8201;meist technische&#8201;&#8212;&#8201;Festlegungen übergreifender Art,</p>
-</li>
-<li>
-<p>Implementierungsregeln</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Konzepte bilden die Grundlage für <em>konzeptionelle Integrität</em> (Konsistenz, Homogenität) der Architektur und damit eine wesentliche Grundlage für die innere Qualität Ihrer Systeme.</p>
-</div>
-<div class="paragraph">
-<p>Manche dieser Themen lassen sich nur schwer als Baustein in der Architektur unterbringen (z.B. das Thema „Sicherheit“).
-Hier ist der Platz im Template, wo Sie derartige Themen geschlossen behandeln können.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Kann vielfältig sein:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Konzeptpapiere mit beliebiger Gliederung,</p>
-</li>
-<li>
-<p>übergreifende Modelle/Szenarien mit Notationen, die Sie auch in den Architektursichten nutzen,</p>
-</li>
-<li>
-<p>beispielhafte Implementierung speziell für technische Konzepte,</p>
-</li>
-<li>
-<p>Verweise auf „übliche“ Nutzung von Standard-Frameworks (beispielsweise die Nutzung von Hibernate als Object/Relational Mapper).</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Struktur</div>
-<p>Eine mögliche (nicht aber notwendige!) Untergliederung dieses Abschnittes könnte wie folgt aussehen (wobei die Zuordnung von Themen zu den Gruppen nicht immer eindeutig ist)</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Fachliche Konzepte</p>
-</li>
-<li>
-<p>User Experience (UX)</p>
-</li>
-<li>
-<p>Sicherheitskonzepte (Safety und Security)</p>
-</li>
-<li>
-<p>Architektur- und Entwurfsmuster</p>
-</li>
-<li>
-<p>Unter-der-Haube</p>
-</li>
-<li>
-<p>Entwicklungskonzepte</p>
-</li>
-<li>
-<p>Betriebskonzepte</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/08-Crosscutting-Concepts-Structure-DE.png" alt="Possible topics for crosscutting concepts"></span></p>
-</div>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_konzept_1">8.1. <em>&lt;Konzept 1&gt;</em></h3>
@@ -1462,7 +1394,7 @@ Risikomanagement ist Projektmanagement für Erwachsene.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-19 12:57:06 UTC
+Last updated 2021-06-19 13:02:50 UTC
 </div>
 </div>
 </body>
