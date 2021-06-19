@@ -214,40 +214,41 @@ _<Whitebox-Template>_
 
 STUFF  
 
-ASU
-· Apollo Sensor Unit (ASU) is designed to work with Industrial PC (IPC) to implement sensor fusion, vehicle control and network access in Apollo's autonomous driving platform.
-· The ASU system provides sensor interfaces to collect data from various sensors, including cameras, Radars, and Ultrasonic Sensors. The system also utilizes pulse per second (PPS) and GPRMC signals from GNSS receiver to enable synchronization for the camera and LiDAR sensors.
-· The communication between the ASU and the IPC is through PCI Express Interface. ASU collects sensor data and passes to IPC via PCI Express Interface, and the IPC uses the ASU to send out Vehicle Control commands in the Controller Area Network (CAN) protocol.
+* ASU
+** Apollo Sensor Unit (ASU) is designed to work with Industrial PC (IPC) to implement sensor fusion, vehicle control and network access in Apollo's autonomous driving platform.
+** The ASU system provides sensor interfaces to collect data from various sensors, including cameras, Radars, and Ultrasonic Sensors. The system also utilizes pulse per second (PPS) and GPRMC signals from GNSS receiver to enable synchronization for the camera and LiDAR sensors.
+** The communication between the ASU and the IPC is through PCI Express Interface. ASU collects sensor data and passes to IPC via PCI Express Interface, and the IPC uses the ASU to send out Vehicle Control commands in the Controller Area Network (CAN) protocol.
 
 AXU
 Apollo Extension Unit (AXU) is designed to boost computation capability and expand storage capacity by enabling developers to plug-in additional accelerators including GPU, FPGA modules, and etc.
 
 ACU
 Apollo Computing Unit
-Introduction：
-· Integrated Autosar software；
-· ASIL-D functional safety level with special hardware safety island design；
-· 100% Auto-grade components；
-· IATF16949 design with PPAP supply chain and production management；
 
-Features:
-· Power supply：8~16V
-· Max Power Consumption：28W（Static Power Consumption<0.1mA）
-· Computing Power：Up to 1.5TOPS
-· SOC/MCU：Xilinx ZU5/ Aurix TC297
-· Operating temperature：-40~85℃
-· OS：Linux/QNX & AUTOSAR
-· Size：
-· 200 x 170 x 36mm（Working temperatures 85C）or
-· 200 x 120 x 36mm（Working temperatures 70C)
-· Cooling: Natural Cooling
-· Interface：
-· 5＊GMSL Video Input - support 1.3 megapixel and 2 megapixel
-· 1＊GMSL Video Output
-· 4＊CAN（support CAN-FD）
-· 12＊Ultrasonic Rdar Interface
-· 1＊100BASE-T1
-· 3＊Analog Switch
+* Introduction：
+** Integrated Autosar software；
+** ASIL-D functional safety level with special hardware safety island design；
+** 100% Auto-grade components；
+** IATF16949 design with PPAP supply chain and production management；
+
+* Features:
+** Power supply：8~16V
+** Max Power Consumption：28W（Static Power Consumption<0.1mA）
+** Computing Power：Up to 1.5TOPS
+** SOC/MCU：Xilinx ZU5/ Aurix TC297
+** Operating temperature：-40~85℃
+** OS：Linux/QNX & AUTOSAR
+** Size：
+** 200 x 170 x 36mm（Working temperatures 85C）or
+** 200 x 120 x 36mm（Working temperatures 70C)
+** Cooling: Natural Cooling
+** Interface：
+** 5＊GMSL Video Input - support 1.3 megapixel and 2 megapixel
+** 1＊GMSL Video Output
+** 4＊CAN（support CAN-FD）
+** 12＊Ultrasonic Rdar Interface
+** 1＊100BASE-T1
+** 3＊Analog Switch
 
 CAN-PCIe/402-B4
 
@@ -277,28 +278,31 @@ Vendor：ON SemiconductorApollo Hardware Development Platform supported
 Introduction：The Modular Automotive Reference System (MARS) is a complete imaging solution for camera system developers and software developers working on automotive imaging applications. MARS gives engineers and software developers the fundamental building blocks needed to create next generation imaging systems, while reducing the design effort and resources required to develop a working solution.
 Link
 Vendor：Wissen TechnologiesApollo Hardware Development Platform Supported
-Introduction：
-· 30mm x 30mm coax camera module
-· 1080p FHD YUV422 data
-· HDR function(High Dynamic Range) higher than 100dB
-· support external trigger function
+
+* Introduction：
+** 30mm x 30mm coax camera module
+** 1080p FHD YUV422 data
+** HDR function(High Dynamic Range) higher than 100dB
+** support external trigger function
+
 Link
 LI-USB30-AR023ZWDR
 Vendor：Leopard Imaging Inc.Apollo Platform Supported
-Introduction：
-· Key Features：
-· USB 3.0 Super Speed support
-· Support register access function
-· ON Semiconductor AR023Z 1080p HD Sensor
-· Support CS lens
-· Pixel Size: 3.0um x 3.0um
-· Provide customization services
-· YUV output without compression
-· USB +5VDC powered device
-· UVC compliance
-· Built in AP0202 ISP
-· Support External Trigger, Software Trigger
-· Compact Size: 30mm x 30mm
+
+* Introduction：
+** Key Features：
+** USB 3.0 Super Speed support
+** Support register access function
+** ON Semiconductor AR023Z 1080p HD Sensor
+** Support CS lens
+** Pixel Size: 3.0um x 3.0um
+** Provide customization services
+** YUV output without compression
+** USB +5VDC powered device
+** UVC compliance
+** Built in AP0202 ISP
+** Support External Trigger, Software Trigger
+** Compact Size: 30mm x 30mm
 
 ARS408-21
 Vendor：ContinentalApollo Platform Supported
@@ -310,16 +314,17 @@ Introduction：The 77GHz millimeter-wave automotive anti-collision radar develop
 
 VLS-128
 Vendor：VelodyneApollo Platform Supported
-Introduction：
-· 360° Horizontal FOV
-· +15° to -25° Vertical FOV
-· Up to 300m Range
-· Minimum Angular Resolution: 0.11°
-· Up to 4 Return Modes
-· Up to ~9.6 Million Points per Second
-· Environmental Protection: IP67
-· Connectors: RJ45 / M12
-· High Volume, Automotive Grade Contract Pricing
+
+* Introduction：
+** 360° Horizontal FOV
+** +15° to -25° Vertical FOV
+** Up to 300m Range
+** Minimum Angular Resolution: 0.11°
+** Up to 4 Return Modes
+** Up to ~9.6 Million Points per Second
+** Environmental Protection: IP67
+** Connectors: RJ45 / M12
+** High Volume, Automotive Grade Contract Pricing
 Link
 Scala 2
 Vendor：ValeoApollo Hardware Development Platform supported
@@ -350,11 +355,12 @@ Vendor：HesaiApollo Platform Supported
 Introduction：Pandora is an all-in-one sensor kit for environmental sensing for self-driving cars. It integrates cameras, LiDAR and data processing ability (from Baidu Apollo) into the same module, with advanced synchronization and calibration solutions.
 Link
 Vendor：InnovusionApollo Hardware Development Platform Supported
-Introduction：
-· Resolution: provides near picture quality with over 300 lines of resolution and several hundred pixels in both the vertical and horizontal dimensions.  
-· Range: detects both light and dark objects at distances up to 150 meters away which allows cars to react and make decisions at freeway speeds and during complex driving situations.
-· Sensor fusion: fuses LiDAR raw data with camera video in the hardware layer which dramatically reduces latency, increases computing efficiency and creates a superior sensor experience.
-· Accessibility: enables a compact design which allows for easy and flexible integration without impairing vehicle aerodynamics.  Innovusion’s products leverage components available from mature supply chain partners, enabling fast time-to-market, affordable pricing and mass production.
+
+* Introduction：
+** Resolution: provides near picture quality with over 300 lines of resolution and several hundred pixels in both the vertical and horizontal dimensions.  
+** Range: detects both light and dark objects at distances up to 150 meters away which allows cars to react and make decisions at freeway speeds and during complex driving situations.
+** Sensor fusion: fuses LiDAR raw data with camera video in the hardware layer which dramatically reduces latency, increases computing efficiency and creates a superior sensor experience.
+** Accessibility: enables a compact design which allows for easy and flexible integration without impairing vehicle aerodynamics.  Innovusion’s products leverage components available from mature supply chain partners, enabling fast time-to-market, affordable pricing and mass production.
 C16 Series
 Vendor：LeiShen Intelligent SystemApollo Hardware Development Platform Supported
 Introduction：LeiShen’s developing 3D Multi-channel LiDARs including 2/4/8/16/32-channel have excellent cost performance ratio and wide range of applications.
