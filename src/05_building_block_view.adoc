@@ -109,7 +109,7 @@ Wichtige Schnittstellen:: _<Beschreibung wichtiger Schnittstellen>_
 //Dessen Überschrift ist jeweils der Namen dieser Blackbox.
 //****
 
-==== <Name Blackbox 1>
+==== Guardian
 
 //[role="arc42help"]
 //****
@@ -119,28 +119,42 @@ Wichtige Schnittstellen:: _<Beschreibung wichtiger Schnittstellen>_
 //* Schnittstelle(n), sofern diese nicht als eigenständige Beschreibungen herausgezogen sind.
 //Hierzu gehören eventuell auch Qualitäts- und Leistungsmerkmale dieser Schnittstelle.
 //* (Optional) Qualitäts-/Leistungsmerkmale der Blackbox, beispielsweise Verfügbarkeit, Laufzeitverhalten o. Ä.
-//* (Optional) Ablageort/Datei(en)
+Ablageort/Datei(en)
+
 //* (Optional) Erfüllte Anforderungen, falls Sie Traceability zu Anforderungen benötigen.
 //* (Optional) Offene Punkte/Probleme/Risiken
 //****
 
-_<Zweck/Verantwortung>_
+==== Zweck/Verantwortung
+Ein Sicherheitsmodul, dass die Funktion eines "Action Centers" übernimmt und eingreift, wenn das Modul Monitor einen Fehler erkennt.
 
-_<Schnittstelle(n)>_
+==== Schnittstelle(n)
 
-_<(Optional) Qualitäts-/Leistungsmerkmale>_
+==== Qualitäts-/Leistungsmerkmale
 
-_<(Optional) Ablageort/Datei(en)>_
+* Alle Module funktionieren einwandfrei - Guardian lässt den Steuerfluss normal funktionieren. Steuersignale werden an den CANBus gesendet, als ob Guardian nicht vorhanden wäre.
 
-_<(Optional) Erfüllte Anforderungen>_
+* Wenn ein Fehler von Monitor erkannt wird, verhindert Guardian, dass Steuersignale den CANBus erreichen und bringt das Auto zum Stillstand. Es gibt 3 Möglichkeiten, wie Guardian entscheidet, wie das Fahrzeug anzuhalten ist. Dazu verwendet Guardian die Ultraschallsensoren
+** Wenn der Ultraschallsensor einwandfrei funktioniert, ohne ein Hindernis zu erkennen, bringt Guardian das Auto langsam zum Stehen
+** Reagieren die Ultraschallsensoren nicht, bremst Guardian hart ab, um das Auto sofort zum Stillstand zu bringen.
+** Ein Sonderfall liegt vor, wenn das HMI den Fahrer über einen drohenden Unfall informiert und der Fahrer 10 Sekunden lang nicht eingreift, führt Guardian eine Vollbremsung durch, um das Fahrzeug sofort zum Stehen zu bringen.
 
-_<(optional) Offene Punkte/Probleme/Risiken>_
+//_<(Optional) Ablageort/Datei(en)>_
+//_<(Optional) Erfüllte Anforderungen>_
+//_<(optional) Offene Punkte/Probleme/Risiken>_
 
-==== <Name Blackbox 2>
+=== Monitor
+==== Zweck/Verantwortung
+Das Überwachungssystem für alle Module im Fahrzeug einschließlich der Hardware. Monitor empfängt Daten von verschiedenen Modulen und leitet sie an die HMI weiter, damit der Fahrer sie sehen und sicherstellen kann, dass alle Module ohne Probleme funktionieren. Im Falle eines Modul- oder Hardwarefehlers sendet Monitor eine Warnung an Guardian, das dann entscheidet, welche Maßnahmen ergriffen werden müssen, um einen Unfall zu verhindern.
 
-_<Blackbox-Template>_
+==== Schnittstelle(n)
 
-==== <Name Blackbox n>
+//==== Qualitäts-/Leistungsmerkmale
+//_<(Optional) Ablageort/Datei(en)>_
+//_<(Optional) Erfüllte Anforderungen>_
+//_<(optional) Offene Punkte/Probleme/Risiken>_
+
+==== HMI
 
 _<Blackbox-Template>_
 
