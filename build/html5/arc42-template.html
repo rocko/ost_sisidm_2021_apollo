@@ -565,7 +565,7 @@ table.CodeRay td.code>pre{padding:0}
 </li>
 <li><a href="#section-concepts">8. Querschnittliche Konzepte</a>
 <ul class="sectlevel2">
-<li><a href="#_konzept_1">8.1. <em>&lt;Konzept 1&gt;</em></a></li>
+<li><a href="#_unter_der_haube">8.1. Unter-der-Haube</a></li>
 <li><a href="#_konzept_2">8.2. <em>&lt;Konzept 2&gt;</em></a></li>
 <li><a href="#_konzept_n">8.3. <em>&lt;Konzept n&gt;</em></a></li>
 </ul>
@@ -948,14 +948,6 @@ Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverläss
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">Terminologie und Gliederung nach dem deutschen arc42-Template in der Version 6.0</span></em></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Kodierrichtlinien für C++</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">C++ Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle</span></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Kodierrichtlinien für Python</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">Python Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle</span></em></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">Spezifische Datenformate und Frameworks für autonomes Fahren</span></em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em><span class="small">Verwendung etablierter Standards für autonomes Fahren. zum Beispiel sind alle Softwaremodule als ROS(Robot Operating System)-Knoten zu behandeln.</span></em></p></td>
 </tr>
@@ -975,181 +967,32 @@ Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverläss
 <h3 id="_fachlicher_kontext">3.1. Fachlicher Kontext</h3>
 <div class="imageblock">
 <div class="content">
-<img src="./images/plantUMLfachkontext.png" alt="plantUMLfachkontext" width="920" height="146">
+<img src="./images/plantUMLFACHkontext.png" alt="plantUMLFACHkontext" width="920" height="146">
 </div>
 <div class="title">Abbildung 1. Fachlicher Kontext von Apollo Auto</div>
 </div>
 <div class="sect3">
 <h4 id="_open_vehicle_certification_platform">3.1.1. Open Vehicle Certification Platform</h4>
 <div class="paragraph">
-<p>Certified Apollo Compatible Drive-by-wire Vehicle
-Open Vehicle Interface Standard</p>
+<p>Die Open Vehicle Certification Platform schlug eine standardisierte Schnittstelle zwischen dem Autonomen Fahrsystem und dem Fahrzeug vor. Durch diese Plattform können die Fahrzeuganbieter das Fahrzeug einfach mit der offenen Plattform von Apollo verbinden, mehr Entwickler für autonomes Fahren abdecken und die Entwicklung beschleunigen.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_hardware_development_platform">3.1.2. Hardware Development Platform</h4>
-<div class="sect4">
-<h5 id="_computing_unit">Computing Unit</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_gpsimu">GPS/IMU</h5>
 <div class="paragraph">
-<p>You could integrate 2 types of Navigation Hardware with Apollo. Refer to their individual Installation guides for more information.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Novatel</p>
-<div class="ulist">
-<ul>
-<li>
-<p>NovAtel Propak6 with NovAtel IMU-IGM-A1</p>
-</li>
-<li>
-<p>SPAN-IGM-A1
-*Navtech NV-GI120</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_camera">Camera</h5>
-<div class="paragraph">
-<p>You could integrate 3 types of Camera&#8217;s with Apollo.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Leopard Imaging Inc&#8217;s Camera - LI-USB30-AZ023WDRB</p>
-</li>
-<li>
-<p>Truly Camera</p>
-</li>
-<li>
-<p>Wissen Camera</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Refer to their individual Installation guides for more information. If you currently use the ASU, you could integrate any of the camera&#8217;s below, if not, only the Leopard Camera would work with Apollo.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_lidar">LiDAR</h5>
-<div class="paragraph">
-<p>You could integrate 3 types of LiDAR&#8217;s with Apollo. Refer to their individual Installation guides for more information.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Velodyne - Apollo 3.0 provides support to 2 types of Velodyne LiDARs:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>HDL64E-S3</p>
-</li>
-<li>
-<p>VLP Series</p>
-</li>
-<li>
-<p>VLS-128</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Hesai</p>
-</li>
-<li>
-<p>Innovusion</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_radar">Radar</h5>
-<div class="paragraph">
-<p>You could integrate 3 types of Radar&#8217;s with Apollo. Refer to their individual Installation guides for more information.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Continental ARS408-21 Radar</p>
-</li>
-<li>
-<p>Racobit B01HC Radar</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_ultrasonic_radar">Ultrasonic Radar</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_hmi_device">HMI Device</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_black_box">Black Box</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_asu">ASU</h5>
-<div class="paragraph">
-<p>Apollo Sensor Unit (ASU) is designed to work with Industrial PC (IPC) to implement sensor fusion, vehicle control and network access in Apollo&#8217;s autonomous driving platform.</p>
-</div>
-<div class="paragraph">
-<p>The ASU system provides sensor interfaces to collect data from various sensors, including cameras, Lidars, Radars, and Ultrasonic Sensors. The system also utilizes pulse per second (PPS) and GPRMC signals from GNSS receiver to implement data collection synchronization for the camera and LiDAR sensors.</p>
-</div>
-<div class="paragraph">
-<p>The communication between the ASU and the IPC is through PCI Express Interface. ASU collects sensor data and passes to IPC via PCI Express Interface, and the IPC uses the ASU to send out Vehicle Control commands in the Controller Area Network (CAN) protocol.</p>
-</div>
-<div class="paragraph">
-<p>In addition, Lidar connectivity via Ethernet, WWAN gateway via 4G LTE module, and WiFi access point via WiFi module will be enabled in the future releases.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_axu">AXU</h5>
-<div class="paragraph">
-<p>Apollo Extension Unit (AXU) is designed to boost computation capability and expand storage capacity by enabling developers to plug-in additional accelerators including GPU, FPGA modules, and etc.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_v2x_obu">V2X OBU</h5>
-
+<p>Unter der Hardware Development Platform werden einige durch Apollo Auto unterstütze Hardwarekomponenten zusammengefasst. Diese sind beispielsweise Sensoren wie Kamera und Lidar-Systeme und Komponenten wie Rechen- und Adaptersysteme.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_open_software_platform">3.1.3. Open Software Platform</h4>
 <div class="paragraph">
-<p>Map Engine
-Localization
-Perception
-Prediction
-Planning
-Control
-HMI
-V2X Adaptor
-Apollo Cyber RT
-RTOS</p>
+<p>Die Open Software Platform fasst alle Softwaremodule zusammen die von Apollo Auto verwendet werden, um ein autonomes Fahren zu ermöglichen.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_cloud_service_platform">3.1.4. Cloud Service Platform</h4>
 <div class="paragraph">
-<p>HD Map
-Simulation
-Production Components
-Security
-OTA
-DuerOS
-V2X
-Fuel Data Service</p>
+<p>Die Cloud Service Platform fasst ergänzende cloud-basierte Module zusammen die von Apollo Auto verwendet werden.</p>
 </div>
 </div>
 </div>
@@ -1157,7 +1000,7 @@ Fuel Data Service</p>
 <h3 id="_technischer_kontext">3.2. Technischer Kontext</h3>
 <div class="imageblock">
 <div class="content">
-<img src="./images/plantUMLfachkontext.png" alt="plantUMLfachkontext" width="1020" height="146">
+<img src="./images/plantUMLTECHcontext.png" alt="plantUMLTECHcontext" width="920" height="146">
 </div>
 <div class="title">Abbildung 2. Technischer Kontext von Apollo Auto</div>
 </div>
@@ -1170,6 +1013,9 @@ Fuel Data Service</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Dieser Abschnitt enthält einen stark verdichteten Architekturüberblick. Eine Gegenüberstellung der wichtigsten Ziele und Lösungsansätze.</p>
+</div>
+<div class="paragraph">
+<p>irgendwas zu interoperabilität weil versch. sensoren etc verwendet werden können</p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -1307,11 +1153,25 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 <div class="paragraph">
 <p>STUFF</p>
 </div>
-<div class="paragraph">
-<p>ASU
-· Apollo Sensor Unit (ASU) is designed to work with Industrial PC (IPC) to implement sensor fusion, vehicle control and network access in Apollo&#8217;s autonomous driving platform.
-· The ASU system provides sensor interfaces to collect data from various sensors, including cameras, Radars, and Ultrasonic Sensors. The system also utilizes pulse per second (PPS) and GPRMC signals from GNSS receiver to enable synchronization for the camera and LiDAR sensors.
-· The communication between the ASU and the IPC is through PCI Express Interface. ASU collects sensor data and passes to IPC via PCI Express Interface, and the IPC uses the ASU to send out Vehicle Control commands in the Controller Area Network (CAN) protocol.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ASU</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Apollo Sensor Unit (ASU) is designed to work with Industrial PC (IPC) to implement sensor fusion, vehicle control and network access in Apollo&#8217;s autonomous driving platform.</p>
+</li>
+<li>
+<p>The ASU system provides sensor interfaces to collect data from various sensors, including cameras, Radars, and Ultrasonic Sensors. The system also utilizes pulse per second (PPS) and GPRMC signals from GNSS receiver to enable synchronization for the camera and LiDAR sensors.</p>
+</li>
+<li>
+<p>The communication between the ASU and the IPC is through PCI Express Interface. ASU collects sensor data and passes to IPC via PCI Express Interface, and the IPC uses the ASU to send out Vehicle Control commands in the Controller Area Network (CAN) protocol.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>AXU
@@ -1319,32 +1179,88 @@ Apollo Extension Unit (AXU) is designed to boost computation capability and expa
 </div>
 <div class="paragraph">
 <p>ACU
-Apollo Computing Unit
-Introduction：
-· Integrated Autosar software；
-· ASIL-D functional safety level with special hardware safety island design；
-· 100% Auto-grade components；
-· IATF16949 design with PPAP supply chain and production management；</p>
+Apollo Computing Unit</p>
 </div>
-<div class="paragraph">
-<p>Features:
-· Power supply：8~16V
-· Max Power Consumption：28W（Static Power Consumption&lt;0.1mA）
-· Computing Power：Up to 1.5TOPS
-· SOC/MCU：Xilinx ZU5/ Aurix TC297
-· Operating temperature：-40~85℃
-· OS：Linux/QNX &amp; AUTOSAR
-· Size：
-· 200 x 170 x 36mm（Working temperatures 85C）or
-· 200 x 120 x 36mm（Working temperatures 70C)
-· Cooling: Natural Cooling
-· Interface：
-· 5＊GMSL Video Input - support 1.3 megapixel and 2 megapixel
-· 1＊GMSL Video Output
-· 4＊CAN（support CAN-FD）
-· 12＊Ultrasonic Rdar Interface
-· 1＊100BASE-T1
-· 3＊Analog Switch</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Introduction：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Integrated Autosar software；</p>
+</li>
+<li>
+<p>ASIL-D functional safety level with special hardware safety island design；</p>
+</li>
+<li>
+<p>100% Auto-grade components；</p>
+</li>
+<li>
+<p>IATF16949 design with PPAP supply chain and production management；</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Power supply：8~16V</p>
+</li>
+<li>
+<p>Max Power Consumption：28W（Static Power Consumption&lt;0.1mA）</p>
+</li>
+<li>
+<p>Computing Power：Up to 1.5TOPS</p>
+</li>
+<li>
+<p>SOC/MCU：Xilinx ZU5/ Aurix TC297</p>
+</li>
+<li>
+<p>Operating temperature：-40~85℃</p>
+</li>
+<li>
+<p>OS：Linux/QNX &amp; AUTOSAR</p>
+</li>
+<li>
+<p>Size：</p>
+</li>
+<li>
+<p>200 x 170 x 36mm（Working temperatures 85C）or</p>
+</li>
+<li>
+<p>200 x 120 x 36mm（Working temperatures 70C)</p>
+</li>
+<li>
+<p>Cooling: Natural Cooling</p>
+</li>
+<li>
+<p>Interface：</p>
+</li>
+<li>
+<p>5＊GMSL Video Input - support 1.3 megapixel and 2 megapixel</p>
+</li>
+<li>
+<p>1＊GMSL Video Output</p>
+</li>
+<li>
+<p>4＊CAN（support CAN-FD）</p>
+</li>
+<li>
+<p>12＊Ultrasonic Rdar Interface</p>
+</li>
+<li>
+<p>1＊100BASE-T1</p>
+</li>
+<li>
+<p>3＊Analog Switch</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>CAN-PCIe/402-B4</p>
@@ -1377,29 +1293,85 @@ Link</p>
 Vendor：ON SemiconductorApollo Hardware Development Platform supported
 Introduction：The Modular Automotive Reference System (MARS) is a complete imaging solution for camera system developers and software developers working on automotive imaging applications. MARS gives engineers and software developers the fundamental building blocks needed to create next generation imaging systems, while reducing the design effort and resources required to develop a working solution.
 Link
-Vendor：Wissen TechnologiesApollo Hardware Development Platform Supported
-Introduction：
-· 30mm x 30mm coax camera module
-· 1080p FHD YUV422 data
-· HDR function(High Dynamic Range) higher than 100dB
-· support external trigger function
-Link
+Vendor：Wissen TechnologiesApollo Hardware Development Platform Supported</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Introduction：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>30mm x 30mm coax camera module</p>
+</li>
+<li>
+<p>1080p FHD YUV422 data</p>
+</li>
+<li>
+<p>HDR function(High Dynamic Range) higher than 100dB</p>
+</li>
+<li>
+<p>support external trigger function</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Link
 LI-USB30-AR023ZWDR
-Vendor：Leopard Imaging Inc.Apollo Platform Supported
-Introduction：
-· Key Features：
-· USB 3.0 Super Speed support
-· Support register access function
-· ON Semiconductor AR023Z 1080p HD Sensor
-· Support CS lens
-· Pixel Size: 3.0um x 3.0um
-· Provide customization services
-· YUV output without compression
-· USB +5VDC powered device
-· UVC compliance
-· Built in AP0202 ISP
-· Support External Trigger, Software Trigger
-· Compact Size: 30mm x 30mm</p>
+Vendor：Leopard Imaging Inc.Apollo Platform Supported</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Introduction：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Key Features：</p>
+</li>
+<li>
+<p>USB 3.0 Super Speed support</p>
+</li>
+<li>
+<p>Support register access function</p>
+</li>
+<li>
+<p>ON Semiconductor AR023Z 1080p HD Sensor</p>
+</li>
+<li>
+<p>Support CS lens</p>
+</li>
+<li>
+<p>Pixel Size: 3.0um x 3.0um</p>
+</li>
+<li>
+<p>Provide customization services</p>
+</li>
+<li>
+<p>YUV output without compression</p>
+</li>
+<li>
+<p>USB +5VDC powered device</p>
+</li>
+<li>
+<p>UVC compliance</p>
+</li>
+<li>
+<p>Built in AP0202 ISP</p>
+</li>
+<li>
+<p>Support External Trigger, Software Trigger</p>
+</li>
+<li>
+<p>Compact Size: 30mm x 30mm</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>ARS408-21
@@ -1412,17 +1384,40 @@ Introduction：The 77GHz millimeter-wave automotive anti-collision radar develop
 </div>
 <div class="paragraph">
 <p>VLS-128
-Vendor：VelodyneApollo Platform Supported
-Introduction：
-· 360° Horizontal FOV
-· +15° to -25° Vertical FOV
-· Up to 300m Range
-· Minimum Angular Resolution: 0.11°
-· Up to 4 Return Modes
-· Up to ~9.6 Million Points per Second
-· Environmental Protection: IP67
-· Connectors: RJ45 / M12
-· High Volume, Automotive Grade Contract Pricing
+Vendor：VelodyneApollo Platform Supported</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Introduction：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>360° Horizontal FOV</p>
+</li>
+<li>
+<p>+15° to -25° Vertical FOV</p>
+</li>
+<li>
+<p>Up to 300m Range</p>
+</li>
+<li>
+<p>Minimum Angular Resolution: 0.11°</p>
+</li>
+<li>
+<p>Up to 4 Return Modes</p>
+</li>
+<li>
+<p>Up to ~9.6 Million Points per Second</p>
+</li>
+<li>
+<p>Environmental Protection: IP67</p>
+</li>
+<li>
+<p>Connectors: RJ45 / M12</p>
+</li>
+<li>
+<p>High Volume, Automotive Grade Contract Pricing
 Link
 Scala 2
 Vendor：ValeoApollo Hardware Development Platform supported
@@ -1452,12 +1447,26 @@ Pandora
 Vendor：HesaiApollo Platform Supported
 Introduction：Pandora is an all-in-one sensor kit for environmental sensing for self-driving cars. It integrates cameras, LiDAR and data processing ability (from Baidu Apollo) into the same module, with advanced synchronization and calibration solutions.
 Link
-Vendor：InnovusionApollo Hardware Development Platform Supported
-Introduction：
-· Resolution: provides near picture quality with over 300 lines of resolution and several hundred pixels in both the vertical and horizontal dimensions.
-· Range: detects both light and dark objects at distances up to 150 meters away which allows cars to react and make decisions at freeway speeds and during complex driving situations.
-· Sensor fusion: fuses LiDAR raw data with camera video in the hardware layer which dramatically reduces latency, increases computing efficiency and creates a superior sensor experience.
-· Accessibility: enables a compact design which allows for easy and flexible integration without impairing vehicle aerodynamics.  Innovusion’s products leverage components available from mature supply chain partners, enabling fast time-to-market, affordable pricing and mass production.
+Vendor：InnovusionApollo Hardware Development Platform Supported</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Introduction：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Resolution: provides near picture quality with over 300 lines of resolution and several hundred pixels in both the vertical and horizontal dimensions.</p>
+</li>
+<li>
+<p>Range: detects both light and dark objects at distances up to 150 meters away which allows cars to react and make decisions at freeway speeds and during complex driving situations.</p>
+</li>
+<li>
+<p>Sensor fusion: fuses LiDAR raw data with camera video in the hardware layer which dramatically reduces latency, increases computing efficiency and creates a superior sensor experience.</p>
+</li>
+<li>
+<p>Accessibility: enables a compact design which allows for easy and flexible integration without impairing vehicle aerodynamics.  Innovusion’s products leverage components available from mature supply chain partners, enabling fast time-to-market, affordable pricing and mass production.
 C16 Series
 Vendor：LeiShen Intelligent SystemApollo Hardware Development Platform Supported
 Introduction：LeiShen’s developing 3D Multi-channel LiDARs including 2/4/8/16/32-channel have excellent cost performance ratio and wide range of applications.
@@ -1465,6 +1474,11 @@ Link
 Rs-LiDAR-16
 Vendor：RobosenseApollo Hardware Development Platform Supported
 Introduction：The compact housing of RS-LiDAR-16 mounted with 16 laser/detector pairs rapidly spins and sends out high-frequency laser beams to continuously scan the Surrounding environment. Advanced digital signal processing and ranging algorithms calculate point cloud data and reflectivity of objects to enable machine to 'see' the world and providing reliable data for localization, navigation and obstacle avoidance.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -1487,7 +1501,8 @@ Introduction：The compact housing of RS-LiDAR-16 mounted with 16 laser/detector
 <div class="sect2">
 <h3 id="_infrastruktur_ebene_1">7.1. Infrastruktur Ebene 1</h3>
 <div class="paragraph">
-<p><em><strong>&lt;Übersichtsdiagramm&gt;</strong></em></p>
+<p><em><strong>&lt;Übersichtsdiagramm&gt;</strong></em>
+<span class="image"><img src="./images/Hardware_overview_3_5.png" alt="Deployment von Apollo Auto"></span></p>
 </div>
 <div class="dlist">
 <dl>
@@ -1540,12 +1555,12 @@ Introduction：The compact housing of RS-LiDAR-16 mounted with 16 laser/detector
 <p>Dieser Abschnitt beschreibt allgemeine Strukturen und Aspekte, die systemweit gelten. Darüber hinaus stellt er verschiedene technische Lösungskonzepte vor.</p>
 </div>
 <div class="sect2">
-<h3 id="_konzept_1">8.1. <em>&lt;Konzept 1&gt;</em></h3>
+<h3 id="_unter_der_haube">8.1. Unter-der-Haube</h3>
 <div class="paragraph">
-<p><em>&lt;Erklärung&gt;</em></p>
+<p>Die Dynamik von autonomen Fahrzeugen (AV) wird von der Planungs-Engine über den Controller Area Network-Bus (CAN-Bus) gesteuert. Die Software liest Daten aus Hardware-Registern und schreibt sie zurück, genau wie wir es in Assembler tun würden. Für hochpräzise Berechnungen arbeiten die Lokalisierungs-, Wahrnehmungs- und Planungsmodule als unabhängige Eingabequellen, während die Ausgabequellen über das Peer2Peer (P2P)-Protokoll zusammenarbeiten. P2P wird durch die RPC-Netzwerkanwendung unterstützt.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/test.png" alt="test"></span></p>
+<p>Apollo Auto verwendet ROS1 als zugrunde liegendes Netzwerk, was bedeutet, dass Apollo Auto das Master-Nodes-Framework von ROS1 entlehnt. Da xmlRPC von ROS1 wirklich alt ist (im Vergleich zu den neueren brpc und grpc), hat Baidu seine eigene protobuf-Version von RPC entwickelt.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1712,7 +1727,7 @@ Introduction：The compact housing of RS-LiDAR-16 mounted with 16 laser/detector
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-19 17:15:36 UTC
+Last updated 2021-06-19 18:57:08 UTC
 </div>
 </div>
 </body>
