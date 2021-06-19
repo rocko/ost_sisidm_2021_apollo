@@ -1,8 +1,6 @@
 [[section-deployment-view]]
 == Verteilungssicht
 
-image:Hardware_overview_3_5.png["Deployment von Apollo Auto"]
-
 [role="arc42help"]
 ****
 .Inhalt
@@ -48,7 +46,8 @@ An dieser Stelle beschreiben Sie (als Kombination von Diagrammen mit Tabellen od
 Für mehrere Umgebungen oder alternative Deployments kopieren Sie diesen Teil von arc42 für alle wichtigen Umgebungen/Varianten.
 ****
 
-_**<Übersichtsdiagramm>**_
+//_**<Übersichtsdiagramm>**_
+image:Hardware_overview_3_5.png["Deployment von Apollo Auto"]
 
 Begründung:: _<Erläuternder Text>_
 

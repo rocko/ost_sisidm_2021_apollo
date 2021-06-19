@@ -3,10 +3,10 @@
 
 Dieser Abschnitt führt in die Aufgabenstellung ein und skizziert die Ziele, die Apollo Auto verfolgt.
 
-
 === Aufgabenstellung
 
 ==== Was ist Apollo Auto?
+
 Apollo ist eine hochleistungsfähige, flexible Architektur, die die Entwicklung, das Testen und den Einsatz von autonomen Fahrzeugen beschleunigt.
 Apollo Auto bietet unter Andrem Lösungen für Valet Parking, V2X-Kommunikation und intelligente Lichtsignalanlagen.
 
@@ -17,8 +17,7 @@ Apollo Auto bietet unter Andrem Lösungen für Valet Parking, V2X-Kommunikation 
  Multifusionslösung bestand aus Fahrzeug, Cloud, HD-Karte und Parkplätzen
 ** Bietet hochwertige Dienstleistungen, wie automatische Parkplatzerkennung und autonomes Parken, für Kunden.
 
-
-* V2X-Communication
+* V2X-Kommunikation
 ** Interaktionslösung für intelligente Fahrzeuginfrastruktur
 ** Apollo V2X umfasst ein intelligentes Transportsystem für Fahrzeug Straßendatenerfassung und intelligente Verarbeitungsanalyse, Verkehrssicherheit und -effizienz
 ** Wahrnehmung aller Verkehrsteilnehmer im Sichtfeld und die bereitgestellten straßenseitigen Sensorinformationen können für die Entscheidungsfindung beim autonomen Fahren auf hohem Niveau verwendet werden
@@ -47,68 +46,51 @@ Apollo Auto bietet unter Andrem Lösungen für Valet Parking, V2X-Kommunikation 
 <<<
 
 === Qualitätsziele
+
 Die folgende Tabelle beschreibt die zentralen Qualitätsziele von DokChess, wobei die Reihenfolge eine grobe Orientierung bezüglich der Wichtigkeit vorgibt.
+
 [cols="1,2" options="header"]
 |===
 |Qualitätsziel |Motivation und Erläuterung
 | _Zugängliches Beispiel (Analysierbarkeit)_ |
-• Apollo Auto ist eine offene Plattform
-
-• Daher ist es wichtig, dass sich neue Entwickler möglichst schnell in die Architektur, Entwurf und Implementierung einarbeiten können
+[small]#Apollo Auto ist eine offene Plattform, daher ist es wichtig, dass sich neue Entwickler möglichst schnell in die Architektur, Entwurf und Implementierung einarbeiten können#
 | _Echzeitsteuerung von einzelnen Fahrzeugen und Verkehrströmen_ |
-• Apollo Auto übernimmt zuverlässig und sicher die autonome Steuerung von Fashrzeugen auf Level 4
+[small]#Apollo Auto übernimmt zuverlässig und sicher die autonome Steuerung von Fashrzeugen auf Level 4#
 | _Echtzeit Umfelderkennung_ |
-• Für die Steuerung von Fahrzeugen wird ein Modell des Umfelds benötigt
-
-• Aus den Sensoprdaten wird ein digitales Abbild des Fahrweges, von beweglichen und unbeweglichen Hindernissen und von Signalen geschaffen
+[small]#Für die Steuerung von Fahrzeugen wird ein Modell des Umfelds benötigt.
+Aus den Sensoprdaten wird ein digitales Abbild des Fahrweges, von beweglichen und unbeweglichen Hindernissen und von Signalen geschaffen#
 | _Prediction_ |
-• Um die Fahrsicherheit weiter zu erhöhen, wird auf die Sensor- und Zustandsdaten von anderen Verkehrsteilnehmern in Echtzeit zugegriffen
+[small]#Um die Fahrsicherheit weiter zu erhöhen, wird auf die Sensor- und Zustandsdaten von anderen Verkehrsteilnehmern in Echtzeit zugegriffen#
 |===
 
 <<<
 
 === Stakeholder
 
-
-
 Die folgende Tabelle stellt die Stakeholder von Apollo Auto und ihre jeweilige Intention dar.
+
 [cols="1,2" options="header"]
 |===
 |Rolle |Interesse, Bezug
 | _Softwarearchitekten_ |
-• Wollen ein Gefühl bekommen, wie Architekturdokumentation für ein konkretes System aussehen kann
-
-• Möchten sich Dinge (z.B. Form, Notation) für Ihre tägliche Arbeit abgucken
-
-• Gewinnen Sicherheit für Ihre eigenen
-
-• Haben in der Regel keine tiefen Schachkenntnisse
-
-
+[small]#Wollen ein Gefühl bekommen, wie Architekturdokumentation für ein konkretes System aussehen kann.
+Möchten sich Dinge (z.B. Form, Notation) für Ihre tägliche Arbeit abgucken.
+Gewinnen Sicherheit für Ihre eigenen Projekte.#
 | _Entwickler_ |
-• Nehmen Architekturaufgaben im Team wahr
-• Brauchen ein generelles Verständnis für die Architektur
-
+[small]#Nehmen Architekturaufgaben im Team wahr.
+Brauchen ein generelles Verständnis für die Architektur.#
 | _OEM & Lieferanten_ |
-• Entwickeln neue Produkte auf Grundlage von Apollo Auto
-
-• Wollen Anregungen für eigene Produkte finden
-
+[small]#Entwickeln neue Produkte auf Grundlage von Apollo Auto.
+Wollen Anregungen für eigene Produkte finden.#
 
 | _Gesetzgeber & Genehmigungsbehörden_ |
-• Entwickeln einen gesetzlichen Rahmen zur Zulassung von fahrerlosen Fahrzeugen im öffentlichen Straßenverkehr
-
-• Etablieren Prüfvorschriften und Tests für Genehmigungsverfahren
-
+[small]#Entwickeln einen gesetzlichen Rahmen zur Zulassung von fahrerlosen Fahrzeugen im öffentlichen Straßenverkehr.
+Etablieren Prüfvorschriften und Tests für Genehmigungsverfahren.#
 | _Universitäten_ |
-• Entwickeln eigene Forschungsprojekte auf Grundlage von Apollo Auto
-
-• Wollen Anregungen für weitere Forschungsprojekte und studentische Arbeiten finden
-
+[small]#Entwickeln eigene Forschungsprojekte auf Grundlage von Apollo Auto.
+Wollen Anregungen für weitere Forschungsprojekte und studentische Arbeiten finden.#
 | _Studenten_ |
-• Interessieren sich aufgrund ihres Studiums für die verschiedenen
-
-• Setzen eigene Projekte (z.B. Masterarbeit) zum Thema autonomes Fahren mit Apollo Auto um
-
-• Schreiben eine Architektur Dokumentation zu Apollo Auto
+[small]#Interessieren sich aufgrund ihres Studiums für die verschiedenen Aspekte einer Architekturdokumentation.
+Setzen eigene Projekte (z.B. Masterarbeit) zum Thema autonomes Fahren mit Apollo Auto um.
+Schreiben eine Architekturdokumentation zu Apollo Auto.#
 |===
