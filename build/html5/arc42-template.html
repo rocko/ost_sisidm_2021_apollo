@@ -562,38 +562,6 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_localization">5.9. Localization</a></li>
 <li><a href="#_prediction">5.10. Prediction</a></li>
 <li><a href="#_perception">5.11. Perception</a></li>
-<li><a href="#_ebene_2">5.12. Ebene 2</a></li>
-<li><a href="#_ebene_3">5.13. Ebene 3</a></li>
-</ul>
-</li>
-<li><a href="#section-runtime-view">6. Laufzeitsicht</a></li>
-<li><a href="#section-deployment-view">7. Verteilungssicht</a>
-<ul class="sectlevel2">
-<li><a href="#_infrastruktur_ebene_1">7.1. Infrastruktur Ebene 1</a></li>
-<li><a href="#_infrastruktur_ebene_2">7.2. Infrastruktur Ebene 2</a></li>
-</ul>
-</li>
-<li><a href="#section-concepts">8. Querschnittliche Konzepte</a>
-<ul class="sectlevel2">
-<li><a href="#_unter_der_haube">8.1. Unter-der-Haube</a></li>
-<li><a href="#_konzept_2">8.2. <em>&lt;Konzept 2&gt;</em></a></li>
-<li><a href="#_konzept_n">8.3. <em>&lt;Konzept n&gt;</em></a></li>
-</ul>
-</li>
-<li><a href="#section-design-decisions">9. Entwurfsentscheidungen</a></li>
-<li><a href="#section-quality-scenarios">10. Qualitätsanforderungen</a>
-<ul class="sectlevel2">
-<li><a href="#_qualitätsbaum">10.1. Qualitätsbaum</a></li>
-<li><a href="#_qualitätsszenarien">10.2. Qualitätsszenarien</a></li>
-</ul>
-</li>
-<li><a href="#section-technical-risks">11. Risiken und technische Schulden</a></li>
-<li><a href="#section-glossary">12. Glossar</a></li>
-<li><a href="#section-appendix">13. Anhang</a>
-<ul class="sectlevel2">
-<li><a href="#_apollo">13.1. Apollo</a></li>
-<li><a href="#_arc42">13.2. Arc42</a></li>
-<li><a href="#_doctoolchain">13.3. docToolChain</a></li>
 </ul>
 </li>
 </ul>
@@ -1189,7 +1157,32 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 
 </div>
 <div class="sect3">
-<h4 id="_ablageortdateien_2">5.3.3. Ablageort/Datei(en)</h4>
+<h4 id="_qualitäts_leistungsmerkmale">5.3.3. Qualitäts-/Leistungsmerkmale</h4>
+<div class="paragraph">
+<p>Dieses Modul enthält Software auf Systemebene, wie z. B. Code zur Überprüfung des Hardwarestatus und zur Überwachung des Systemzustands. In Apollo 5.5 führt das Monitor-Modul nun u. a. die folgenden Prüfungen durch:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Status der laufenden Module</p>
+</li>
+<li>
+<p>Überwachung der Datenintegrität</p>
+</li>
+<li>
+<p>Überwachung der Datenfrequenz</p>
+</li>
+<li>
+<p>Überwachung des Systemzustands (z. B. CPU-, Speicher-, Festplattennutzung usw.)</p>
+</li>
+<li>
+<p>Erzeugen eines End-to-End-Latenz-Statistikberichts</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ablageortdateien_2">5.3.4. Ablageort/Datei(en)</h4>
 <div class="paragraph">
 <p><a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/monitor" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/monitor</a></p>
 </div>
@@ -1208,7 +1201,7 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 
 </div>
 <div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale">5.4.3. Qualitäts-/Leistungsmerkmale</h4>
+<h4 id="_qualitäts_leistungsmerkmale_2">5.4.3. Qualitäts-/Leistungsmerkmale</h4>
 
 </div>
 <div class="sect3">
@@ -1310,7 +1303,7 @@ ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird
 
 </div>
 <div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale_2">5.7.3. Qualitäts-/Leistungsmerkmale</h4>
+<h4 id="_qualitäts_leistungsmerkmale_3">5.7.3. Qualitäts-/Leistungsmerkmale</h4>
 
 </div>
 <div class="sect3">
@@ -1325,11 +1318,21 @@ ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird
 <div class="sect3">
 <h4 id="_zweckverantwortung_7">5.8.1. Zweck/Verantwortung</h4>
 <div class="paragraph">
-<p>Das Routing-Modul muss den Start- und Endpunkt des Routings kennen, um die Durchfahrtsspuren und Straßen zu berechnen. Normalerweise ist der Startpunkt der Standort des autonomen Fahrzeugs. Die RoutingResponse wird wie unten gezeigt berechnet und veröffentlicht.
-==== Schnittstelle(n)
-==== Qualitäts-/Leistungsmerkmale
-==== Ablageort/Datei(en)
-<a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/routing" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/routing</a></p>
+<p>Das Routing-Modul muss den Start- und Endpunkt des Routings kennen, um die Durchfahrtsspuren und Straßen zu berechnen. Normalerweise ist der Startpunkt der Standort des autonomen Fahrzeugs. Die RoutingResponse wird wie unten gezeigt berechnet und veröffentlicht.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_schnittstellen_6">5.8.2. Schnittstelle(n)</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_qualitäts_leistungsmerkmale_4">5.8.3. Qualitäts-/Leistungsmerkmale</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_ablageortdateien_7">5.8.4. Ablageort/Datei(en)</h4>
+<div class="paragraph">
+<p><a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/routing" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/routing</a></p>
 </div>
 </div>
 </div>
@@ -1344,11 +1347,21 @@ ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird
 <p>Die erste Lokalisierungsmethode ist RTK-basiert, mit einer Timer-basierten Callback-Funktion OnTimer, wie unten gezeigt.</p>
 </div>
 <div class="paragraph">
-<p>Die andere Lokalisierungsmethode ist die Multiple Sensor Fusion (MSF)-Methode, bei der eine Reihe von ereignisgesteuerten Callback-Funktionen registriert werden, wie unten gezeigt.
-==== Schnittstelle(n)
-==== Qualitäts-/Leistungsmerkmale
-==== Ablageort/Datei(en)
-<a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/localization" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/localization</a></p>
+<p>Die andere Lokalisierungsmethode ist die Multiple Sensor Fusion (MSF)-Methode, bei der eine Reihe von ereignisgesteuerten Callback-Funktionen registriert werden, wie unten gezeigt.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_schnittstellen_7">5.9.2. Schnittstelle(n)</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_qualitäts_leistungsmerkmale_5">5.9.3. Qualitäts-/Leistungsmerkmale</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_ablageortdateien_8">5.9.4. Ablageort/Datei(en)</h4>
+<div class="paragraph">
+<p><a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/localization" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/localization</a></p>
 </div>
 </div>
 </div>
@@ -1362,11 +1375,11 @@ Wenn ein Lokalisierungsupdate empfangen wird, aktualisiert das Prediction-Modul 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_schnittstellen_6">5.10.2. Schnittstelle(n)</h4>
+<h4 id="_schnittstellen_8">5.10.2. Schnittstelle(n)</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_ablageortdateien_7">5.10.3. Ablageort/Datei(en)</h4>
+<h4 id="_ablageortdateien_9">5.10.3. Ablageort/Datei(en)</h4>
 <div class="paragraph">
 <p><a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/prediction" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/prediction</a></p>
 </div>
@@ -1377,645 +1390,24 @@ Wenn ein Lokalisierungsupdate empfangen wird, aktualisiert das Prediction-Modul 
 <div class="sect3">
 <h4 id="_zweckverantwortung_10">5.11.1. Zweck/Verantwortung</h4>
 <div class="paragraph">
-<p>Das Perception-Modul verfügt über die Fähigkeit, 5 Kameras (2 vorne, 2 seitlich und 1 hinten) und 2 Radare (vorne und hinten) zusammen mit 3 16-Linien-LiDARs (2 hinten und 1 vorne) und 1 128-Linien-LiDAR zu verwenden, um Hindernisse zu erkennen und ihre individuellen Spuren zu einer endgültigen Spurliste zu verschmelzen. Das Hindernis-Submodul erkennt, klassifiziert und verfolgt Hindernisse. Dieses Teilmodul sagt auch die Bewegung und Positionsinformationen des Hindernisses voraus (z. B. Richtung und Geschwindigkeit). Für die Fahrspur werden Fahrspurinstanzen durch Nachbearbeitung von Fahrspur-Parsing-Pixeln konstruiert und die relative Position der Fahrspur zum Ego-Fahrzeug berechnet (L0, L1, R0, R1, usw.).
-==== Schnittstelle(n)
-==== Ablageort/Datei(en)
-<a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/perception" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/perception</a></p>
+<p>Das Perception-Modul verfügt über die Fähigkeit, 5 Kameras (2 vorne, 2 seitlich und 1 hinten) und 2 Radare (vorne und hinten) zusammen mit 3 16-Linien-LiDARs (2 hinten und 1 vorne) und 1 128-Linien-LiDAR zu verwenden, um Hindernisse zu erkennen und ihre individuellen Spuren zu einer endgültigen Spurliste zu verschmelzen. Das Hindernis-Submodul erkennt, klassifiziert und verfolgt Hindernisse. Dieses Teilmodul sagt auch die Bewegung und Positionsinformationen des Hindernisses voraus (z. B. Richtung und Geschwindigkeit). Für die Fahrspur werden Fahrspurinstanzen durch Nachbearbeitung von Fahrspur-Parsing-Pixeln konstruiert und die relative Position der Fahrspur zum Ego-Fahrzeug berechnet (L0, L1, R0, R1, usw.).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_name_schnittstelle_1">5.11.2. &lt;Name Schnittstelle 1&gt;</h4>
+<h4 id="_ablageortdateien_10">5.11.2. Ablageort/Datei(en)</h4>
+<div class="paragraph">
+<p><a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/perception" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/perception</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_name_schnittstelle_1">5.11.3. &lt;Name Schnittstelle 1&gt;</h4>
 <div class="paragraph">
 <p>&#8230;&#8203;</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_name_schnittstelle_m">5.11.3. &lt;Name Schnittstelle m&gt;</h4>
+<h4 id="_name_schnittstelle_m">5.11.4. &lt;Name Schnittstelle m&gt;</h4>
 
-</div>
-</div>
-<div class="sect2">
-<h3 id="_ebene_2">5.12. Ebene 2</h3>
-<div class="sect3">
-<h4 id="_whitebox_baustein_1">5.12.1. Whitebox <em>&lt;Baustein 1&gt;</em></h4>
-<div class="paragraph">
-<p><em>&lt;Whitebox-Template&gt;</em></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_whitebox_baustein_2">5.12.2. Whitebox <em>&lt;Baustein 2&gt;</em></h4>
-<div class="paragraph">
-<p><em>&lt;Whitebox-Template&gt;</em></p>
-</div>
-<div class="paragraph">
-<p>&#8230;&#8203;</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_whitebox_baustein_m">5.12.3. Whitebox <em>&lt;Baustein m&gt;</em></h4>
-<div class="paragraph">
-<p><em>&lt;Whitebox-Template&gt;</em></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_ebene_3">5.13. Ebene 3</h3>
-<div class="sect3">
-<h4 id="_whitebox_baustein_x_1">5.13.1. Whitebox &lt;_Baustein x.1_&gt;</h4>
-<div class="paragraph">
-<p><em>&lt;Whitebox-Template&gt;</em></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_whitebox_baustein_x_2">5.13.2. Whitebox &lt;_Baustein x.2_&gt;</h4>
-<div class="paragraph">
-<p><em>&lt;Whitebox-Template&gt;</em></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_whitebox_baustein_y_1">5.13.3. Whitebox &lt;_Baustein y.1_&gt;</h4>
-<div class="paragraph">
-<p><em>&lt;Whitebox-Template&gt;</em></p>
-</div>
-<div class="sect4">
-<h5 id="_hardware_development_platform_2">Hardware Development Platform</h5>
-<div class="paragraph">
-<p>STUFF</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>ASU</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Apollo Sensor Unit (ASU) is designed to work with Industrial PC (IPC) to implement sensor fusion, vehicle control and network access in Apollo&#8217;s autonomous driving platform.</p>
-</li>
-<li>
-<p>The ASU system provides sensor interfaces to collect data from various sensors, including cameras, Radars, and Ultrasonic Sensors. The system also utilizes pulse per second (PPS) and GPRMC signals from GNSS receiver to enable synchronization for the camera and LiDAR sensors.</p>
-</li>
-<li>
-<p>The communication between the ASU and the IPC is through PCI Express Interface. ASU collects sensor data and passes to IPC via PCI Express Interface, and the IPC uses the ASU to send out Vehicle Control commands in the Controller Area Network (CAN) protocol.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>AXU
-Apollo Extension Unit (AXU) is designed to boost computation capability and expand storage capacity by enabling developers to plug-in additional accelerators including GPU, FPGA modules, and etc.</p>
-</div>
-<div class="paragraph">
-<p>ACU
-Apollo Computing Unit</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Introduction：</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Integrated Autosar software；</p>
-</li>
-<li>
-<p>ASIL-D functional safety level with special hardware safety island design；</p>
-</li>
-<li>
-<p>100% Auto-grade components；</p>
-</li>
-<li>
-<p>IATF16949 design with PPAP supply chain and production management；</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Features:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Power supply：8~16V</p>
-</li>
-<li>
-<p>Max Power Consumption：28W（Static Power Consumption&lt;0.1mA）</p>
-</li>
-<li>
-<p>Computing Power：Up to 1.5TOPS</p>
-</li>
-<li>
-<p>SOC/MCU：Xilinx ZU5/ Aurix TC297</p>
-</li>
-<li>
-<p>Operating temperature：-40~85℃</p>
-</li>
-<li>
-<p>OS：Linux/QNX &amp; AUTOSAR</p>
-</li>
-<li>
-<p>Size：</p>
-</li>
-<li>
-<p>200 x 170 x 36mm（Working temperatures 85C）or</p>
-</li>
-<li>
-<p>200 x 120 x 36mm（Working temperatures 70C)</p>
-</li>
-<li>
-<p>Cooling: Natural Cooling</p>
-</li>
-<li>
-<p>Interface：</p>
-</li>
-<li>
-<p>5＊GMSL Video Input - support 1.3 megapixel and 2 megapixel</p>
-</li>
-<li>
-<p>1＊GMSL Video Output</p>
-</li>
-<li>
-<p>4＊CAN（support CAN-FD）</p>
-</li>
-<li>
-<p>12＊Ultrasonic Rdar Interface</p>
-</li>
-<li>
-<p>1＊100BASE-T1</p>
-</li>
-<li>
-<p>3＊Analog Switch</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>CAN-PCIe/402-B4</p>
-</div>
-<div class="paragraph">
-<p>Nuvo-6108GC
-Vendor：NeousysApollo Platform Supported
-Introduction：Nuvo-6018GC is world&#8217;s first industrial-grade GPU computer supporting high-end graphics cards. It&#8217;s designed to fuel emerging GPU-accelerated applications, such as artificial intelligence, VR, autonomous driving and CUDA computing, by accommodating NVIDIA® GPU with up to 250W TDP.
-Link</p>
-</div>
-<div class="paragraph">
-<p>ProPak6™
-Vendor：NovAtelApollo Platform Supported
-Introduction：ProPak6™ is an enclosure product manufactured by NovAtel. From standalone metre-level to RTK centimetre-level positioning, the ProPak6 is flexible to meet your positioning needs. Reliability is safeguarded as a result of the extremely rugged and water resistant IP67 housing combined with its wide operating temperature range. NovAtel has also assured faster time to market by reducing integration time with standardized software and hardware connections. The ProPak6 offers optional GPRS/HSPA cellular modem and/or heading options to provide a solution for many applications.
-Link
-PwrPak 7D
-Vendor：NovAtelApollo Platform Supported
-Introduction：The PwrPak7D is a robust, high precision receiver ideal for ground vehicle, marine or aircraft based systems. Its multi-frequency dual antenna input allows the PwrPak7D to utilize NovAtel CORRECT® with RTK and ALIGN® functionality. The PwrPak7D has a powerful OEM7® Global Navigation Satellite System (GNSS) inside and offers built-in Wi-Fi, on board NTRIP client and server support and 16 GB of internal storage.
-Link
-NV-GI120
-Vendor：NavTech Inc.Apollo Hardware Development Platform Supported
-Introduction：NV-GI120 is a position and orientation system for automatic drive of NAV Technology. With the high-precision GNSS board card and high-precision MEMS gyro, it has the real-time attitude and position resolving ability while transmitting the original data of the sensor and board card for post-processing high-precision resolution.
-Newton-M1
-Vendor：Starneto
-Introduction：Newton series MEMS inertial/satellite integrated navigation products not only have compact structure , rich interface resources, but also highly cost-effective. Moreover, they can realize high frequency and precision position, speed detection and attitude determination for various vehicles.
-Link</p>
-</div>
-<div class="paragraph">
-<p>MARS
-Vendor：ON SemiconductorApollo Hardware Development Platform supported
-Introduction：The Modular Automotive Reference System (MARS) is a complete imaging solution for camera system developers and software developers working on automotive imaging applications. MARS gives engineers and software developers the fundamental building blocks needed to create next generation imaging systems, while reducing the design effort and resources required to develop a working solution.
-Link
-Vendor：Wissen TechnologiesApollo Hardware Development Platform Supported</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Introduction：</p>
-<div class="ulist">
-<ul>
-<li>
-<p>30mm x 30mm coax camera module</p>
-</li>
-<li>
-<p>1080p FHD YUV422 data</p>
-</li>
-<li>
-<p>HDR function(High Dynamic Range) higher than 100dB</p>
-</li>
-<li>
-<p>support external trigger function</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Link
-LI-USB30-AR023ZWDR
-Vendor：Leopard Imaging Inc.Apollo Platform Supported</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Introduction：</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Key Features：</p>
-</li>
-<li>
-<p>USB 3.0 Super Speed support</p>
-</li>
-<li>
-<p>Support register access function</p>
-</li>
-<li>
-<p>ON Semiconductor AR023Z 1080p HD Sensor</p>
-</li>
-<li>
-<p>Support CS lens</p>
-</li>
-<li>
-<p>Pixel Size: 3.0um x 3.0um</p>
-</li>
-<li>
-<p>Provide customization services</p>
-</li>
-<li>
-<p>YUV output without compression</p>
-</li>
-<li>
-<p>USB +5VDC powered device</p>
-</li>
-<li>
-<p>UVC compliance</p>
-</li>
-<li>
-<p>Built in AP0202 ISP</p>
-</li>
-<li>
-<p>Support External Trigger, Software Trigger</p>
-</li>
-<li>
-<p>Compact Size: 30mm x 30mm</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>ARS408-21
-Vendor：ContinentalApollo Platform Supported
-Introduction：The ARS408 realized a broad field of view by two independent scans in conjunction with the high range functions like Adaptive Cruise Control, Forward Collision Warning and Emergency Brake Assist can be easily implemented. Its capability to detect stationary objects without the help of a camera system emphasizes its performance. The ARS408 is a best in class radar, especially for the stationary target detection and separation.
-Link
-B01HC
-Vendor：RacobitApollo Hardware Development Platform Supported
-Introduction：The 77GHz millimeter-wave automotive anti-collision radar developed by RACO (Beijing Racobit Electronic Information Technology Co., Ltd) utilizing MIMO virtual aperture technology achieves higher precision, finer angle resolution and smaller volume, which is compatible with long-and-mid-range detection function. It enables real-time detection of the vehicle&#8217;s driving environment as well as other vehicle targets in various working environments, which is the core sensor of the driverless technology and ADAS system.</p>
-</div>
-<div class="paragraph">
-<p>VLS-128
-Vendor：VelodyneApollo Platform Supported</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Introduction：</p>
-<div class="ulist">
-<ul>
-<li>
-<p>360° Horizontal FOV</p>
-</li>
-<li>
-<p>+15° to -25° Vertical FOV</p>
-</li>
-<li>
-<p>Up to 300m Range</p>
-</li>
-<li>
-<p>Minimum Angular Resolution: 0.11°</p>
-</li>
-<li>
-<p>Up to 4 Return Modes</p>
-</li>
-<li>
-<p>Up to ~9.6 Million Points per Second</p>
-</li>
-<li>
-<p>Environmental Protection: IP67</p>
-</li>
-<li>
-<p>Connectors: RJ45 / M12</p>
-</li>
-<li>
-<p>High Volume, Automotive Grade Contract Pricing
-Link
-Scala 2
-Vendor：ValeoApollo Hardware Development Platform supported
-Introduction：Valeo provides its laser scanner to Apollo. The Valeo SCALA® is the first 3D laser scanner compliant with the fierce requirements for automotive mass production. SCALA® offers an unique combination of wide field of view, large detection range and high precision, capable of detecting both stationary and moving objects during day and night.
-Link
-M16-LSR
-Vendor：LeddarTechApollo Hardware Development Platform supported
-Introduction：The Leddar M16 Sensor Modules are advanced, solid-state LiDAR solutions that combine wide-beam flash illumination with 16 independent detection segments to simultaneously deliver rapid, continuous and precise detection and ranging for multiple objects along with excellent lateral discrimination. Based on the patented Leddar Technology, LeddarTech’s off-the-shelf solid-state LiDAR modules for mobility applications are ready for integration into specific projects for R&amp;D, proof-of-concept, field validation, and platform seeding.
-Link
-LEDDARVU (VU8)
-Vendor：LeddarTechApollo Hardware Development Platform supported
-Introduction：Leddar Vu8 is an affordable, versatile solid-state LiDAR sensor module that delivers exceptional detection and ranging performance in a small, robust package. LeddarVu modules provide the ability to detect and track multiple objects simultaneously over eight distinct segments with superior lateral discrimination capabilities. Based on the patented Leddar Technology, LeddarTech’s off-the-shelf solid-state LiDAR modules for mobility applications are ready for integration into specific projects for R&amp;D, proof-of-concept, field validation, and platform seeding.
-Link
-HDL-64E S3
-Vendor：VelodyneApollo Platform Supported
-Introduction：The HDL-64E LiDAR sensor is designed for obstacle detection and navigation of autonomous ground vehicles and marine vessels. Its durability, 360° field of view and very high data rate makes this sensor ideal for the most demanding perception applications as well as 3D mobile data collection and mapping applications. The HDL-64E‘s innovative laser array enables navigation and mapping systems to observe more of their environment than any other LiDAR sensor.
-Link
-ULTRA Puck VLP-32C
-Vendor：VelodyneApollo Hardware Development Platform supported
-Introduction：Velodyne LiDAR&#8217;s ULTRA Puck™ VLP-32C is the newest long-range LiDAR sensor in its product portfolio that combines best-in-class performance with a small form factor. A high-resolution LiDAR sensor that is cost- effective when compared to similar performance sensors but developed with automotive applications in mind to ensure reliability while delivering the performance demanded by the market. The VLP-32C retains the innovative breakthroughs in 3D LiDAR such as 360° surround view along with real-time 3D data that includes distance and calibrated reflectivity measurements along with rotational angles.
-Link
-PUCK VLP-16, PUCK Hi-Res, PUCK LITE
-Vendor：VelodyneApollo Hardware Development Platform Supported
-Introduction：Velodyne&#8217;s new PUCK™ (VLP-16) sensor is the smallest, newest, and most advanced product in Velodyne&#8217;s 3D LiDAR product range. Vastly more cost-effective than similarly priced sensors, and developed with mass production in mind, it retains the key features of Velodyne&#8217;s breakthroughs in LiDAR: Real-time, 360°, 3D distance and calibrated reflectivity measurements.
-Link
-Pandora
-Vendor：HesaiApollo Platform Supported
-Introduction：Pandora is an all-in-one sensor kit for environmental sensing for self-driving cars. It integrates cameras, LiDAR and data processing ability (from Baidu Apollo) into the same module, with advanced synchronization and calibration solutions.
-Link
-Vendor：InnovusionApollo Hardware Development Platform Supported</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Introduction：</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Resolution: provides near picture quality with over 300 lines of resolution and several hundred pixels in both the vertical and horizontal dimensions.</p>
-</li>
-<li>
-<p>Range: detects both light and dark objects at distances up to 150 meters away which allows cars to react and make decisions at freeway speeds and during complex driving situations.</p>
-</li>
-<li>
-<p>Sensor fusion: fuses LiDAR raw data with camera video in the hardware layer which dramatically reduces latency, increases computing efficiency and creates a superior sensor experience.</p>
-</li>
-<li>
-<p>Accessibility: enables a compact design which allows for easy and flexible integration without impairing vehicle aerodynamics.  Innovusion’s products leverage components available from mature supply chain partners, enabling fast time-to-market, affordable pricing and mass production.
-C16 Series
-Vendor：LeiShen Intelligent SystemApollo Hardware Development Platform Supported
-Introduction：LeiShen’s developing 3D Multi-channel LiDARs including 2/4/8/16/32-channel have excellent cost performance ratio and wide range of applications.
-Link
-Rs-LiDAR-16
-Vendor：RobosenseApollo Hardware Development Platform Supported
-Introduction：The compact housing of RS-LiDAR-16 mounted with 16 laser/detector pairs rapidly spins and sends out high-frequency laser beams to continuously scan the Surrounding environment. Advanced digital signal processing and ranging algorithms calculate point cloud data and reflectivity of objects to enable machine to 'see' the world and providing reliable data for localization, navigation and obstacle avoidance.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="section-runtime-view">6. Laufzeitsicht</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>TBD</p>
-</div>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="section-deployment-view">7. Verteilungssicht</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_infrastruktur_ebene_1">7.1. Infrastruktur Ebene 1</h3>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Hardware_overview_3_5.png" alt="Deployment von Apollo Auto"></span></p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Begründung</dt>
-<dd>
-<p><em>&lt;Erläuternder Text&gt;</em></p>
-</dd>
-<dt class="hdlist1">Qualitäts- und/oder Leistungsmerkmale</dt>
-<dd>
-<p><em>&lt;Erläuternder Text&gt;</em></p>
-</dd>
-<dt class="hdlist1">Zuordnung von Bausteinen zu Infrastruktur</dt>
-<dd>
-<p><em>&lt;Beschreibung der Zuordnung&gt;</em></p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_infrastruktur_ebene_2">7.2. Infrastruktur Ebene 2</h3>
-<div class="sect3">
-<h4 id="_infrastrukturelement_1">7.2.1. <em>&lt;Infrastrukturelement 1&gt;</em></h4>
-<div class="paragraph">
-<p><em>&lt;Diagramm + Erläuterungen&gt;</em></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_infrastrukturelement_2">7.2.2. <em>&lt;Infrastrukturelement 2&gt;</em></h4>
-<div class="paragraph">
-<p><em>&lt;Diagramm + Erläuterungen&gt;</em></p>
-</div>
-<div class="paragraph">
-<p>&#8230;&#8203;</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_infrastrukturelement_n">7.2.3. <em>&lt;Infrastrukturelement n&gt;</em></h4>
-<div class="paragraph">
-<p><em>&lt;Diagramm + Erläuterungen&gt;</em></p>
-</div>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="section-concepts">8. Querschnittliche Konzepte</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Dieser Abschnitt beschreibt allgemeine Strukturen und Aspekte, die systemweit gelten. Darüber hinaus stellt er verschiedene technische Lösungskonzepte vor.</p>
-</div>
-<div class="sect2">
-<h3 id="_unter_der_haube">8.1. Unter-der-Haube</h3>
-<div class="paragraph">
-<p>Die Dynamik von autonomen Fahrzeugen (AV) wird von der Planungs-Engine über den Controller Area Network-Bus (CAN-Bus) gesteuert. Die Software liest Daten aus Hardware-Registern und schreibt sie zurück, genau wie wir es in Assembler tun würden. Für hochpräzise Berechnungen arbeiten die Lokalisierungs-, Wahrnehmungs- und Planungsmodule als unabhängige Eingabequellen, während die Ausgabequellen über das Peer2Peer (P2P)-Protokoll zusammenarbeiten. P2P wird durch die RPC-Netzwerkanwendung unterstützt.</p>
-</div>
-<div class="paragraph">
-<p>Apollo Auto verwendet ROS1 als zugrunde liegendes Netzwerk, was bedeutet, dass Apollo Auto das Master-Nodes-Framework von ROS1 entlehnt. Da xmlRPC von ROS1 wirklich alt ist (im Vergleich zu den neueren brpc und grpc), hat Baidu seine eigene protobuf-Version von RPC entwickelt.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_konzept_2">8.2. <em>&lt;Konzept 2&gt;</em></h3>
-<div class="paragraph">
-<p><em>&lt;Erklärung&gt;</em></p>
-</div>
-<div class="paragraph">
-<p>&#8230;&#8203;</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_konzept_n">8.3. <em>&lt;Konzept n&gt;</em></h3>
-<div class="paragraph">
-<p><em>&lt;Erklärung&gt;</em></p>
-</div>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="section-design-decisions">9. Entwurfsentscheidungen</h2>
-<div class="sectionbody">
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="section-quality-scenarios">10. Qualitätsanforderungen</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Dieser Abschnitt beinhaltet konkrete Qualitätsszenarien, welche die zentralen Qualitätsziele, aber auch andere geforderte Qualitätseigenschaften besser fassen. Sie ermöglichen es, Entscheidungsoptionen zu bewerten.</p>
-</div>
-<div class="sect2">
-<h3 id="_qualitätsbaum">10.1. Qualitätsbaum</h3>
-<div class="paragraph">
-<p>Das folgende Bild gibt einen Überblick über die relevanten Qualitätsmerkmale und den ihnen jeweils zugeordneten Szenarien.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/qualitytree.png" alt="Qualitätsbaum"></span></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_qualitätsszenarien">10.2. Qualitätsszenarien</h3>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="section-technical-risks">11. Risiken und technische Schulden</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Die folgenden Risiken wurden zu Beginn des Vorhabens identifiziert. Sie beeinflussten die Planung der ersten drei Iterationen maßgeblich. Seit Abschluss der dritten Iteration werden sie beherrscht. Dieser Architekturüberblick zeigt die Risiken inklusive der damaligen Eventualfallplanung weiterhin, wegen ihres großen Einflusses auf die Lösung.</p>
-</div>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="section-glossary">12. Glossar</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Das folgende Glossar erklärt Begriffe aus dem Bereich Autonomes Fahren.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 66.6667%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Begriff</th>
-<th class="tableblock halign-left valign-top">Definition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>By-Wire</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Bezeichnung für (zumindest partielles) Fahren oder Steuern von Fahrzeugen ohne mechanische Kraftübertragung der Bedienelemente zu den entsprechenden Stellelementen wie etwa Drosselklappen. Das By-Wire-Konzept umfasst dabei zumindest zwei oder mehr der „X-by-Wire“- Systeme wie etwa Brake-by-Wire (Bremssteuerung) und Steer-by-Wire (Lenkung)..</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>LIDAR</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>ist eine dem Radar verwandte Methode zur optischen Abstands- und Geschwindigkeitsmessung sowie zur Fernmessung. Statt der Radiowellen wie beim Radar werden Laserstrahlen verwendet.</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>RADAR</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>ist die Bezeichnung für verschiedene Erkennungs- und Ortungsverfahren und -geräte auf der Basis elektromagnetischer Wellen im Radiofrequenzbereich (Funkwellen).</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>P2P</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Peer-to-Peer und Rechner-Rechner-Verbindung sind synonyme Bezeichnungen für eine Kommunikation unter Gleichen, hier bezogen auf ein Rechnernetz.</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>RPC</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Remote Procedure Call ist eine Technik zur Realisierung von Interprozesskommunikation. Sie ermöglicht den Aufruf von Funktionen in anderen Adressräumen. Im Normalfall werden die aufgerufenen Funktionen auf einem anderen Computer als das aufrufende Programm ausgeführt.</em></p></td>
-</tr>
-</tbody>
-</table>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="section-appendix">13. Anhang</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_apollo">13.1. Apollo</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_arc42">13.2. Arc42</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>die Dokumentation muss bereits zu Beginn der Arbeiten an der Architektur/am Quellcode erfolgen um stets den aktuellen Stand abbilden zu können.</p>
-</li>
-<li>
-<p>die Dokumentation soll mit dem Projekt wachsen!</p>
-</li>
-<li>
-<p>die nachträgliche Dokumentation ist eine Sysiphusarbeit</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Beispiel:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Diagramme in der Laufzeitsicht sind effizienter zu gestalten während ein Modul im Entstehen ist. Änderungen können mit jeder Entwicklungsstufe eingepflegt werden.</p>
-</li>
-<li>
-<p>Ein fertiges Modul in ein Diagramm zu überführen erfordert viel Zeit, da alle beteiligten Module und deren Funktionsweise erst identifiziert werden müssen.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_doctoolchain">13.3. docToolChain</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>plantUML ist zwar bei sehr einfachen Diagrammen eine Erleichterung, kommt aber an beispielsweise draw.io oder tikz (in Latex) nicht heran wenn es um komplexe und detailierte Diagramme geht</p>
-<div class="ulist">
-<ul>
-<li>
-<p>teilweise werden bei der inline-Erstellung bei plantUML Diagrammeinstellungen nicht übernommen</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Schriftgrößen sind nicht einstellbar, was an manchen Stellen - z.B Tabellen nötig gewesen wäre</p>
-</li>
-<li>
-<p>Ansonsten ist docToolChain eine interessante Alternative, besonders in Bezug auf den CI-Task in github.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>damit nicht bei jedem Commit die Dokumentation neu erstellt wird, bietet github die Möglichkeit über Commitnachrichten, z.B "[no ci]" oder "[skip ci]" den CI-Task auszusetzen. Hier wäre es sinnvoller über Commitnachrichten explizit die Generierung zu starten.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
 </div>
 </div>
 </div>
@@ -2023,7 +1415,7 @@ Introduction：The compact housing of RS-LiDAR-16 mounted with 16 laser/detector
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-19 22:02:36 UTC
+Last updated 2021-06-19 22:31:39 UTC
 </div>
 </div>
 </body>
