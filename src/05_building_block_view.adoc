@@ -88,42 +88,46 @@ image:Apollo_3_5_software_architecture.png["Bausteinsicht, Ebene 1"]
 
 Begründung:: _<Erläuternder Text>_
 
-Enthaltene Bausteine:: _<Beschreibung der enthaltenen Bausteine (Blackboxen)>_
+Enthaltene Bausteine:: 
+[cols="1,2" options="header"]
+|===
+| **Name** | **Verantwortung**
+
+| Guardian 
+| Ein Sicherheitsmodul, das die Funktion eines Aktionszentrums übernimmt und eingreift, wenn Monitor einen Fehler erkennt.
+
+| Monitor 
+| Das Überwachungssystem aller Module im Fahrzeug inklusive Hardware.
+
+| HMI/Dreamview 
+| Human Machine Interface oder DreamView in Apollo ist ein Modul zur Anzeige des Fahrzeugstatus, zum Testen anderer Module und zur Steuerung der Funktion des Fahrzeugs in Echtzeit.
+
+| CANBus 
+| Der CanBus ist die Schnittstelle, die Steuerbefehle an die Fahrzeughardware weitergibt. Außerdem gibt er die Fahrwerksinformationen an das Softwaresystem weiter.
+
+| Control 
+| Das Control-Modul führt die geplante räumlich-zeitliche Trajektorie aus, indem es Steuerbefehle wie Gas, Bremse und Lenkung erzeugt.
+
+| Planning 
+| Das Planning-Modul plant die räumlich-zeitliche Trajektorie, die das autonome Fahrzeug fahren soll.
+
+| Routing 
+| Das Routing Modul sagt dem autonomen Fahrzeug, wie es sein Ziel über eine Reihe von Fahrspuren oder Straßen erreichen kann.
+
+| Localization 
+| Das Localization-Modul nutzt verschiedene Informationsquellen wie GPS, LiDAR und IMU, um zu schätzen, wo sich das autonome Fahrzeug befindet.
+
+| Prediction 
+| Das Prediction-Modul antizipiert die zukünftigen Bewegungstrajektorien der wahrgenommenen Hindernisse.
+
+| Perception 
+| Das Perception-Modul identifiziert die Welt, die das autonome Fahrzeug umgibt. Innerhalb Perception gibt es zwei wichtige Teilmodule: Hinderniserkennung und Ampelerkennung.
+
+|===
 
 Wichtige Schnittstellen:: _<Beschreibung wichtiger Schnittstellen>_
 
-//[role="arc42help"]
-//****
-//Hier folgen jetzt Erläuterungen zu Blackboxen der Ebene 1.
-
-//Falls Sie die tabellarische Beschreibung wählen, so werden Blackboxen darin nur mit Name und Verantwortung nach folgendem Muster beschrieben:
-
-//[cols="1,2" options="header"]
-//|===
-//| **Name** | **Verantwortung**
-//| _<Blackbox 1>_ | _<Text>_
-//| _<Blackbox 2>_ | _<Text>_
-//|===
-
-//Falls Sie die ausführliche Liste von Blackbox-Beschreibungen wählen, beschreiben Sie jede wichtige Blackbox in einem eigenen Blackbox-Template.
-//Dessen Überschrift ist jeweils der Namen dieser Blackbox.
-//****
-
-==== Guardian
-
-//[role="arc42help"]
-//****
-//Beschreiben Sie die <Blackbox 1> anhand des folgenden Blackbox-Templates:
-
-//* Zweck/Verantwortung
-//* Schnittstelle(n), sofern diese nicht als eigenständige Beschreibungen herausgezogen sind.
-//Hierzu gehören eventuell auch Qualitäts- und Leistungsmerkmale dieser Schnittstelle.
-//* (Optional) Qualitäts-/Leistungsmerkmale der Blackbox, beispielsweise Verfügbarkeit, Laufzeitverhalten o. Ä.
-Ablageort/Datei(en)
-
-//* (Optional) Erfüllte Anforderungen, falls Sie Traceability zu Anforderungen benötigen.
-//* (Optional) Offene Punkte/Probleme/Risiken
-//****
+=== Guardian
 
 ==== Zweck/Verantwortung
 Ein Sicherheitsmodul, dass die Funktion eines "Action Centers" übernimmt und eingreift, wenn das Modul Monitor einen Fehler erkennt.
@@ -139,7 +143,9 @@ Ein Sicherheitsmodul, dass die Funktion eines "Action Centers" übernimmt und ei
 ** Reagieren die Ultraschallsensoren nicht, bremst Guardian hart ab, um das Auto sofort zum Stillstand zu bringen.
 ** Ein Sonderfall liegt vor, wenn das HMI den Fahrer über einen drohenden Unfall informiert und der Fahrer 10 Sekunden lang nicht eingreift, führt Guardian eine Vollbremsung durch, um das Fahrzeug sofort zum Stehen zu bringen.
 
-//_<(Optional) Ablageort/Datei(en)>_
+==== Ablageort/Datei(en)
+https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/guardian
+
 //_<(Optional) Erfüllte Anforderungen>_
 //_<(optional) Offene Punkte/Probleme/Risiken>_
 
@@ -150,14 +156,67 @@ Das Überwachungssystem für alle Module im Fahrzeug einschließlich der Hardwar
 ==== Schnittstelle(n)
 
 //==== Qualitäts-/Leistungsmerkmale
-//_<(Optional) Ablageort/Datei(en)>_
+==== Ablageort/Datei(en)
+https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/monitor
+
 //_<(Optional) Erfüllte Anforderungen>_
 //_<(optional) Offene Punkte/Probleme/Risiken>_
 
-==== HMI
+=== HMI/Dreamview
+==== Zweck/Verantwortung
+==== Schnittstelle(n)
+==== Qualitäts-/Leistungsmerkmale
+==== Ablageort/Datei(en)
+https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/dreamview
 
-_<Blackbox-Template>_
+=== CANBus
+==== Zweck/Verantwortung
+==== Schnittstelle(n)
+==== Qualitäts-/Leistungsmerkmale
+==== Ablageort/Datei(en)
+https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/canbus
 
+=== Control
+==== Zweck/Verantwortung
+==== Schnittstelle(n)
+==== Qualitäts-/Leistungsmerkmale
+==== Ablageort/Datei(en)
+https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/control
+
+=== Planning
+==== Zweck/Verantwortung
+==== Schnittstelle(n)
+==== Qualitäts-/Leistungsmerkmale
+==== Ablageort/Datei(en)
+https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/planning
+
+=== Routing
+==== Zweck/Verantwortung
+==== Schnittstelle(n)
+==== Qualitäts-/Leistungsmerkmale
+==== Ablageort/Datei(en)
+https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/routing
+
+=== Localization
+==== Zweck/Verantwortung
+==== Schnittstelle(n)
+==== Qualitäts-/Leistungsmerkmale
+==== Ablageort/Datei(en)
+https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/localization
+
+=== Prediction
+==== Zweck/Verantwortung
+==== Schnittstelle(n)
+==== Qualitäts-/Leistungsmerkmale
+==== Ablageort/Datei(en)
+https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/prediction
+
+=== Perception
+==== Zweck/Verantwortung
+==== Schnittstelle(n)
+==== Qualitäts-/Leistungsmerkmale
+==== Ablageort/Datei(en)
+https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/perception
 
 ==== <Name Schnittstelle 1>
 
