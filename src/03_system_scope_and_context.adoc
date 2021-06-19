@@ -1,96 +1,28 @@
 [[section-system-scope-and-context]]
 == Kontextabgrenzung
 
-Dieser Abschnitt beschreibt das Umfeld von Baidu Apollo. Für welche Benutzer ist es da, und mit welchen Fremdsystemen interagiert es?
+Dieser Abschnitt beschreibt das Umfeld von Apollo Auto. Für welche Benutzer ist es da, und mit welchen Fremdsystemen interagiert es?
 
-[role="arc42help"]
-****
-.Inhalt
-Die Kontextabgrenzung grenzt das System von allen Kommunikationsbeziehungen (Nachbarsystemen und Benutzerrollen) ab.
-Sie legt damit die externen Schnittstellen fest.
+//[role="arc42help"]
+//****
+//.Inhalt
+//Die Kontextabgrenzung grenzt das System von allen Kommunikationsbeziehungen (Nachbarsystemen und Benutzerrollen) ab.
+//Sie legt damit die externen Schnittstellen fest.
 
-Differenzieren Sie fachliche (fachliche Ein- und Ausgaben) und technische Kontexte (Kanäle, Protokolle, Hardware), falls nötig.
+//Differenzieren Sie fachliche (fachliche Ein- und Ausgaben) und technische Kontexte (Kanäle, Protokolle, Hardware), falls nötig.
 
-.Motivation
-Die fachlichen und technischen Schnittstellen zur Kommunikation gehören zu den kritischsten Aspekten eines Systems.
-Stellen Sie sicher, dass Sie diese komplett verstanden haben.
+//.Motivation
+//Die fachlichen und technischen Schnittstellen zur Kommunikation gehören zu den kritischsten Aspekten eines Systems.
+//Stellen Sie sicher, dass Sie diese komplett verstanden haben.
 
-.Form
-Verschiedene Optionen:
+//.Form
+//Verschiedene Optionen:
 
-* Diverse Kontextdiagramme
-* Listen von Kommunikationsbeziehungen mit deren Schnittstellen
-****
+//* Diverse Kontextdiagramme
+//* Listen von Kommunikationsbeziehungen mit deren Schnittstellen
+//****
 
 === Fachlicher Kontext
-
-.Benutzer und Benutzergruppen von VENOM
-[plantuml, "{plantUMLDir}fachkontext", png]
-----
-!pragma graphviz_dot smetana
-skinparam rectangle {
-    roundCorner<<Concept>> 25
-}
-rectangle "Apollo Auto" <<system>> as AA
-rectangle "Open Vehicle Certification Platform" as OVCP
-rectangle "Hardware Development Platform" as HDP
-rectangle "Open Software Platform" as OSP
-rectangle "Open Service Platform" as OServiceP
-rectangle "Solutions" as S
-
-AA --> OVCP
-AA --> HDP
-AA --> OSP
-AA --> OServiceP
-AA --> S
-----
-
-[role="arc42help"]
-****
-.Inhalt
-Festlegung *aller* Kommunikationsbeziehungen (Nutzer, IT-Systeme, ...) mit Erklärung der fachlichen Ein- und Ausgabedaten oder Schnittstellen.
-Zusätzlich (bei Bedarf) fachliche Datenformate oder Protokolle der Kommunikation mit den Nachbarsystemen.
-
-.Motivation
-Alle Beteiligten müssen verstehen, welche fachlichen Informationen mit der Umwelt ausgetauscht werden.
-
-.Form
-Alle Diagrammarten, die das System als Blackbox darstellen und die fachlichen Schnittstellen zu den Nachbarsystemen beschreiben.
-
-Alternativ oder ergänzend können Sie eine Tabelle verwenden.
-Der Titel gibt den Namen Ihres Systems wieder; die drei Spalten sind: Kommunikationsbeziehung, Eingabe, Ausgabe.
-****
-
-**<Diagramm und/oder Tabelle>**
-
-**<optional: Erläuterung der externen fachlichen Schnittstellen>**
-
-:important-caption: ausführlich
-
-=== Technischer Kontext
-
-[role="arc42help"]
-****
-.Inhalt
-Technische Schnittstellen (Kanäle, Übertragungsmedien) zwischen dem System und seiner Umwelt.
-Zusätzlich eine Erklärung (_mapping_), welche fachlichen Ein- und Ausgaben über welche technischen Kanäle fließen.
-
-.Motivation
-Viele Stakeholder treffen Architekturentscheidungen auf Basis der technischen Schnittstellen des Systems zu seinem Kontext.
-
-Insbesondere bei der Entwicklung von Infrastruktur oder Hardware sind diese technischen Schnittstellen durchaus entscheidend.
-
-.Form
-Beispielsweise UML Deployment-Diagramme mit den Kanälen zu Nachbarsystemen, begleitet von einer Tabelle, die Kanäle auf Ein-/Ausgaben abbildet.
-****
-
-**<Diagramm oder Tabelle>**
-
-**<optional: Erläuterung der externen technischen Schnittstellen>**
-
-**<Mapping fachliche auf technische Schnittstellen>**
-
-ausführlich
 
 .Benutzer und Benutzergruppen von VENOM
 [plantuml, "{plantUMLDir}demoPlantUML", png]
@@ -112,4 +44,71 @@ bodies -up-> venom
 ops --> venom
 internal -left-> venom
 ----
+
+//[role="arc42help"]
+//****
+//.Inhalt
+//Festlegung *aller* Kommunikationsbeziehungen (Nutzer, IT-Systeme, ...) mit Erklärung der fachlichen Ein- und Ausgabedaten oder Schnittstellen.
+//Zusätzlich (bei Bedarf) fachliche Datenformate oder Protokolle der Kommunikation mit den Nachbarsystemen.
+
+//.Motivation
+//Alle Beteiligten müssen verstehen, welche fachlichen Informationen mit der Umwelt ausgetauscht werden.
+
+//.Form
+//Alle Diagrammarten, die das System als Blackbox darstellen und die fachlichen Schnittstellen zu den Nachbarsystemen beschreiben.
+
+//Alternativ oder ergänzend können Sie eine Tabelle verwenden.
+//Der Titel gibt den Namen Ihres Systems wieder; die drei Spalten sind: Kommunikationsbeziehung, Eingabe, Ausgabe.
+//****
+
+//**<Diagramm und/oder Tabelle>**
+
+//**<optional: Erläuterung der externen fachlichen Schnittstellen>**
+
+=== Technischer Kontext
+
+.Technischer Kontext von Apollo Auto
+[plantuml, "{plantUMLDir}fachkontext", png]
+----
+!pragma graphviz_dot smetana
+skinparam rectangle {
+    roundCorner<<Concept>> 25
+}
+rectangle "Apollo Auto" <<system>> as AA
+rectangle "Open Vehicle Certification Platform" as OVCP
+rectangle "Hardware Development Platform" as HDP
+rectangle "Open Software Platform" as OSP
+rectangle "Open Service Platform" as OServiceP
+rectangle "Solutions" as S
+
+AA --> OVCP
+AA --> HDP
+AA --> OSP
+AA --> OServiceP
+AA --> S
+----
+
+//[role="arc42help"]
+//****
+//.Inhalt
+//Technische Schnittstellen (Kanäle, Übertragungsmedien) zwischen dem System und seiner Umwelt.
+//Zusätzlich eine Erklärung (_mapping_), welche fachlichen Ein- und Ausgaben über welche technischen Kanäle fließen.
+
+//.Motivation
+//Viele Stakeholder treffen Architekturentscheidungen auf Basis der technischen Schnittstellen des Systems zu seinem Kontext.
+
+//Insbesondere bei der Entwicklung von Infrastruktur oder Hardware sind diese technischen Schnittstellen durchaus entscheidend.
+
+//.Form
+//Beispielsweise UML Deployment-Diagramme mit den Kanälen zu Nachbarsystemen, begleitet von einer Tabelle, die Kanäle auf Ein-/Ausgaben abbildet.
+//****
+
+//**<Diagramm oder Tabelle>**
+
+//**<optional: Erläuterung der externen technischen Schnittstellen>**
+
+//**<Mapping fachliche auf technische Schnittstellen>**
+
+
+
 
