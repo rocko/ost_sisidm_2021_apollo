@@ -45,11 +45,13 @@ Dieser Abschnitt beschreibt allgemeine Strukturen und Aspekte, die systemweit ge
 //image:08-Crosscutting-Concepts-Structure-DE.png["Possible topics for crosscutting concepts"]
 //****
 
-=== _<Konzept 1>_
+=== Unter-der-Haube
 
-_<Erklärung>_
+//_<Erklärung>_
+Die Dynamik von autonomen Fahrzeugen (AV) wird von der Planungs-Engine über den Controller Area Network-Bus (CAN-Bus) gesteuert. Die Software liest Daten aus Hardware-Registern und schreibt sie zurück, genau wie wir es in Assembler tun würden. Für hochpräzise Berechnungen arbeiten die Lokalisierungs-, Wahrnehmungs- und Planungsmodule als unabhängige Eingabequellen, während die Ausgabequellen über das Peer2Peer (P2P)-Protokoll zusammenarbeiten. P2P wird durch die RPC-Netzwerkanwendung unterstützt.
 
-image:test.png["test"]
+Apollo Auto verwendet ROS1 als zugrunde liegendes Netzwerk, was bedeutet, dass Apollo Auto das Master-Nodes-Framework von ROS1 entlehnt. Da xmlRPC von ROS1 wirklich alt ist (im Vergleich zu den neueren brpc und grpc), hat Baidu seine eigene protobuf-Version von RPC entwickelt.
+//https://github.com/ApolloAuto/apollo/blob/r5.5.0/docs/howto/how_to_understand_architecture_and_workflow.md
 
 === _<Konzept 2>_
 

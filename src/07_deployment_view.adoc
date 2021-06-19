@@ -47,7 +47,7 @@
 //****
 
 _**<Übersichtsdiagramm>**_
-//image:Hardware_overview_3_5.png["Deployment von Apollo Auto"]
+image:Hardware_overview_3_5.png["Deployment von Apollo Auto"]
 
 Begründung:: _<Erläuternder Text>_
 

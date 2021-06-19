@@ -25,3 +25,6 @@ Dieser Abschnitt enthält einen stark verdichteten Architekturüberblick. Eine 
 //****
 
 //ausführlich
+
+irgendwas zu interoperabilität weil versch. sensoren etc verwendet werden können
+
