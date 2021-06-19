@@ -38,6 +38,9 @@ Das Prinzip der fairen Daten stellt sicher, dass Partner mit größeren eigenen 
 |Datenschutz
 |Jeder Partner kann seine eigenen Daten anzeigen und die Datenschutzeigenschaften der Daten als privat oder öffentlich festlegen.
 Die von Partnern hochgeladenen Daten gelten standardmäßig als privat.
+|Endscheidungsführung
+|Grundsätzlich handelt es sich bei Apollo Auto um eine offene PLattform.
+Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverlässigkeit und die schnelle Entwicklung von Apollo zu gewährleisten, bei Bedarf wichtige Entscheidungen treffen, während die aktive Beteiligung der breiteren Gemeinschaft erhalten bleibt.
 |===
 
 === Konventionen
