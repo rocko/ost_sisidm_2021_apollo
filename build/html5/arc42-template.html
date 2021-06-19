@@ -866,37 +866,24 @@ Multifusionslösung bestand aus Fahrzeug, Cloud, HD-Karte und Parkplätzen</p>
 <p>Beim Einsatz von Apollo sind verschiedene Randbedingungen zu beachten.
 Dieser Abschnitt stellt sie dar und erklärt auch – wo nötig – deren Motivation.</p>
 </div>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Inhalt</div>
-<p>Randbedingungen und Vorgaben, die ihre Freiheiten bezüglich Entwurf, Implementierung oder Ihres Entwicklungsprozesses einschränken.
-Diese Randbedingungen gelten manchmal organisations- oder firmenweit über die Grenzen einzelner Systeme hinweg.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Für eine tragfähige Architektur sollten Sie genau wissen, wo Ihre Freiheitsgrade bezüglich der Entwurfsentscheidungen liegen und wo Sie Randbedingungen beachten müssen.
-Sie können Randbedingungen vielleicht noch verhandeln, zunächst sind sie aber da.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Einfache Tabellen der Randbedingungen mit Erläuterungen.
-Bei Bedarf unterscheiden Sie technische, organisatorische und politische Randbedingungen oder übergreifende Konventionen (beispielsweise Programmier- oder Versionierungsrichtlinien, Dokumentations- oder Namenskonvention).</p>
-</div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_technische_randbedingungen">2.1. Technische Randbedingungen</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Ein Fahrzeug, das mit dem By-Wire-System ausgestattet ist, einschließlich, aber nicht beschränkt auf Brake-by-Wire, Steering-by-Wire, Throttle-by-Wire und Shift-by-Wire (Apollo wird derzeit auf Lincoln MKZ getestet).</p>
+<p>Für den Einsatz von Apollo Auto wird eine anspruchsvolle Hardwareausstattung benötigt, eine Lösung mit einem marktüblichen Standard-Notebook allein ist nicht möglich</p>
+</li>
+<li>
+<p>Ein Fahrzeug, das mit By-Wire-Systemen ausgestattet ist, zum Beispiel Brake-by-Wire, Steering-by-Wire, Throttle-by-Wire oder Shift-by-Wire (Apollo wird derzeit auf Lincoln MKZ getestet).</p>
 </li>
 <li>
 <p>Ein Rechner mit einem 4-Kern-Prozessor und mindestens 8 GB Speicher (16 GB für Apollo 3.5 und höher)</p>
 </li>
 <li>
 <p>Ubuntu 18.04</p>
+</li>
+<li>
+<p>Zusätzlich wird eine umfangreiche Sensorik benötigt die Bild- und Abstandsinformationen aus dem Umfeld aufnehmen</p>
 </li>
 <li>
 <p>Arbeitskenntnisse über Docker</p>
@@ -923,6 +910,29 @@ sonst kein plan wie die arbeiten, denke mal auch verteilt</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">github</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Quellcode ist über github verfügbar.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bereitstellung von Daten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alle Daten müssen in einem Format hochgeladen werden, das den Apollo-Datenspezifikationen entspricht.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Speicherung von Daten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Daten, die in China gesammelt wurden, dürfen nur auf Servern in China gespeichert werden. Daten, die in anderen Ländern und Regionen erhoben werden, unterliegen den Beschränkungen der Datenspeicherung, die durch die Gesetze der jeweiligen Länder festgelegt sind.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bereitstellung von Daten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Als Initiator dieser Plattform stellt Baidu die Ausgangsdaten für diese Plattform bereit. Die Daten stehen allen Partnern dieser Plattform offen.
+Das Prinzip der fairen Daten stellt sicher, dass Partner mit größeren eigenen Beiträgen mehr Daten und Dienste von dieser Plattform erhalten.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datenschutz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jeder Partner kann seine eigenen Daten anzeigen und die Datenschutzeigenschaften der Daten als privat oder öffentlich festlegen.
+Die von Partnern hochgeladenen Daten gelten standardmäßig als privat.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endscheidungsführung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Grundsätzlich handelt es sich bei Apollo Auto um eine offene PLattform.
+Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverlässigkeit und die schnelle Entwicklung von Apollo zu gewährleisten, bei Bedarf wichtige Entscheidungen treffen, während die aktive Beteiligung der breiteren Gemeinschaft erhalten bleibt.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2063,6 +2073,10 @@ Risikomanagement ist Projektmanagement für Erwachsene.
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>By-Wire</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Bezeichnung für (zumindest partielles) Fahren oder Steuern von Fahrzeugen ohne mechanische Kraftübertragung der Bedienelemente zu den entsprechenden Stellelementen wie etwa Drosselklappen. Das By-Wire-Konzept umfasst dabei zumindest zwei oder mehr der „X-by-Wire“- Systeme wie etwa Brake-by-Wire (Bremssteuerung) und Steer-by-Wire (Lenkung)..</em></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>LIDAR</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>ist eine dem Radar verwandte Methode zur optischen Abstands- und Geschwindigkeitsmessung sowie zur Fernmessung. Statt der Radiowellen wie beim Radar werden Laserstrahlen verwendet.</em></p></td>
 </tr>
@@ -2150,7 +2164,7 @@ Risikomanagement ist Projektmanagement für Erwachsene.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-19 10:55:43 UTC
+Last updated 2021-06-19 12:25:27 UTC
 </div>
 </div>
 </body>
