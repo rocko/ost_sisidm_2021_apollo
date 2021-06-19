@@ -39,7 +39,7 @@ Das Prinzip der fairen Daten stellt sicher, dass Partner mit größeren eigenen 
 |Jeder Partner kann seine eigenen Daten anzeigen und die Datenschutzeigenschaften der Daten als privat oder öffentlich festlegen.
 Die von Partnern hochgeladenen Daten gelten standardmäßig als privat.
 |Endscheidungsführung
-|Grundsätzlich handelt es sich bei Apollo Auto um eine offene PLattform.
+|Grundsätzlich handelt es sich bei Apollo Auto um eine offene Plattform.
 Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverlässigkeit und die schnelle Entwicklung von Apollo zu gewährleisten, bei Bedarf wichtige Entscheidungen treffen, während die aktive Beteiligung der breiteren Gemeinschaft erhalten bleibt.
 |===
 
@@ -53,4 +53,6 @@ Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverläss
 |C++ Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle
 |Kodierrichtlinien für Python
 |Python Coding Conventions von Sun/Oracle, geprüft mit Hilfe von CheckStyle
+|Spezifische Datenformate und Frameworks für autonomes Fahren
+|Verwendung etablierter Standards für autonomes Fahren. zum Beispiel sind alle Softwaremodule als ROS(Robot Operating System)-Knoten zu behandeln.
 |===
