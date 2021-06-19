@@ -24,6 +24,7 @@ Dieser Abschnitt stellt sie dar und erklärt auch – wo nötig – deren Motiva
 hier irgendwas das github verwendet wird ....
 sonst kein plan wie die arbeiten, denke mal auch verteilt
 
+
 |===
 |Randbedingung | Erläuterungen, Hintergrund
 |github
