@@ -1,0 +1,8 @@
+component ASU
+component IPC
+component Sensors
+
+
+Sensors <-> ASU: CAN Bus
+ASU <-> IPC: PCIe
+
