@@ -564,6 +564,36 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_perception">5.11. Perception</a></li>
 </ul>
 </li>
+<li><a href="#section-runtime-view">6. Laufzeitsicht</a></li>
+<li><a href="#section-deployment-view">7. Verteilungssicht</a>
+<ul class="sectlevel2">
+<li><a href="#_infrastruktur_ebene_1">7.1. Infrastruktur Ebene 1</a></li>
+<li><a href="#_infrastruktur_ebene_2">7.2. Infrastruktur Ebene 2</a></li>
+</ul>
+</li>
+<li><a href="#section-concepts">8. Querschnittliche Konzepte</a>
+<ul class="sectlevel2">
+<li><a href="#_unter_der_haube">8.1. Unter-der-Haube</a></li>
+<li><a href="#_konzept_2">8.2. <em>&lt;Konzept 2&gt;</em></a></li>
+<li><a href="#_konzept_n">8.3. <em>&lt;Konzept n&gt;</em></a></li>
+</ul>
+</li>
+<li><a href="#section-design-decisions">9. Entwurfsentscheidungen</a></li>
+<li><a href="#section-quality-scenarios">10. Qualitätsanforderungen</a>
+<ul class="sectlevel2">
+<li><a href="#_qualitätsbaum">10.1. Qualitätsbaum</a></li>
+<li><a href="#_qualitätsszenarien">10.2. Qualitätsszenarien</a></li>
+</ul>
+</li>
+<li><a href="#section-technical-risks">11. Risiken und technische Schulden</a></li>
+<li><a href="#section-glossary">12. Glossar</a></li>
+<li><a href="#section-appendix">13. Anhang</a>
+<ul class="sectlevel2">
+<li><a href="#_apollo">13.1. Apollo</a></li>
+<li><a href="#_arc42">13.2. Arc42</a></li>
+<li><a href="#_doctoolchain">13.3. docToolChain</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1407,7 +1437,252 @@ Wenn ein Lokalisierungsupdate empfangen wird, aktualisiert das Prediction-Modul 
 </div>
 <div class="sect3">
 <h4 id="_name_schnittstelle_m">5.11.4. &lt;Name Schnittstelle m&gt;</h4>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="section-runtime-view">6. Laufzeitsicht</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TBD</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="section-deployment-view">7. Verteilungssicht</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_infrastruktur_ebene_1">7.1. Infrastruktur Ebene 1</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./images/Hardware_overview_3_5.png" alt="Deployment von Apollo Auto"></span></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Begründung</dt>
+<dd>
+<p><em>&lt;Erläuternder Text&gt;</em></p>
+</dd>
+<dt class="hdlist1">Qualitäts- und/oder Leistungsmerkmale</dt>
+<dd>
+<p><em>&lt;Erläuternder Text&gt;</em></p>
+</dd>
+<dt class="hdlist1">Zuordnung von Bausteinen zu Infrastruktur</dt>
+<dd>
+<p><em>&lt;Beschreibung der Zuordnung&gt;</em></p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_infrastruktur_ebene_2">7.2. Infrastruktur Ebene 2</h3>
+<div class="sect3">
+<h4 id="_infrastrukturelement_1">7.2.1. <em>&lt;Infrastrukturelement 1&gt;</em></h4>
+<div class="paragraph">
+<p><em>&lt;Diagramm + Erläuterungen&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_infrastrukturelement_2">7.2.2. <em>&lt;Infrastrukturelement 2&gt;</em></h4>
+<div class="paragraph">
+<p><em>&lt;Diagramm + Erläuterungen&gt;</em></p>
+</div>
+<div class="paragraph">
+<p>&#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_infrastrukturelement_n">7.2.3. <em>&lt;Infrastrukturelement n&gt;</em></h4>
+<div class="paragraph">
+<p><em>&lt;Diagramm + Erläuterungen&gt;</em></p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="section-concepts">8. Querschnittliche Konzepte</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dieser Abschnitt beschreibt allgemeine Strukturen und Aspekte, die systemweit gelten. Darüber hinaus stellt er verschiedene technische Lösungskonzepte vor.</p>
+</div>
+<div class="sect2">
+<h3 id="_unter_der_haube">8.1. Unter-der-Haube</h3>
+<div class="paragraph">
+<p>Die Dynamik von autonomen Fahrzeugen (AV) wird von der Planungs-Engine über den Controller Area Network-Bus (CAN-Bus) gesteuert. Die Software liest Daten aus Hardware-Registern und schreibt sie zurück, genau wie wir es in Assembler tun würden. Für hochpräzise Berechnungen arbeiten die Lokalisierungs-, Wahrnehmungs- und Planungsmodule als unabhängige Eingabequellen, während die Ausgabequellen über das Peer2Peer (P2P)-Protokoll zusammenarbeiten. P2P wird durch die RPC-Netzwerkanwendung unterstützt.</p>
+</div>
+<div class="paragraph">
+<p>Apollo Auto verwendet ROS1 als zugrunde liegendes Netzwerk, was bedeutet, dass Apollo Auto das Master-Nodes-Framework von ROS1 entlehnt. Da xmlRPC von ROS1 wirklich alt ist (im Vergleich zu den neueren brpc und grpc), hat Baidu seine eigene protobuf-Version von RPC entwickelt.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_konzept_2">8.2. <em>&lt;Konzept 2&gt;</em></h3>
+<div class="paragraph">
+<p><em>&lt;Erklärung&gt;</em></p>
+</div>
+<div class="paragraph">
+<p>&#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_konzept_n">8.3. <em>&lt;Konzept n&gt;</em></h3>
+<div class="paragraph">
+<p><em>&lt;Erklärung&gt;</em></p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="section-design-decisions">9. Entwurfsentscheidungen</h2>
+<div class="sectionbody">
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="section-quality-scenarios">10. Qualitätsanforderungen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dieser Abschnitt beinhaltet konkrete Qualitätsszenarien, welche die zentralen Qualitätsziele, aber auch andere geforderte Qualitätseigenschaften besser fassen. Sie ermöglichen es, Entscheidungsoptionen zu bewerten.</p>
+</div>
+<div class="sect2">
+<h3 id="_qualitätsbaum">10.1. Qualitätsbaum</h3>
+<div class="paragraph">
+<p>Das folgende Bild gibt einen Überblick über die relevanten Qualitätsmerkmale und den ihnen jeweils zugeordneten Szenarien.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/qualitytree.png" alt="Qualitätsbaum"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_qualitätsszenarien">10.2. Qualitätsszenarien</h3>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="section-technical-risks">11. Risiken und technische Schulden</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Die folgenden Risiken wurden zu Beginn des Vorhabens identifiziert. Sie beeinflussten die Planung der ersten drei Iterationen maßgeblich. Seit Abschluss der dritten Iteration werden sie beherrscht. Dieser Architekturüberblick zeigt die Risiken inklusive der damaligen Eventualfallplanung weiterhin, wegen ihres großen Einflusses auf die Lösung.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="section-glossary">12. Glossar</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Das folgende Glossar erklärt Begriffe aus dem Bereich Autonomes Fahren.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Begriff</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>By-Wire</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Bezeichnung für (zumindest partielles) Fahren oder Steuern von Fahrzeugen ohne mechanische Kraftübertragung der Bedienelemente zu den entsprechenden Stellelementen wie etwa Drosselklappen. Das By-Wire-Konzept umfasst dabei zumindest zwei oder mehr der „X-by-Wire“- Systeme wie etwa Brake-by-Wire (Bremssteuerung) und Steer-by-Wire (Lenkung)..</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>LIDAR</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>ist eine dem Radar verwandte Methode zur optischen Abstands- und Geschwindigkeitsmessung sowie zur Fernmessung. Statt der Radiowellen wie beim Radar werden Laserstrahlen verwendet.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>RADAR</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>ist die Bezeichnung für verschiedene Erkennungs- und Ortungsverfahren und -geräte auf der Basis elektromagnetischer Wellen im Radiofrequenzbereich (Funkwellen).</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>P2P</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Peer-to-Peer und Rechner-Rechner-Verbindung sind synonyme Bezeichnungen für eine Kommunikation unter Gleichen, hier bezogen auf ein Rechnernetz.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>RPC</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Remote Procedure Call ist eine Technik zur Realisierung von Interprozesskommunikation. Sie ermöglicht den Aufruf von Funktionen in anderen Adressräumen. Im Normalfall werden die aufgerufenen Funktionen auf einem anderen Computer als das aufrufende Programm ausgeführt.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="section-appendix">13. Anhang</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_apollo">13.1. Apollo</h3>
 
+</div>
+<div class="sect2">
+<h3 id="_arc42">13.2. Arc42</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>die Dokumentation muss bereits zu Beginn der Arbeiten an der Architektur/am Quellcode erfolgen um stets den aktuellen Stand abbilden zu können.</p>
+</li>
+<li>
+<p>die Dokumentation soll mit dem Projekt wachsen!</p>
+</li>
+<li>
+<p>die nachträgliche Dokumentation ist eine Sysiphusarbeit</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Beispiel:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Diagramme in der Laufzeitsicht sind effizienter zu gestalten während ein Modul im Entstehen ist. Änderungen können mit jeder Entwicklungsstufe eingepflegt werden.</p>
+</li>
+<li>
+<p>Ein fertiges Modul in ein Diagramm zu überführen erfordert viel Zeit, da alle beteiligten Module und deren Funktionsweise erst identifiziert werden müssen.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_doctoolchain">13.3. docToolChain</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>plantUML ist zwar bei sehr einfachen Diagrammen eine Erleichterung, kommt aber an beispielsweise draw.io oder tikz (in Latex) nicht heran wenn es um komplexe und detailierte Diagramme geht</p>
+<div class="ulist">
+<ul>
+<li>
+<p>teilweise werden bei der inline-Erstellung bei plantUML Diagrammeinstellungen nicht übernommen</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Schriftgrößen sind nicht einstellbar, was an manchen Stellen - z.B Tabellen nötig gewesen wäre</p>
+</li>
+<li>
+<p>Ansonsten ist docToolChain eine interessante Alternative, besonders in Bezug auf den CI-Task in github.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>damit nicht bei jedem Commit die Dokumentation neu erstellt wird, bietet github die Möglichkeit über Commitnachrichten, z.B "[no ci]" oder "[skip ci]" den CI-Task auszusetzen. Hier wäre es sinnvoller über Commitnachrichten explizit die Generierung zu starten.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -1415,7 +1690,7 @@ Wenn ein Lokalisierungsupdate empfangen wird, aktualisiert das Prediction-Modul 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-19 22:31:39 UTC
+Last updated 2021-06-19 22:48:02 UTC
 </div>
 </div>
 </body>
