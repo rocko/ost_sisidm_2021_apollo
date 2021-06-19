@@ -45,6 +45,7 @@ Die von Partnern hochgeladenen Daten gelten standardmäßig als privat.#
 Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverlässigkeit und die schnelle Entwicklung von Apollo zu gewährleisten, bei Bedarf wichtige Entscheidungen treffen, während die aktive Beteiligung der breiteren Gemeinschaft erhalten bleibt.#
 |===
 
+
 <<<
 
 === Konventionen
