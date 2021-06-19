@@ -17,7 +17,7 @@
 
 ** Beispiel: 
 **** Diagramme in der Laufzeitsicht sind effizienter zu gestalten während ein Modul im Entstehen ist. Änderungen können mit jeder Entwicklungsstufe eingepflegt werden. 
-**** Ein fertiges Modul in ein Diagramm zu überführen erfordert viel Zeit, da alle beteiligten Module erst identifiziert werden müssen.
+**** Ein fertiges Modul in ein Diagramm zu überführen erfordert viel Zeit, da alle beteiligten Module und deren Funktionsweise erst identifiziert werden müssen.
 
 
 === docToolChain
