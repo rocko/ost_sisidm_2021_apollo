@@ -28,6 +28,16 @@ sonst kein plan wie die arbeiten, denke mal auch verteilt
 |Randbedingung | Erläuterungen, Hintergrund
 |github
 |Quellcode ist über github verfügbar.
+|Bereitstellung von Daten
+|Alle Daten müssen in einem Format hochgeladen werden, das den Apollo-Datenspezifikationen entspricht.
+|Speicherung von Daten
+|Daten, die in China gesammelt wurden, dürfen nur auf Servern in China gespeichert werden. Daten, die in anderen Ländern und Regionen erhoben werden, unterliegen den Beschränkungen der Datenspeicherung, die durch die Gesetze der jeweiligen Länder festgelegt sind.
+|Bereitstellung von Daten
+|Als Initiator dieser Plattform stellt Baidu die Ausgangsdaten für diese Plattform bereit. Die Daten stehen allen Partnern dieser Plattform offen.
+Das Prinzip der fairen Daten stellt sicher, dass Partner mit größeren eigenen Beiträgen mehr Daten und Dienste von dieser Plattform erhalten.
+|Datenschutz
+|Jeder Partner kann seine eigenen Daten anzeigen und die Datenschutzeigenschaften der Daten als privat oder öffentlich festlegen.
+Die von Partnern hochgeladenen Daten gelten standardmäßig als privat.
 |===
 
 === Konventionen
