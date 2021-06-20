@@ -15,6 +15,8 @@ Die Dokumentation muss bereits zu Beginn der Arbeiten an der Architektur/am Quel
 Beispielsweise sind Diagramme in der Laufzeitsicht effizienter zu gestalten während ein Modul im Entstehen ist. Änderungen können mit jeder Entwicklungsstufe eingepflegt werden. 
 Ein fertiges Modul in ein Diagramm zu überführen erfordert viel Zeit, da alle beteiligten Module und deren Funktionsweise erst identifiziert werden müssen.
 
+<<<
+
 === docToolChain
 
 * plantUML
