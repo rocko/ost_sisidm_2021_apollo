@@ -18,7 +18,6 @@ Cyber RT als Runtime Framework
 | Apollo Sensor Unit (ASU) als Sensorschnittstellen, um Daten von verschiedenen Sensoren zu sammeln und Sensordaten aggregiert für Module bereitzustellen 
 |===
 
-
 //[role="arc42help"]
 //****
 //.Inhalt
