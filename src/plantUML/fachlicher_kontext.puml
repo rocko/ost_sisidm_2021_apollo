@@ -21,7 +21,7 @@ skinparam rectangle {
     roundCorner<<Concept>> 25
 }
 rectangle "Apollo Auto" <<system>> as AA {
-component "ICU" as ICU
+component "IPC" as IPC
 component "AXU" as AXU
 component "ASU" as ASU
 component "V2X OBU" as V2X
@@ -31,7 +31,7 @@ component "Sensors" as SENS
 }
 
 C --> V2X
-C -> ICU
+C -> IPC
 C --> AXU
 ASU -d-> SENS
 C --> ASU: PCIe
