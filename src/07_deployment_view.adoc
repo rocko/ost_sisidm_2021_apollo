@@ -66,18 +66,18 @@ image:Hardware_connection_3_5_1.png["Deployment von Apollo Auto, Ebene 2"]
 //Für jedes Infrastrukturelement kopieren Sie die Struktur aus Ebene 1.
 //****
 
-==== _<Infrastrukturelement 1>_
+//==== _<Infrastrukturelement 1>_
 
-_<Diagramm + Erläuterungen>_
+//_<Diagramm + Erläuterungen>_
 
-==== _<Infrastrukturelement 2>_
+//==== _<Infrastrukturelement 2>_
 
-_<Diagramm + Erläuterungen>_
+//_<Diagramm + Erläuterungen>_
 
-...
+//...
 
-==== _<Infrastrukturelement n>_
+//==== _<Infrastrukturelement n>_
 
-_<Diagramm + Erläuterungen>_
+//_<Diagramm + Erläuterungen>_
 
 

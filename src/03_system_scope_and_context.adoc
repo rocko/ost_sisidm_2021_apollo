@@ -166,26 +166,26 @@ Hierzu zählen beispielsweise Security, V2X und OTA.
 //Fuel Data Service
 //==== Solutions
 
-=== Technischer Kontext
+//=== Technischer Kontext
 
-.Technischer Kontext von Apollo Auto
-[plantuml, "{plantUMLDir}TECHcontext", png]
-----
-!pragma graphviz_dot smetana
-skinparam rectangle {
-    roundCorner<<Concept>> 25
-}
-rectangle "Apollo Auto" <<system>> as AA
-rectangle "Open Vehicle Certification Platform" as OVCP
-rectangle "Hardware Development Platform" as HDP
-rectangle "Open Software Platform" as OSP
-rectangle "Cloud Service Platform" as CSP
+//.Technischer Kontext von Apollo Auto
+//[plantuml, "{plantUMLDir}TECHcontext", png]
+//----
+//!pragma graphviz_dot smetana
+//skinparam rectangle {
+//   roundCorner<<Concept>> 25
+//}
+//rectangle "Apollo Auto" <<system>> as AA
+//rectangle "Open Vehicle Certification Platform" as OVCP
+//rectangle "Hardware Development Platform" as HDP
+//rectangle "Open Software Platform" as OSP
+//rectangle "Cloud Service Platform" as CSP
 
-AA --> OVCP
-AA --> HDP
-AA --> OSP
-AA --> CSP
-----
+//AA --> OVCP
+//AA --> HDP
+//AA --> OSP
+//AA --> CSP
+//----
 
 //[role="arc42help"]
 //****
