@@ -1,5 +1,5 @@
 [[section-technical-risks]]
-== Risiken und technische Schulden
+== Risiken
 
 Die folgenden Risiken wurden zu Beginn des Vorhabens identifiziert. Sie beeinflussten die Planung der ersten drei Iterationen maßgeblich. Seit Abschluss der dritten Iteration werden sie beherrscht. Dieser Architekturüberblick zeigt die Risiken inklusive der damaligen Eventualfallplanung weiterhin, wegen ihres großen Einflusses auf die Lösung.
 
@@ -18,3 +18,45 @@ Die folgenden Risiken wurden zu Beginn des Vorhabens identifiziert. Sie beeinflu
 //Liste oder Tabelle von Risiken und/oder technischen Schulden, eventuell mit vorgeschlagenen Maßnahmen zur Risikovermeidung, Risikominimierung oder dem Abbau der technischen Schulden.
 //****
 
+=== Angriffe von Außen
+Da Moderne autonome Fahrzeuge über By-Wire Systeme verfügen und zukünftig keine mechanischen Eingriffmöglichkeiten mehr bieten werden, sind Sie besonders anfällig für Hackerangriffe mit Tötungszweck.
+Aufgrund der hohen Komplexität der Softwarefunktionen, im Zusammenspiel mit vielen Sensordaten und sonstigen Informationen, kann es im Nachhinein schwer sein, den Eingriff in die Software festzustellen.
+
+Folgend einige Beispiele für mögliche Angriffe auf Autonome Fahrzeuge:
+
+* Hacking
+** Eingriffe über Hardware Schnittstellen
+** Entfernte Angriffe über die Cloudanbindung
+
+* Beeinträchtigung des GNSS (global navigation satellite system)
+** Interferenz
+** Jamming
+** Spoofing
+
+* Visuelle Eingriffe
+** Manipuilation von Lichtsignalanlagen
+** Veränderung von Verkehrszeichen
+** Veränderung von Leitlinien oder Fahrbahnbegrenzungen
+
+* Eingriffe in die Datenübertragung
+** Signalabschirmung
+** Fälschung von Verkehrsdaten über V2X
+
+Hacking:
+Sowohl über Hardware Schnittstellen zur Diagnose und Wartung, als auch über die Schnittstelle zum Internet, für Over-the-Air-Updates und Datenaustausch), kann Schadsoftware in das Netzwerk gelangen.
+Dabei kann es sich zum Einen um Spyware zum Ausspähen vertraulicher z.B. personenbezogener Daten, wie zum Beispiel den genauen Standort handeln.
+Zum Anderen kann Maleware benutzt werden, um das Fahrzeug funktionsunfähig zu machen, oder einen mitunter tödlichen Unfall zu verursachen.
+
+Beeinträchtigung GNSS:
+Die Positionsbestimmung mit GNSS basiert auf dem Empfang von Positionsdaten über Elektromagnetische Wellen.
+Dieser Übertragungsweg eröffnet einige mögliche Angriffswege.
+
+Um zu verhindern, dass in Fahrzeuge mit Apollo Auto von außen eingegriffen wird, bietet Apollo Auto einige Sicherheitsfunktionen.
+
+Cyber Security Produkte:
+
+
+
+Zusammenfassend kann festgehalten werden, dass die Sicherheitsrisiken bei autonomen Fahrzeugen enorm sind.
+Apollo Auto bietet erste Funktionen die für eine erhöhte Cybersecurity sorgen.
+Besonders gegen komplexe Angriffe mit mehreren kombinierten Verfahren müssen aber noch neue Lösungen entwickelt werden.
