@@ -1,9 +1,12 @@
 [[section-runtime-view]]
 == Laufzeitsicht
 
-Die Module kommunizieren über Cyber RT, die Pub/Sub basiert ist.
+Diese Sicht visualisiert im Gegensatz zur statischen Bausteinsicht dynamische Aspekte. Wie spielen die Teile zusammen?
+Mit Apollo Auto kommunizieren die Modulbausteine über Cyber RT.
 
-//Diese Sicht visualisiert im Gegensatz zur statischen Bausteinsicht dynamische Aspekte. Wie spielen die Teile zusammen?
+
+, die Pub/Sub basiert ist.
+
 
 //[role="arc42help"]
 //****
@@ -38,15 +41,34 @@ Die Module kommunizieren über Cyber RT, die Pub/Sub basiert ist.
 //* ...
 //****
 
-//=== _<Bezeichnung Laufzeitszenario 1>_
+=== Perception
 
 //*  <hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
 //*  <hier Besonderheiten bei dem Zusammenspiel der Bausteine in diesem Szenario erläutern>
 
-//=== _<Bezeichnung Laufzeitszenario 2>_
+=== Guardian
 
-//...
+.Guardian
+[plantuml, "{plantUMLDir}Guardian", png]
+----
+!pragma graphviz_dot smetana
 
-//=== _<Bezeichnung Laufzeitszenario n>_
+CANBus -> Guardian: Chassis 
+Control -> Guardian: ControlCommand
+Monitor -> Guardian: SystemStatus
 
+Guardian --> CANBus: GuardianCommand
+----
+
+=== CANBus
+.CANBus
+[plantuml, "{plantUMLDir}CANBus", png]
+----
+!pragma graphviz_dot smetana
+Vehicle -> CANBus: ChassisDetails
+Control -> CANBus: ControlCommand 
+Guardian -> CANBus: GuardianCommand
+CANBus --> CyberRT: ChassisStatus
+CANBus --> CyberRT: ChasisDetailsStatus 
+----
 //...

@@ -18,3 +18,33 @@ Routing --> Planning: RoutingResponse
 Guardian -> CANBus
 
 @enduml
+
+@startuml
+Perception -> Planning: TrafficLightDetection
+
+Planning -> Routing: RoutingRequest
+Routing --> Planning: RoutingResponse
+
+Plannning -> ADCTrajectory
+
+@enduml
+
+
+
+@startuml
+CANBus -> Guardian: Chassis 
+Control -> Guardian: ControlCommand
+Monitor -> Guardian: SystemStatus
+
+Guardian --> CANBus: GuardianCommand
+
+@enduml
+
+@startuml
+Vehicle -> CANBus: ChassisDetails
+Control -> CANBus: ControlCommand 
+Guardian -> CANBus: GuardianCommand
+CANBus --> CyberRT: ChassisStatus
+CANBus --> CyberRT: ChasisDetailsStatus 
+
+@enduml
