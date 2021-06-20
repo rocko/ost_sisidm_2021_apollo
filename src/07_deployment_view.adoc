@@ -87,4 +87,3 @@ image:Hardware_connection_3_5_1.png["Deployment von Apollo Auto, Ebene 2"]
 
 //_<Diagramm + Erläuterungen>_
 
-
