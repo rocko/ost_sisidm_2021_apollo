@@ -75,8 +75,6 @@ Apollo Auto zerfällt wie in Bild unten dargestellt in mehrere Subsysteme.
 image:Apollo_3_5_software_architecture.png["Bausteinsicht, Ebene 1"]
 
 
-Begründung:: _<Erläuternder Text>_
-
 Enthaltene Bausteine:: 
 [cols="1,2" options="header"]
 |===
