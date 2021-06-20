@@ -54,3 +54,5 @@ Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverläss
 |[small]#Spezifische Datenformate und Frameworks für autonomes Fahren#
 |[small]#Verwendung etablierter Standards für autonomes Fahren. zum Beispiel sind alle Softwaremodule als ROS(Robot Operating System)-Knoten zu behandeln.#
 |===
+
+// DONE

@@ -136,6 +136,15 @@ Ein Sicherheitsmodul, dass die Funktion eines "Action Centers" übernimmt und ei
 
 ==== Schnittstelle(n)
 
+.Guardian
+[plantuml, "{plantUMLDir}Guardian", png]
+----
+!pragma graphviz_dot smetana
+
+Control -> Guardian: ControlCommand
+Guardian --> CANBus: GuardianCommand
+----
+
 ==== Qualitäts-/Leistungsmerkmale
 
 * Alle Module funktionieren einwandfrei - Guardian lässt den Steuerfluss normal funktionieren. Steuersignale werden an den CANBus gesendet, als ob Guardian nicht vorhanden wäre.
@@ -195,8 +204,8 @@ Der CanBus ist die Schnittstelle, die Steuerbefehle an die Fahrzeughardware weit
 ----
 !pragma graphviz_dot smetana
 
-Guardian --> CANBus: OnGuardianCommand MSG
-Control --> CANBus: OnControlCommand MSG
+Guardian -> CANBus: OnGuardianCommand MSG
+Control -> CANBus: OnControlCommand MSG
 ----
 
 //==== Qualitäts-/Leistungsmerkmale
@@ -214,14 +223,11 @@ Das Control-Modul nimmt die geplante Trajektorie als Eingabe und generiert den S
 ----
 !pragma graphviz_dot smetana
 
-Planning -> Control: OnPlanning MSG
-CANBus -> Control: OnChassis MSG
-HMI -> Control: OnPad MSG
-Monitor -> Control: OnMonitor MSG
-Localization -> Control: OnLocalization MSG
-
-Control --> Guardian: OnGuardianCommand MSG
-Control --> CANBus: OnControlCommand MSG
+[Control] - OnPlanning
+[Control] - OnChassis
+[Control] - OnPad
+[Control] - OnMonitor
+[Control] - OnLocalization
 ----
 
 //==== Qualitäts-/Leistungsmerkmale
