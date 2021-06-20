@@ -6,27 +6,29 @@
 
 === Apollo
 
+Die Dokumentation von Appollo Auto ist anfangs schwer nachzuvollziehen. Teilweise ist die Dokumentation von Subsystemen oder Konzepten tief in der Projektstruktur "verborgen" und wird nur beim systematischen Durchsuchen gefunden. Die allgemein zur Verfügung stehende Dokumentation ist zwar ausreichend um die rudimentären Konzepte hinter Apollo Auto zu verstehen, wünschenswert wäre allerdings eine 
+
 === Arc42
 
-* die Dokumentation muss bereits zu Beginn der Arbeiten an der Architektur/am Quellcode erfolgen um stets den aktuellen Stand abbilden zu können.
+Die Dokumentation muss bereits zu Beginn der Arbeiten an der Architektur/am Quellcode erfolgen um stets den aktuellen Stand abbilden zu können, damit die Dokumentation mit dem Projekt wachsen kann. Die nachträgliche Dokumentation ist eine Sysiphusarbeit und kann nicht gewährleisten das alle Aspekte im Nachhinein korrekt wiedergegeben werden.
 
-* die Dokumentation soll mit dem Projekt wachsen!
-
-* die nachträgliche Dokumentation ist eine Sysiphusarbeit
-
-** Beispiel: 
-**** Diagramme in der Laufzeitsicht sind effizienter zu gestalten während ein Modul im Entstehen ist. Änderungen können mit jeder Entwicklungsstufe eingepflegt werden. 
-**** Ein fertiges Modul in ein Diagramm zu überführen erfordert viel Zeit, da alle beteiligten Module und deren Funktionsweise erst identifiziert werden müssen.
-
+Beispielsweise sind Diagramme in der Laufzeitsicht effizienter zu gestalten während ein Modul im Entstehen ist. Änderungen können mit jeder Entwicklungsstufe eingepflegt werden. 
+Ein fertiges Modul in ein Diagramm zu überführen erfordert viel Zeit, da alle beteiligten Module und deren Funktionsweise erst identifiziert werden müssen.
 
 === docToolChain
 
-* plantUML ist zwar bei sehr einfachen Diagrammen eine Erleichterung, kommt aber an beispielsweise draw.io oder tikz (in Latex) nicht heran wenn es um komplexe und detailierte Diagramme geht
+* plantUML
+
+** plantUML ist zwar bei sehr einfachen Diagrammen eine Erleichterung, kommt aber an beispielsweise draw.io oder tikz (in Latex) nicht heran wenn es um komplexe und detailierte Diagramme geht
 
 ** teilweise werden bei der inline-Erstellung bei plantUML Diagrammeinstellungen nicht übernommen 
 
-* Schriftgrößen sind nicht einstellbar, was an manchen Stellen - z.B Tabellen nötig gewesen wäre
+* asciiDoc
 
-* Ansonsten ist docToolChain eine interessante Alternative, besonders in Bezug auf den CI-Task in github.
+** Schriftgrößen sind nicht einstellbar, was an manchen Stellen - z.B Tabellen nötig gewesen wäre. Es gibt lediglich die Einstellung um Text in [small] oder [big] darzustellen.
+
+** Ansonsten ist docToolChain eine interessante Alternative, besonders in Bezug auf den CI-Task in github.
+
+* CI-Task
 
 ** damit nicht bei jedem Commit die Dokumentation neu erstellt wird, bietet github die Möglichkeit über Commitnachrichten, z.B "[no ci]" oder "[skip ci]" den CI-Task auszusetzen. Hier wäre es sinnvoller über Commitnachrichten explizit die Generierung zu starten. 
