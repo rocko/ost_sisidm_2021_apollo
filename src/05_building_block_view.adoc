@@ -1,9 +1,7 @@
 [[section-building-block-view]]
 == Bausteinsicht
 
-Dieser Abschnitt beschreibt die Zerlegung von Apollo Auto in Module, wie sie sich auch in der Paketstruktur des Java-Quelltextes widerspiegelt. Module der ersten Zerlegungsebene bezeichnen wir in DokChess als Subsysteme. Die → Bausteinsicht, Ebene 1 stellt sie inklusive ihrer Schnittstellen dar.
-
-Für das Subsystem Engine enthält dieser Überblick auch eine detailliertere Zerlegung in → Ebene 2.
+Dieser Abschnitt beschreibt die Zerlegung von Apollo Auto in Module.
 
 //[role="arc42help"]
 //****
@@ -51,8 +49,7 @@ Für das Subsystem Engine enthält dieser Überblick auch eine detailliertere Ze
 
 === Whitebox Gesamtsystem
 
-DokChess zerfällt wie in Bild unten dargestellt in vier Subsysteme. Die gestrichelten Pfeile stellen fachliche Abhängigkeiten der Subsysteme untereinander dar (“x -> y” für “x ist abhängig von y”). Die Kästchen auf der Membran des Systems sind Interaktionspunkte mit Außenstehenden (→ 3.2 Kontextabgrenzung).
-
+Apollo Auto zerfällt wie in Bild unten dargestellt in mehrere Subsysteme. 
 
 //[role="arc42help"]
 //****
