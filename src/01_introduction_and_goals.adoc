@@ -1,7 +1,7 @@
 [[section-introduction-and-goals]]
 ==	Einführung und Ziele
 
-:caution-caption: Test
+:caution-caption: Der Link zum Repository lautet https://github.com/rocko/ost_sisidm_2021_apollo
 
 Dieser Abschnitt führt in die Aufgabenstellung ein und skizziert die Ziele, die Apollo Auto verfolgt.
 
