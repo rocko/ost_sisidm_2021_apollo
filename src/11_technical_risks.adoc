@@ -29,18 +29,17 @@ Folgend einige Beispiele für mögliche Angriffe auf Autonome Fahrzeuge:
 ** Entfernte Angriffe über die Cloudanbindung
 
 * Beeinträchtigung des GNSS (global navigation satellite system)
-** Interferenz
 ** Jamming
 ** Spoofing
 
 * Visuelle Eingriffe
-** Manipuilation von Lichtsignalanlagen
+** Manipulation von Lichtsignalanlagen
 ** Veränderung von Verkehrszeichen
 ** Veränderung von Leitlinien oder Fahrbahnbegrenzungen
 
 * Eingriffe in die Datenübertragung
 ** Signalabschirmung
-** Fälschung von Verkehrsdaten über V2X
+** Fälschung von Verkehrsdaten über V2X oder Internet
 
 Hacking:
 Sowohl über Hardware Schnittstellen zur Diagnose und Wartung, als auch über die Schnittstelle zum Internet, für Over-the-Air-Updates und Datenaustausch), kann Schadsoftware in das Netzwerk gelangen.
@@ -49,14 +48,42 @@ Zum Anderen kann Maleware benutzt werden, um das Fahrzeug funktionsunfähig zu m
 
 Beeinträchtigung GNSS:
 Die Positionsbestimmung mit GNSS basiert auf dem Empfang von Positionsdaten über Elektromagnetische Wellen.
-Dieser Übertragungsweg eröffnet einige mögliche Angriffswege.
+Dieser Übertragungsweg eröffnet einige mögliche Angriffswege, wie Jamming und Spoofing.
+Beim Jamming wird das GNSS-Signal mittels Interferenz(Überlagerung der Signalwellen) gestört. Damit kann das Fahrzeug seine aktuelle Position nicht mehr bestimmen.
+Bei einem Spoofing-Angriff werden dem Fahrzeug gefälschte Positionsdaten gesendet. Damit kann das Fahrzeug fehlgeleitet werden.
+
+Visuelle Eingriffe:
+Die Steuerung von autonomen Fahrzeugen beruht zum größten Teil auf Sensordaten. Diese können gezielt visuell manipuliert werden.
+Zum Beispiel ist es möglich Lichtanlagen zu manipulieren, um Fahrzeuge an Kreuzungen in den kreuzenden Verkehr fahren zu lassen.
+Außerdem können Verkehrszeichen abgeändert werden, um zum Beispiel Geschwindigkeiten stark zu überhöhen (z.B. 130km/h anstatt 30km/h).
+Fahrtrajektorien werden unter Anderem aufgrund der Fahrbahnbegrenzung ermittelt. Diese kann sehr einfach mechanisch manipuliert werden.
+Test haben ergeben, dass generell, aber im Besonderen auch im Bereich von Baustellen die Fahrspurerkennung Fehler- und Manipulationsanfällig ist.
+
+Eingriffe in die Datenübertragung:
+Wie beim GNSS können generell Störsender benutzt werden, um die Datenübertragung zum autonomen Fahrzeug zu unterbrechen.
+Dann fährt das Fahrzeug ohne externe Verkehrsinformationen und kann ausschließlich auf der Grundlage der eigenen Sensorinformationen navigieren.
+Außerdem können auch hier wieder Fehlinformationen gesendet werden, um zum Beispiel unnötige riskante Ausweichmanöver auszulösen.
 
 Um zu verhindern, dass in Fahrzeuge mit Apollo Auto von außen eingegriffen wird, bietet Apollo Auto einige Sicherheitsfunktionen.
 
 Cyber Security Produkte:
 
+* Secure IVI:
+
+Ein Produkt, das das IVI-System sichert. Es kann die Legitimität von Anwendungen überwachen, unbefugte Softwareinstallationen verhindern und verdächtige Verbindungen und Portzugriffe filtern.
+Es schützt auch die Privatsphäre der Benutzer und das IVI-Urheberrecht.
+
+* IDPS（Intrusion Detection and Prevention System）
+
+Ein Sicherheitsprodukt zur Identifizierung anormaler Daten und Verhaltensweisen im Fahrzeug, um zu verhindern, dass sie sich auf das gesamte Fahrzeugnetzwerk ausbreiten.
+Durch die Kombination mehrerer Erkennungs-Engines kann es die Anomalie im Fahrzeug vollständig erkennen.
+
+* CANScan
+
+Ein Produkt für den Sicherheitstest von CAN und Steuergeräten.
+Mit einer umfangreichen Testfallbibliothek kann es Sicherheitstestanalysen auf verschiedenen Steuergeräten durchführen und Schwachstellen schnell ausfindig machen.
 
 
 Zusammenfassend kann festgehalten werden, dass die Sicherheitsrisiken bei autonomen Fahrzeugen enorm sind.
 Apollo Auto bietet erste Funktionen die für eine erhöhte Cybersecurity sorgen.
-Besonders gegen komplexe Angriffe mit mehreren kombinierten Verfahren müssen aber noch neue Lösungen entwickelt werden.
+Besonders gegen komplexe Angriffe mit mehreren kombinierten Verfahren müssen die Sicherheitslösungen aber noch weiterentwickelt werden.
