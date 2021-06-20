@@ -128,7 +128,7 @@ Enthaltene Bausteine::
 
 |===
 
-Wichtige Schnittstellen:: _<Beschreibung wichtiger Schnittstellen>_
+//Wichtige Schnittstellen:: _<Beschreibung wichtiger Schnittstellen>_
 
 === Guardian
 ==== Zweck/Verantwortung
@@ -136,14 +136,7 @@ Ein Sicherheitsmodul, dass die Funktion eines "Action Centers" übernimmt und ei
 
 ==== Schnittstelle(n)
 
-.Guardian
-[plantuml, "{plantUMLDir}Guardian", png]
-----
-!pragma graphviz_dot smetana
-
-Control -> Guardian: ControlCommand
-Guardian --> CANBus: GuardianCommand
-----
+TBD
 
 ==== Qualitäts-/Leistungsmerkmale
 
@@ -188,6 +181,9 @@ https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/monitor
 Human Machine Interface oder DreamView in Apollo ist eine Web-Anwendung, die: - die aktuelle Ausgabe relevanter autonomer Fahrmodule visualisiert, z. B. Planung der Trajektorie, Fahrzeuglokalisierung, Fahrwerkstatus usw. - eine Mensch-Maschine-Schnittstelle bietet, über die der Benutzer den Hardwarestatus einsehen, Module ein- und ausschalten und das autonom fahrende Auto starten kann. - bietet Debugging-Tools, wie z. B. PnC-Monitor, zur effizienten Verfolgung von Modulproblemen.
 
 ==== Schnittstelle(n)
+
+TBD
+
 ==== Qualitäts-/Leistungsmerkmale
 
 ==== Ablageort/Datei(en)
@@ -246,7 +242,10 @@ Dann nimmt das Planning-Modul die Routing-Ausgabe. In bestimmten Szenarien kann 
 
 Schließlich muss das Planning-Modul den Standort (Lokalisierung: wo bin ich) sowie die aktuellen autonomen Fahrzeuginformationen (Fahrwerk: wie ist mein Status) kennen.
 
-//==== Schnittstelle(n)
+==== Schnittstelle(n)
+
+TBD
+
 //==== Qualitäts-/Leistungsmerkmale
 
 ==== Ablageort/Datei(en)
@@ -256,7 +255,10 @@ https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/planning
 ==== Zweck/Verantwortung
 Das Routing-Modul muss den Start- und Endpunkt des Routings kennen, um die Durchfahrtsspuren und Straßen zu berechnen. Normalerweise ist der Startpunkt der Standort des autonomen Fahrzeugs. Die RoutingResponse wird wie unten gezeigt berechnet und veröffentlicht.
 
-//==== Schnittstelle(n)
+==== Schnittstelle(n)
+
+TBD
+
 //==== Qualitäts-/Leistungsmerkmale
 
 ==== Ablageort/Datei(en)
@@ -328,9 +330,9 @@ LIDAR - [Perception]
 ==== Ablageort/Datei(en)
 https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/perception
 
-==== <Name Schnittstelle 1>
+//==== <Name Schnittstelle 1>
 
-...
+//...
 
-==== <Name Schnittstelle m>
+//==== <Name Schnittstelle m>
 
