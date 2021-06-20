@@ -278,7 +278,6 @@ Die andere Lokalisierungsmethode ist die Multiple Sensor Fusion (MSF)-Methode, b
 !pragma graphviz_dot smetana
 
 OnTimer - [Localization]
-[Localization] - MSF
 ----
 
 
@@ -311,7 +310,19 @@ https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/prediction
 ==== Zweck/Verantwortung
 Das Perception-Modul verfügt über die Fähigkeit, 5 Kameras (2 vorne, 2 seitlich und 1 hinten) und 2 Radare (vorne und hinten) zusammen mit 3 16-Linien-LiDARs (2 hinten und 1 vorne) und 1 128-Linien-LiDAR zu verwenden, um Hindernisse zu erkennen und ihre individuellen Spuren zu einer endgültigen Spurliste zu verschmelzen. Das Hindernis-Submodul erkennt, klassifiziert und verfolgt Hindernisse. Dieses Teilmodul sagt auch die Bewegung und Positionsinformationen des Hindernisses voraus (z. B. Richtung und Geschwindigkeit). Für die Fahrspur werden Fahrspurinstanzen durch Nachbearbeitung von Fahrspur-Parsing-Pixeln konstruiert und die relative Position der Fahrspur zum Ego-Fahrzeug berechnet (L0, L1, R0, R1, usw.).
 
-//==== Schnittstelle(n)
+==== Schnittstelle(n)
+
+.Perception
+[plantuml, "{plantUMLDir}Perception", png]
+----
+!pragma graphviz_dot smetana
+
+LIDAR - [Perception]
+[Perception] - Camera
+[Perception] -- RADAR
+[Perception] -- ChassisDetails
+----
+
 //==== Qualitäts-/Leistungsmerkmale
 
 ==== Ablageort/Datei(en)
