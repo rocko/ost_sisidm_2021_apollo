@@ -24,7 +24,7 @@ Das folgende Bild gibt einen Überblick über die relevanten Qualitätsmerkmale 
 //            -> Änderbarkeit 9
 //Funktionalität -> Richtigkeit 4
 //Zuverlässigkeit -> Fehlertoleranz 5
-//                -> Sicherheit 7,8
+//                -> Sicherheit 7,8,6
 //Effizienz -> Zeitverhalten 6
 
 
