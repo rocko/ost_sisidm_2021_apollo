@@ -117,6 +117,8 @@ Enthaltene Bausteine::
 
 //Wichtige Schnittstellen:: _<Beschreibung wichtiger Schnittstellen>_
 
+<<<
+
 === Guardian
 ==== Zweck/Verantwortung
 Ein Sicherheitsmodul, dass die Funktion eines "Action Centers" übernimmt und eingreift, wenn das Modul Monitor einen Fehler erkennt.
