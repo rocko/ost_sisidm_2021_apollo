@@ -20,21 +20,21 @@ AA --> S
 skinparam rectangle {
     roundCorner<<Concept>> 25
 }
-rectangle "Apollo Auto" <<system>> as AA
-rectangle "ICU" <<subsystem>> as ICU
-rectangle "AXU" <<subsystem>> as AXU
-rectangle "ASU" <<subsystem>>as ASU
-rectangle "V2X OBU" <<subsystem>> as V2X
+rectangle "Apollo Auto" <<system>> as AA {
+component "ICU" as ICU
+component "AXU" as AXU
+component "ASU" as ASU
+component "V2X OBU" as V2X
 rectangle "Cyber RT" <<subsystem>> as C
 
-rectangle "Sensors" as SENS
+component "Sensors" as SENS
+}
 
-AA --> C
-AA --> V2X
+C --> V2X
 C -> ICU
-ICU --> AXU
-AXU -> SENS
-ICU --> ASU
+C --> AXU
+ASU -d-> SENS
+C --> ASU: PCIe
 
 @enduml
 

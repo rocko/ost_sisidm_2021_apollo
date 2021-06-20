@@ -163,18 +163,35 @@ rectangle "Apollo Auto" <<system>> as AA {
 component "ICU" as ICU
 component "AXU" as AXU
 component "ASU" as ASU
-component "V2X OBU" as V2X
 rectangle "Cyber RT" <<subsystem>> as C
 
 component "Sensors" as SENS
 }
 
-C --> V2X
 C -> ICU
 C --> AXU
 ASU -d-> SENS
 C --> ASU
 ----
+
+[cols="1,2" options="header"]
+|===
+| **Name** | **Verantwortung**
+
+| IPC 
+| Industrial PC
+
+| AXU
+| Die Apollo Extension Unit (AXU) wurde entwickelt, um die Rechenleistung zu erhöhen und die Speicherkapazität zu erweitern, indem Entwickler zusätzliche Beschleuniger wie GPU, FPGA-Module usw. einstecken können.
+
+| ASU 
+| Die Apollo Sensor Unit (ASU) bietet Sensorschnittstellen, um Daten von verschiedenen Sensoren zu sammeln, einschließlich Kameras, Radar und Ultraschallsensoren. Das System nutzt auch Puls-pro-Sekunde- (PPS) und GPRMC-Signale von GNSS-Empfängern, um die Synchronisation für die Kamera- und LiDAR-Sensoren zu ermöglichen.
+
+| Sensors 
+| Verschiedene Sensoren die von Apollo Auto verwendet werden (Radar, Ultraschall, Lidar, Kameras, Chassis-Daten)
+
+
+|===
 
 //[role="arc42help"]
 //****
