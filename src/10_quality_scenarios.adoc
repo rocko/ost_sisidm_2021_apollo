@@ -38,6 +38,26 @@ image:qualitytree.png["Qualitätsbaum"]
 
 === Qualitätsszenarien
 
+[cols="e,15e" options="header"]
+|===
+|Nr. | Szenario
+|1
+|Ein Interessierter mit Grundkenntnissen in autonomen Fahren und UML möchte einen Einstieg indie Architektur von Apollo Auto finden.
+Lösungsstrategie und Entwurf erschließen sich ihm innerhalb von einem Tag.
+
+|2
+|Ein Architekt, der arc42 anwenden möchte, sucht zu einem beliebigen Kapitel des Templates einen konkreten Beispielinhalt und findet ihn unverzüglich in der Dokumentation.
+|3
+|Ein erfahrener Entwickler sucht die Implementierung eines im Entwurf beschriebenen Moduls. Er findet sie ohne Umwege oder fremde Hilfe im Quelltext.
+|4
+|Ein Fahrzeugführer wird vom Ausgangspunkt, ohne implausible Umwege zu seiner Zieldestination gefahren.
+|5
+|Das Fahtzeug identifiziert Hindernisse zuverlässig und weicht Ihnen aus. In keinem Fall kommt es bei  einem stehenden Hindernis zu einer Kollision.
+|6
+|Fahrentscheidungen können in jedem Betriebszustand innerhalb von 100 ms getroffen werden
+|7
+|Beim Ausfall einiger Teilsysteme wird immer ein sicherer Zustand erreicht.
+|===
 //[role="arc42help"]
 //****
 //.Inhalt
