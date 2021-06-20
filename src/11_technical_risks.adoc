@@ -19,8 +19,7 @@ Die folgenden Risiken wurden zu Beginn des Vorhabens identifiziert. Sie beeinflu
 //****
 
 === Angriffe von Außen
-Da Moderne autonome Fahrzeuge über By-Wire Systeme verfügen und zukünftig keine mechanischen Eingriffmöglichkeiten mehr bieten werden, sind Sie besonders anfällig für Hackerangriffe mit Tötungszweck.
-Aufgrund der hohen Komplexität der Softwarefunktionen, im Zusammenspiel mit vielen Sensordaten und sonstigen Informationen, kann es im Nachhinein schwer sein, den Eingriff in die Software festzustellen.
+Da Moderne autonome Fahrzeuge über By-Wire Systeme verfügen und zukünftig keine mechanischen Eingriffmöglichkeiten mehr bieten werden, sind Sie besonders anfällig für Hackerangriffe, zum Beispiel zum Tötungszweck.
 
 Folgend einige Beispiele für mögliche Angriffe auf Autonome Fahrzeuge:
 
@@ -40,6 +39,8 @@ Folgend einige Beispiele für mögliche Angriffe auf Autonome Fahrzeuge:
 * Eingriffe in die Datenübertragung
 ** Signalabschirmung
 ** Fälschung von Verkehrsdaten über V2X oder Internet
+
+<<<
 
 Hacking:
 Sowohl über Hardware Schnittstellen zur Diagnose und Wartung, als auch über die Schnittstelle zum Internet, für Over-the-Air-Updates und Datenaustausch), kann Schadsoftware in das Netzwerk gelangen.
