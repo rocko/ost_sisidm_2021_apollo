@@ -1,6 +1,8 @@
 [[section-deployment-view]]
 == Verteilungssicht
 
+Diese Sicht beschreibt den Betrieb von Apollo Auto.
+
 //[role="arc42help"]
 //****
 //.Inhalt
@@ -34,6 +36,8 @@
 
 === Infrastruktur Ebene 1
 
+In dieser Abbildung ist die Hardwarestruktur dargestellt.
+
 //[role="arc42help"]
 //****
 //An dieser Stelle beschreiben Sie (als Kombination von Diagrammen mit Tabellen oder Texten):
@@ -54,6 +58,8 @@ Begründung:: _<Erläuternder Text>_
 Qualitäts- und/oder Leistungsmerkmale:: _<Erläuternder Text>_
 
 Zuordnung von Bausteinen zu Infrastruktur:: _<Beschreibung der Zuordnung>_
+
+<<<
 
 === Infrastruktur Ebene 2
 
