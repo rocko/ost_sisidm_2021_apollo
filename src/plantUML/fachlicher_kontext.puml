@@ -20,8 +20,31 @@ AA --> S
 skinparam rectangle {
     roundCorner<<Concept>> 25
 }
+rectangle "Apollo Auto" <<system>> as AA {
+component "ICU" as ICU
+component "AXU" as AXU
+component "ASU" as ASU
+component "V2X OBU" as V2X
+rectangle "Cyber RT" <<subsystem>> as C
+
+component "Sensors" as SENS
+}
+
+C --> V2X
+C -> ICU
+C --> AXU
+ASU -d-> SENS
+C --> ASU: PCIe
+
+@enduml
+
+
+@startuml
+skinparam rectangle {
+    roundCorner<<Concept>> 25
+}
 rectangle "Apollo Auto" <<system>> as AA
-rectangle "Open Vehicle Certification Platform" as OVCP
+rectangle "Sensors" as OVCP
 rectangle "Hardware Development Platform" as HDP
 rectangle "Open Software Platform" as OSP
 rectangle "Cloud Service Platform" as CSP
