@@ -322,8 +322,6 @@ LIDAR - [Perception]
 https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/perception
 
 //==== <Name Schnittstelle 1>
-
 //...
-
 //==== <Name Schnittstelle m>
 
