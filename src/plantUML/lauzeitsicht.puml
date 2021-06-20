@@ -32,11 +32,11 @@ Plannning -> ADCTrajectory
 
 
 @startuml
-CANBus -> Guardian: Chassis 
-Control -> Guardian: ControlCommand
-Monitor -> Guardian: SystemStatus
-
-Guardian --> CANBus: GuardianCommand
+OnPlanning - [Control]
+[Control] - OnPad
+[Control] -- OnChassis
+[Control] -- OnMonitor
+[Control] -- OnLocalization
 
 @enduml
 

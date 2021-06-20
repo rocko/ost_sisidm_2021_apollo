@@ -204,8 +204,8 @@ Der CanBus ist die Schnittstelle, die Steuerbefehle an die Fahrzeughardware weit
 ----
 !pragma graphviz_dot smetana
 
-Guardian -> CANBus: OnGuardianCommand MSG
-Control -> CANBus: OnControlCommand MSG
+[CANBus] -- OnGuardianCommand
+[CANBus] -- OnControlCommand
 ----
 
 //==== Qualitäts-/Leistungsmerkmale
@@ -223,11 +223,11 @@ Das Control-Modul nimmt die geplante Trajektorie als Eingabe und generiert den S
 ----
 !pragma graphviz_dot smetana
 
-[Control] - OnPlanning
-[Control] - OnChassis
+OnPlanning - [Control]
 [Control] - OnPad
-[Control] - OnMonitor
-[Control] - OnLocalization
+[Control] -- OnChassis
+[Control] -- OnMonitor
+[Control] -- OnLocalization
 ----
 
 //==== Qualitäts-/Leistungsmerkmale
@@ -246,8 +246,8 @@ Dann nimmt das Planning-Modul die Routing-Ausgabe. In bestimmten Szenarien kann 
 
 Schließlich muss das Planning-Modul den Standort (Lokalisierung: wo bin ich) sowie die aktuellen autonomen Fahrzeuginformationen (Fahrwerk: wie ist mein Status) kennen.
 
-==== Schnittstelle(n)
-==== Qualitäts-/Leistungsmerkmale
+//==== Schnittstelle(n)
+//==== Qualitäts-/Leistungsmerkmale
 
 ==== Ablageort/Datei(en)
 https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/planning
@@ -256,8 +256,8 @@ https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/planning
 ==== Zweck/Verantwortung
 Das Routing-Modul muss den Start- und Endpunkt des Routings kennen, um die Durchfahrtsspuren und Straßen zu berechnen. Normalerweise ist der Startpunkt der Standort des autonomen Fahrzeugs. Die RoutingResponse wird wie unten gezeigt berechnet und veröffentlicht.
 
-==== Schnittstelle(n)
-==== Qualitäts-/Leistungsmerkmale
+//==== Schnittstelle(n)
+//==== Qualitäts-/Leistungsmerkmale
 
 ==== Ablageort/Datei(en)
 https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/routing
@@ -271,6 +271,17 @@ Die erste Lokalisierungsmethode ist RTK-basiert, mit einer Timer-basierten Callb
 Die andere Lokalisierungsmethode ist die Multiple Sensor Fusion (MSF)-Methode, bei der eine Reihe von ereignisgesteuerten Callback-Funktionen registriert werden.
 
 ==== Schnittstelle(n)
+
+.Localization
+[plantuml, "{plantUMLDir}Localization", png]
+----
+!pragma graphviz_dot smetana
+
+OnTimer - [Localization]
+[Localization] - MSF
+----
+
+
 ==== Qualitäts-/Leistungsmerkmale
 ==== Ablageort/Datei(en)
 https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/localization
@@ -281,6 +292,17 @@ Das Prediction-Modul schätzt die zukünftigen Bewegungstrajektorien für alle w
 Wenn ein Lokalisierungsupdate empfangen wird, aktualisiert das Prediction-Modul seinen internen Status. Die eigentliche Vorhersage wird ausgelöst, wenn Perception ihre Perception-Hindernismeldung aussendet.
 
 ==== Schnittstelle(n)
+
+.Prediction
+[plantuml, "{plantUMLDir}Prediction", png]
+----
+!pragma graphviz_dot smetana
+
+OnLocalization - [Prediction]
+[Prediction] - OnPlanning
+[Prediction] -- OnPerception
+----
+
 //==== Qualitäts-/Leistungsmerkmale
 ==== Ablageort/Datei(en)
 https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/prediction
