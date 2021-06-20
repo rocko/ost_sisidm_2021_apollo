@@ -53,11 +53,10 @@ In dieser Abbildung ist die Hardwarestruktur dargestellt.
 //_**<Übersichtsdiagramm>**_
 image:Hardware_overview_3_5.png["Deployment von Apollo Auto, Ebene 1"]
 
-Begründung:: _<Erläuternder Text>_
-
-Qualitäts- und/oder Leistungsmerkmale:: _<Erläuternder Text>_
-
-Zuordnung von Bausteinen zu Infrastruktur:: _<Beschreibung der Zuordnung>_
+Begründung:: Die Sensorik muss so verteilt sein, dass das Umfeld mit 360 Grad komplett abgedeckt ist.
+Der IPC befindet sich zentral im Kofferraum. Dort ist genug Platz für den PC selber und auch für die Montage vorhanden.
+Im Kofferraum erreicht man außerdem möglichst kurze und einfache Verlegewege für die Sensorleitungen.
+Außerdem ist die Erreichbarkeit, zum Besispiel für die Diagnose, im Kofferraum gewährleistet.
 
 <<<
 
