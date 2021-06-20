@@ -157,6 +157,8 @@ Das Überwachungssystem für alle Module im Fahrzeug einschließlich der Hardwar
 
 ==== Schnittstelle(n)
 
+TBD
+
 ==== Qualitäts-/Leistungsmerkmale
 Dieses Modul enthält Software auf Systemebene, wie z. B. Code zur Überprüfung des Hardwarestatus und zur Überwachung des Systemzustands. In Apollo 5.5 führt das Monitor-Modul nun u. a. die folgenden Prüfungen durch:
 
@@ -188,11 +190,14 @@ Der CanBus ist die Schnittstelle, die Steuerbefehle an die Fahrzeughardware weit
 
 ==== Schnittstelle(n)
 
-* OnControlCommand -
-ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird, wenn das CANBus-Modul Steuerbefehle empfängt
+.CANBus
+[plantuml, "{plantUMLDir}CANBus", png]
+----
+!pragma graphviz_dot smetana
 
-* OnGuardianCommand - 
-ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird, wenn das Guardian-Modul Steuerbefehle empfängt
+Guardian --> CANBus: OnGuardianCommand MSG
+Control --> CANBus: OnControlCommand MSG
+----
 
 //==== Qualitäts-/Leistungsmerkmale
 
@@ -201,17 +206,23 @@ https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/canbus
 
 === Control
 ==== Zweck/Verantwortung
-Die Control nimmt die geplante Trajektorie als Eingabe und generiert den Steuerbefehl zur Weitergabe an den CANBus.
+Das Control-Modul nimmt die geplante Trajektorie als Eingabe und generiert den Steuerbefehl zur Weitergabe an den CANBus.
 
 ==== Schnittstelle(n)
+.Control
+[plantuml, "{plantUMLDir}Control", png]
+----
+!pragma graphviz_dot smetana
 
-* OnPad
-* OnMonitor
-* OnChassis
-* OnPlanning
-* OnLocalization
+Planning -> Control: OnPlanning MSG
+CANBus -> Control: OnChassis MSG
+HMI -> Control: OnPad MSG
+Monitor -> Control: OnMonitor MSG
+Localization -> Control: OnLocalization MSG
 
-OnPad und OnMonitor sind Routineinteraktionen mit der PAD-basierten Benutzeroberfläche und Simulationen.
+Control --> Guardian: OnGuardianCommand MSG
+Control --> CANBus: OnControlCommand MSG
+----
 
 //==== Qualitäts-/Leistungsmerkmale
 ==== Ablageort/Datei(en)

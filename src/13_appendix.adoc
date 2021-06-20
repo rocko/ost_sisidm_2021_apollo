@@ -34,3 +34,5 @@ Ein fertiges Modul in ein Diagramm zu überführen erfordert viel Zeit, da alle 
 * CI-Task
 
 ** damit nicht bei jedem Commit die Dokumentation neu erstellt wird, bietet github die Möglichkeit über Commitnachrichten, z.B "[no ci]" oder "[skip ci]" den CI-Task auszusetzen. Hier wäre es sinnvoller über Commitnachrichten explizit die Generierung zu starten. 
+
+// DONE

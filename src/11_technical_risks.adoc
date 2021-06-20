@@ -88,3 +88,5 @@ Mit einer umfangreichen Testfallbibliothek kann es Sicherheitstestanalysen auf v
 Zusammenfassend kann festgehalten werden, dass die Sicherheitsrisiken bei autonomen Fahrzeugen enorm sind.
 Apollo Auto bietet erste Funktionen die für eine erhöhte Cybersecurity sorgen.
 Besonders gegen komplexe Angriffe mit mehreren kombinierten Verfahren müssen die Sicherheitslösungen aber noch weiterentwickelt werden.
+
+// DONE
