@@ -2,11 +2,11 @@
 // including all help texts
 //
 // ====================================
-
-
+// 0. Titelseite
 include::src/00_titlepage.adoc[]
 
 <<<<
+
 // toc-title definition MUST follow document title without blank line!
 :toc-title: Inhaltsverzeichnis
 
