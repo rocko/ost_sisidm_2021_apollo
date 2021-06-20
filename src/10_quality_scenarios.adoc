@@ -15,6 +15,7 @@ Dieser Abschnitt beinhaltet konkrete Qualitätsszenarien, welche die zentralen Q
 //Weil Qualitätsanforderungen die Architekturentscheidungen oft maßgeblich beeinflussen, sollten Sie die für Ihre Stakeholder relevanten Qualitätsanforderungen kennen, möglichst konkret und operationalisiert.
 //****
 
+
 === Qualitätsbaum
 
 Das folgende Bild gibt einen Überblick über die relevanten Qualitätsmerkmale und den ihnen jeweils zugeordneten Szenarien.
