@@ -1,7 +1,8 @@
 [[section-solution-strategy]]
 == Lösungsstrategie
 
-Dieser Abschnitt enthält einen stark verdichteten Architekturüberblick. Eine Gegenüberstellung der wichtigsten Ziele und Lösungsansätze.
+Dieser Abschnitt enthält einen stark verdichteten Architekturüberblick.
+Eine Gegenüberstellung der wichtigsten Ziele und Lösungsansätze.
 
 [cols="1,2" options="header"]
 |===
@@ -18,34 +19,6 @@ Cyber RT als Runtime Framework
 |Apollo Sensor Unit (ASU) als Sensorschnittstellen, um Daten von verschiedenen Sensoren zu sammeln und Sensordaten aggregiert für Module bereitzustellen
 |===
 
-//[role="arc42help"]
-//****
-//.Inhalt
-//Kurzer Überblick über die grundlegenden Entscheidungen und Lösungsansätze, die Entwurf und Implementierung des Systems prägen.
-//Hierzu gehören:
-
-//* Technologieentscheidungen
-//* Entscheidungen über die Top-Level-Zerlegung des Systems, beispielsweise die Verwendung gesamthaft prägender Entwurfs- oder Architekturmuster,
-//* Entscheidungen zur Erreichung der wichtigsten Qualitätsanforderungen sowie
-//* relevante organisatorische Entscheidungen, beispielsweise für bestimmte Entwicklungsprozesse oder Delegation bestimmter Aufgaben an andere Stakeholder.
-
-//.Motivation
-//Diese wichtigen Entscheidungen bilden wesentliche „Eckpfeiler“ der Architektur.
-//Von ihnen hängen viele weitere Entscheidungen oder Implementierungsregeln ab.
-
-//.Form
-//Fassen Sie die zentralen Entwurfsentscheidungen *kurz* zusammen.
-//Motivieren Sie, ausgehend von Aufgabenstellung, Qualitätszielen und Randbedingungen, was Sie entschieden haben und warum Sie so entschieden haben.
-//Vermeiden Sie redundante Beschreibungen und verweisen Sie eher auf weitere Ausführungen in Folgeabschnitten.
-//****
-
-//ausführlich
-
-irgendwas zu interoperabilität weil versch. sensoren etc verwendet werden können
-
-CYber RT -> Ros
-BUS Kommunikation
-...
 
 
 
