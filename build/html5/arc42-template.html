@@ -573,9 +573,8 @@ table.CodeRay td.code>pre{padding:0}
 </li>
 <li><a href="#section-concepts">8. Querschnittliche Konzepte</a>
 <ul class="sectlevel2">
-<li><a href="#_unter_der_haube">8.1. Unter-der-Haube</a></li>
-<li><a href="#_konzept_2">8.2. <em>&lt;Konzept 2&gt;</em></a></li>
-<li><a href="#_konzept_n">8.3. <em>&lt;Konzept n&gt;</em></a></li>
+<li><a href="#_fachliche_konzepte">8.1. Fachliche Konzepte</a></li>
+<li><a href="#_unter_der_haube">8.2. Unter-der-Haube</a></li>
 </ul>
 </li>
 <li><a href="#section-design-decisions">9. Entwurfsentscheidungen</a></li>
@@ -773,11 +772,11 @@ Multifusionslösung bestand aus Fahrzeug, Cloud, HD-Karte und Parkplätzen</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Schnelle Reaktion auf Fahrsituationen (Zeitverhalten)</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Apollo Auto übernimmt zuverlässig und sicher die autonome Steuerung von Fahrzeugen auf Level 4.</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Apollo Auto übernimmt zuverlässig und sicher die autonome Steuerung von Fahrzeugen.</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Interoperabilität</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Um die Fahrsicherheit weiter zu erhöhen, wird auf die Sensor- und Zustandsdaten von anderen Verkehrsteilnehmern in Echtzeit zugegriffen.</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Um die Fahrsicherheit weiter zu erhöhen, werden große Mengen an Sensor- und Zustandsdaten gesammelt, mit denen das Fahrzeug schnell auf Veränderungen reagieren kann.</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -1522,14 +1521,11 @@ Wenn ein Lokalisierungsupdate empfangen wird, aktualisiert das Prediction-Modul 
 <p>Dieser Abschnitt beschreibt allgemeine Strukturen und Aspekte, die systemweit gelten. Darüber hinaus stellt er verschiedene technische Lösungskonzepte vor.</p>
 </div>
 <div class="sect2">
-<h3 id="_unter_der_haube">8.1. Unter-der-Haube</h3>
+<h3 id="_fachliche_konzepte">8.1. Fachliche Konzepte</h3>
 <div class="sect3">
 <h4 id="_common">8.1.1. Common</h4>
 <div class="paragraph">
 <p>Das Common-Modul dient als sogenannte "shared library", und enthält Code der von allen Modulen innerhalb von Apollo Auto gleichermaßen verwendet wird.</p>
-</div>
-<div class="paragraph">
-<p>Hier finden sich Funktion um beispielsweise &#8230;&#8203;.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1543,6 +1539,12 @@ Wenn ein Lokalisierungsupdate empfangen wird, aktualisiert das Prediction-Modul 
 <div class="paragraph">
 <p>Das Drivers-Modul enthält Treiber für verschiedene Sensoren, wie beispielsweise LIDAR- oder Kamerasysteme</p>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_unter_der_haube">8.2. Unter-der-Haube</h3>
+<div class="sect3">
+<h4 id="_apollo_auto_protobuf">8.2.1. Apollo Auto protobuf</h4>
 <div class="paragraph">
 <p>Die Dynamik von autonomen Fahrzeugen (AV) wird von der Planungs-Engine über den Controller Area Network-Bus (CAN-Bus) gesteuert. Die Software liest Daten aus Hardware-Registern und schreibt sie zurück, genau wie wir es in Assembler tun würden. Für hochpräzise Berechnungen arbeiten die Lokalisierungs-, Wahrnehmungs- und Planungsmodule als unabhängige Eingabequellen, während die Ausgabequellen über das Peer2Peer (P2P)-Protokoll zusammenarbeiten. P2P wird durch die RPC-Netzwerkanwendung unterstützt.</p>
 </div>
@@ -1550,22 +1552,13 @@ Wenn ein Lokalisierungsupdate empfangen wird, aktualisiert das Prediction-Modul 
 <p>Apollo Auto verwendet ROS1 als zugrunde liegendes Netzwerk, was bedeutet, dass Apollo Auto das Master-Nodes-Framework von ROS1 entlehnt. Da xmlRPC von ROS1 wirklich alt ist (im Vergleich zu den neueren brpc und grpc), hat Baidu seine eigene protobuf-Version von RPC entwickelt.</p>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_konzept_2">8.2. <em>&lt;Konzept 2&gt;</em></h3>
+<div class="sect3">
+<h4 id="_cyber_rt">8.2.2. Cyber RT</h4>
 <div class="paragraph">
-<p><em>&lt;Erklärung&gt;</em></p>
-</div>
-<div class="paragraph">
-<p>&#8230;&#8203;</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_konzept_n">8.3. <em>&lt;Konzept n&gt;</em></h3>
-<div class="paragraph">
-<p><em>&lt;Erklärung&gt;</em></p>
+<p>Apollo Cyber RT ein Open-Source-Laufzeit-Framework, das speziell für autonome Fahrszenarien entwickelt wurde. Es basiert auf einem zentralisierten Berechnungsmodell und ist hochgradig auf Leistung, Latenz und Datendurchsatz optimiert.</p>
 </div>
 <div style="page-break-after: always;"></div>
+</div>
 </div>
 </div>
 </div>
@@ -1919,7 +1912,7 @@ Ein fertiges Modul in ein Diagramm zu überführen erfordert viel Zeit, da alle 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-20 16:39:55 UTC
+Last updated 2021-06-20 16:48:18 UTC
 </div>
 </div>
 </body>
