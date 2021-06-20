@@ -123,6 +123,9 @@ Enthaltene Bausteine::
 | Perception 
 | Das Perception-Modul identifiziert die Welt, die das autonome Fahrzeug umgibt. Innerhalb Perception gibt es zwei wichtige Teilmodule: Hinderniserkennung und Ampelerkennung.
 
+|HD-Map
+|Dieses Modul ist ähnlich wie eine Bibliothek. Anstatt Nachrichten zu veröffentlichen und zu abonnieren, fungiert es häufig als Abfrageunterstützung, um ad-hoc strukturierte Informationen zu den Straßen bereitzustellen.
+
 |===
 
 Wichtige Schnittstellen:: _<Beschreibung wichtiger Schnittstellen>_
@@ -130,7 +133,9 @@ Wichtige Schnittstellen:: _<Beschreibung wichtiger Schnittstellen>_
 === Guardian
 ==== Zweck/Verantwortung
 Ein Sicherheitsmodul, dass die Funktion eines "Action Centers" übernimmt und eingreift, wenn das Modul Monitor einen Fehler erkennt.
+
 ==== Schnittstelle(n)
+
 ==== Qualitäts-/Leistungsmerkmale
 
 * Alle Module funktionieren einwandfrei - Guardian lässt den Steuerfluss normal funktionieren. Steuersignale werden an den CANBus gesendet, als ob Guardian nicht vorhanden wäre.
@@ -242,11 +247,11 @@ https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/routing
 
 === Localization
 ==== Zweck/Verantwortung
-Das Lokalisierungsmodul aggregiert verschiedene Daten, um das autonome Fahrzeug zu lokalisieren. Es gibt zwei Arten von Lokalisierungsmodi: OnTimer und Multiple SensorFusion.
+Das Localization-Modul aggregiert verschiedene Daten, um das autonome Fahrzeug zu lokalisieren. Es gibt zwei Arten von Lokalisierungsmodi: OnTimer und Multiple SensorFusion.
 
-Die erste Lokalisierungsmethode ist RTK-basiert, mit einer Timer-basierten Callback-Funktion OnTimer, wie unten gezeigt.
+Die erste Lokalisierungsmethode ist RTK-basiert, mit einer Timer-basierten Callback-Funktion OnTimer.
 
-Die andere Lokalisierungsmethode ist die Multiple Sensor Fusion (MSF)-Methode, bei der eine Reihe von ereignisgesteuerten Callback-Funktionen registriert werden, wie unten gezeigt.
+Die andere Lokalisierungsmethode ist die Multiple Sensor Fusion (MSF)-Methode, bei der eine Reihe von ereignisgesteuerten Callback-Funktionen registriert werden.
 
 ==== Schnittstelle(n)
 ==== Qualitäts-/Leistungsmerkmale

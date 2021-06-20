@@ -1,7 +1,7 @@
 [[section-runtime-view]]
 == Laufzeitsicht
 
-TBD
+Die Module kommunizieren über Cyber RT, die Pub/Sub basiert ist.
 
 //Diese Sicht visualisiert im Gegensatz zur statischen Bausteinsicht dynamische Aspekte. Wie spielen die Teile zusammen?
 

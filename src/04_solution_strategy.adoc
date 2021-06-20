@@ -28,3 +28,9 @@ Dieser Abschnitt enthält einen stark verdichteten Architekturüberblick. Eine 
 
 irgendwas zu interoperabilität weil versch. sensoren etc verwendet werden können
 
+CYber RT -> Ros
+BUS Kommunikation
+...
+
+
+

@@ -1,0 +1,20 @@
+@startuml
+Perception -> Prediction: Authentication Request
+Prediction -> Planning: Authentication Response
+
+
+Control -> Guardian: ControlCommand
+CANBus -> Guardian: Chassis
+System -> Guardian: SystemStatus
+
+CANBus -> Control: Chassis
+Localization -> Control: LocalizationEstimate
+Planning -> Control: ADCTrajectory
+
+
+Planning -> Routing: RoutingRequest
+Routing --> Planning: RoutingResponse
+
+Guardian -> CANBus
+
+@enduml
