@@ -59,6 +59,8 @@ Lösungsstrategie und Entwurf erschließen sich ihm innerhalb von einem Tag.
 |Fahrentscheidungen können in jedem Betriebszustand innerhalb von 100 ms getroffen werden
 |7
 |Beim Ausfall einiger Teilsysteme wird immer ein sicherer Zustand erreicht.
+|8
+|Im Falle eines Hackerangriffes wird dieser zuverlässig erkannt und hat keinen Einfluss auf das Fahrverhalten.
 |===
 //[role="arc42help"]
 //****
