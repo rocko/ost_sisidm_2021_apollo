@@ -160,12 +160,11 @@ skinparam rectangle {
     roundCorner<<Concept>> 25
 }
 rectangle "Apollo Auto" <<system>> as AA {
-component "ICU" as ICU
-component "AXU" as AXU
-component "ASU" as ASU
-rectangle "Cyber RT" <<subsystem>> as C
-
-component "Sensors" as SENS
+    component "ICU" as ICU
+    component "AXU" as AXU
+    component "ASU" as ASU
+    rectangle "Cyber RT" <<subsystem>> as C
+    component "Sensors" as SENS
 }
 
 C -> ICU
