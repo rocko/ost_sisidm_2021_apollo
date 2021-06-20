@@ -56,7 +56,7 @@ Die folgende Tabelle beschreibt die zentralen Qualitätsziele von DokChess, wobe
 [small]#Apollo Auto ist eine offene Plattform, daher ist es wichtig, dass sich neue Entwickler möglichst schnell in die Architektur, Entwurf und Implementierung einarbeiten können#
 | _Echzeitsteuerung von einzelnen Fahrzeugen und Verkehrströmen_ |
 [small]#Apollo Auto übernimmt zuverlässig und sicher die autonome Steuerung von Fashrzeugen auf Level 4#
-| _Echtzeit Umfelderkennung_ |
+| _Echtzeit Umfelderkennung (Zeitverhalten)_  |
 [small]#Für die Steuerung von Fahrzeugen wird ein Modell des Umfelds benötigt.
 Aus den Sensoprdaten wird ein digitales Abbild des Fahrweges, von beweglichen und unbeweglichen Hindernissen und von Signalen geschaffen#
 | _Prediction_ |

@@ -1,7 +1,23 @@
 [[section-solution-strategy]]
 == Lösungsstrategie
 
-Dieser Abschnitt enthält einen stark verdichteten Architekturüberblick. Eine Gegenüberstellung der wichtigsten Ziele und Lösungsansätze.
+Dieser Abschnitt enthält einen stark verdichteten Architekturüberblick. Eine Ge
+
+[cols="1,2" options="header"]
+|===
+| **Qualitätsziel** | **Dem zuträgliche Ansätze in der Architektur**
+
+| Zugängliches Beispiel (Analysierbarkeit)
+| Architekturüberblick gegliedert nach arc42, Explizites, modul- und plattformbasiertes Domänenmodell, Ausführliche Dokumentation der öffentlichen Schnittstellen in doxygen
+
+| Schnelle Reaktion auf Fahrsituationen (Zeitverhalten)
+| Apollo Extension Unit (AXU) zur Unterstützung der IPC bei Berechnungen,
+Cyber RT als Runtime Framework
+
+| Interoperabilität
+| Apollo Sensor Unit (ASU) als Sensorschnittstellen, um Daten von verschiedenen Sensoren zu sammeln und Sensordaten aggregiert für Module bereitzustellen 
+|===
+
 
 //[role="arc42help"]
 //****
