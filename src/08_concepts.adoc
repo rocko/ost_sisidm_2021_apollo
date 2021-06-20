@@ -45,13 +45,11 @@ Dieser Abschnitt beschreibt allgemeine Strukturen und Aspekte, die systemweit ge
 //image:08-Crosscutting-Concepts-Structure-DE.png["Possible topics for crosscutting concepts"]
 //****
 
-=== Unter-der-Haube
 
+=== Fachliche Konzepte
 ==== Common
 
 Das Common-Modul dient als sogenannte "shared library", und enthält Code der von allen Modulen innerhalb von Apollo Auto gleichermaßen verwendet wird.
-
-Hier finden sich Funktion um beispielsweise ....
 
 ==== Guardian
 
@@ -62,7 +60,9 @@ Das Guardian-Modul dient als letzte Sicherungsinstanz / Gatekeeper um bei gefäh
 Das Drivers-Modul enthält Treiber für verschiedene Sensoren, wie beispielsweise LIDAR- oder Kamerasysteme
 
 
-//_<Erklärung>_
+=== Unter-der-Haube
+
+==== Apollo Auto protobuf
 Die Dynamik von autonomen Fahrzeugen (AV) wird von der Planungs-Engine über den Controller Area Network-Bus (CAN-Bus) gesteuert. Die Software liest Daten aus Hardware-Registern und schreibt sie zurück, genau wie wir es in Assembler tun würden. Für hochpräzise Berechnungen arbeiten die Lokalisierungs-, Wahrnehmungs- und Planungsmodule als unabhängige Eingabequellen, während die Ausgabequellen über das Peer2Peer (P2P)-Protokoll zusammenarbeiten. P2P wird durch die RPC-Netzwerkanwendung unterstützt.
 
 Apollo Auto verwendet ROS1 als zugrunde liegendes Netzwerk, was bedeutet, dass Apollo Auto das Master-Nodes-Framework von ROS1 entlehnt. Da xmlRPC von ROS1 wirklich alt ist (im Vergleich zu den neueren brpc und grpc), hat Baidu seine eigene protobuf-Version von RPC entwickelt.
@@ -74,12 +74,16 @@ Apollo Auto verwendet ROS1 als zugrunde liegendes Netzwerk, was bedeutet, dass A
 
 //https://github.com/ApolloAuto/apollo-platform/blob/master/ros/docs/design/shm_transport.md
 
-=== _<Konzept 2>_
+==== Cyber RT
 
-_<Erklärung>_
+Apollo Cyber RT ein Open-Source-Laufzeit-Framework, das speziell für autonome Fahrszenarien entwickelt wurde. Es basiert auf einem zentralisierten Berechnungsmodell und ist hochgradig auf Leistung, Latenz und Datendurchsatz optimiert.
 
-...
+//_<Erklärung>_
+//
+//...
+//
+//=== _<Konzept n>_
+//_<Erklärung>_
 
-=== _<Konzept n>_
 
-_<Erklärung>_
+// DONE
