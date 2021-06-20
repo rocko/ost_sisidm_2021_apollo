@@ -564,7 +564,13 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_perception">5.11. Perception</a></li>
 </ul>
 </li>
-<li><a href="#section-runtime-view">6. Laufzeitsicht</a></li>
+<li><a href="#section-runtime-view">6. Laufzeitsicht</a>
+<ul class="sectlevel2">
+<li><a href="#_perception_2">6.1. Perception</a></li>
+<li><a href="#_guardian_2">6.2. Guardian</a></li>
+<li><a href="#_canbus_2">6.3. CANBus</a></li>
+</ul>
+</li>
 <li><a href="#section-deployment-view">7. Verteilungssicht</a>
 <ul class="sectlevel2">
 <li><a href="#_infrastruktur_ebene_1">7.1. Infrastruktur Ebene 1</a></li>
@@ -1038,6 +1044,11 @@ Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverläss
 <div class="paragraph">
 <p>irgendwas zu interoperabilität weil versch. sensoren etc verwendet werden können</p>
 </div>
+<div class="paragraph">
+<p>CYber RT &#8594; Ros
+BUS Kommunikation
+&#8230;&#8203;</p>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -1127,6 +1138,10 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Perception</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"> Das Perception-Modul identifiziert die Welt, die das autonome Fahrzeug umgibt. Innerhalb Perception gibt es zwei wichtige Teilmodule: Hinderniserkennung und Ampelerkennung.</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HD-Map</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dieses Modul ist ähnlich wie eine Bibliothek. Anstatt Nachrichten zu veröffentlichen und zu abonnieren, fungiert es häufig als Abfrageunterstützung, um ad-hoc strukturierte Informationen zu den Straßen bereitzustellen.</p></td>
+</tr>
 </tbody>
 </table>
 <div class="dlist">
@@ -1143,10 +1158,15 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 <div class="sect3">
 <h4 id="_zweckverantwortung">5.2.1. Zweck/Verantwortung</h4>
 <div class="paragraph">
-<p>Ein Sicherheitsmodul, dass die Funktion eines "Action Centers" übernimmt und eingreift, wenn das Modul Monitor einen Fehler erkennt.
-==== Schnittstelle(n)
-==== Qualitäts-/Leistungsmerkmale</p>
+<p>Ein Sicherheitsmodul, dass die Funktion eines "Action Centers" übernimmt und eingreift, wenn das Modul Monitor einen Fehler erkennt.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_schnittstellen">5.2.2. Schnittstelle(n)</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_qualitäts_leistungsmerkmale">5.2.3. Qualitäts-/Leistungsmerkmale</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1172,7 +1192,7 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_ablageortdateien">5.2.2. Ablageort/Datei(en)</h4>
+<h4 id="_ablageortdateien">5.2.4. Ablageort/Datei(en)</h4>
 <div class="paragraph">
 <p><a href="https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/guardian" class="bare">https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/guardian</a></p>
 </div>
@@ -1187,11 +1207,11 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_schnittstellen">5.3.2. Schnittstelle(n)</h4>
+<h4 id="_schnittstellen_2">5.3.2. Schnittstelle(n)</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale">5.3.3. Qualitäts-/Leistungsmerkmale</h4>
+<h4 id="_qualitäts_leistungsmerkmale_2">5.3.3. Qualitäts-/Leistungsmerkmale</h4>
 <div class="paragraph">
 <p>Dieses Modul enthält Software auf Systemebene, wie z. B. Code zur Überprüfung des Hardwarestatus und zur Überwachung des Systemzustands. In Apollo 5.5 führt das Monitor-Modul nun u. a. die folgenden Prüfungen durch:</p>
 </div>
@@ -1231,11 +1251,11 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_schnittstellen_2">5.4.2. Schnittstelle(n)</h4>
+<h4 id="_schnittstellen_3">5.4.2. Schnittstelle(n)</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale_2">5.4.3. Qualitäts-/Leistungsmerkmale</h4>
+<h4 id="_qualitäts_leistungsmerkmale_3">5.4.3. Qualitäts-/Leistungsmerkmale</h4>
 
 </div>
 <div class="sect3">
@@ -1254,7 +1274,7 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_schnittstellen_3">5.5.2. Schnittstelle(n)</h4>
+<h4 id="_schnittstellen_4">5.5.2. Schnittstelle(n)</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1284,7 +1304,7 @@ ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird
 </div>
 </div>
 <div class="sect3">
-<h4 id="_schnittstellen_4">5.6.2. Schnittstelle(n)</h4>
+<h4 id="_schnittstellen_5">5.6.2. Schnittstelle(n)</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1333,11 +1353,11 @@ ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird
 </div>
 </div>
 <div class="sect3">
-<h4 id="_schnittstellen_5">5.7.2. Schnittstelle(n)</h4>
+<h4 id="_schnittstellen_6">5.7.2. Schnittstelle(n)</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale_3">5.7.3. Qualitäts-/Leistungsmerkmale</h4>
+<h4 id="_qualitäts_leistungsmerkmale_4">5.7.3. Qualitäts-/Leistungsmerkmale</h4>
 
 </div>
 <div class="sect3">
@@ -1356,11 +1376,11 @@ ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird
 </div>
 </div>
 <div class="sect3">
-<h4 id="_schnittstellen_6">5.8.2. Schnittstelle(n)</h4>
+<h4 id="_schnittstellen_7">5.8.2. Schnittstelle(n)</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale_4">5.8.3. Qualitäts-/Leistungsmerkmale</h4>
+<h4 id="_qualitäts_leistungsmerkmale_5">5.8.3. Qualitäts-/Leistungsmerkmale</h4>
 
 </div>
 <div class="sect3">
@@ -1375,21 +1395,21 @@ ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird
 <div class="sect3">
 <h4 id="_zweckverantwortung_8">5.9.1. Zweck/Verantwortung</h4>
 <div class="paragraph">
-<p>Das Lokalisierungsmodul aggregiert verschiedene Daten, um das autonome Fahrzeug zu lokalisieren. Es gibt zwei Arten von Lokalisierungsmodi: OnTimer und Multiple SensorFusion.</p>
+<p>Das Localization-Modul aggregiert verschiedene Daten, um das autonome Fahrzeug zu lokalisieren. Es gibt zwei Arten von Lokalisierungsmodi: OnTimer und Multiple SensorFusion.</p>
 </div>
 <div class="paragraph">
-<p>Die erste Lokalisierungsmethode ist RTK-basiert, mit einer Timer-basierten Callback-Funktion OnTimer, wie unten gezeigt.</p>
+<p>Die erste Lokalisierungsmethode ist RTK-basiert, mit einer Timer-basierten Callback-Funktion OnTimer.</p>
 </div>
 <div class="paragraph">
-<p>Die andere Lokalisierungsmethode ist die Multiple Sensor Fusion (MSF)-Methode, bei der eine Reihe von ereignisgesteuerten Callback-Funktionen registriert werden, wie unten gezeigt.</p>
+<p>Die andere Lokalisierungsmethode ist die Multiple Sensor Fusion (MSF)-Methode, bei der eine Reihe von ereignisgesteuerten Callback-Funktionen registriert werden.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_schnittstellen_7">5.9.2. Schnittstelle(n)</h4>
+<h4 id="_schnittstellen_8">5.9.2. Schnittstelle(n)</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_qualitäts_leistungsmerkmale_5">5.9.3. Qualitäts-/Leistungsmerkmale</h4>
+<h4 id="_qualitäts_leistungsmerkmale_6">5.9.3. Qualitäts-/Leistungsmerkmale</h4>
 
 </div>
 <div class="sect3">
@@ -1409,7 +1429,7 @@ Wenn ein Lokalisierungsupdate empfangen wird, aktualisiert das Prediction-Modul 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_schnittstellen_8">5.10.2. Schnittstelle(n)</h4>
+<h4 id="_schnittstellen_9">5.10.2. Schnittstelle(n)</h4>
 
 </div>
 <div class="sect3">
@@ -1450,9 +1470,35 @@ Wenn ein Lokalisierungsupdate empfangen wird, aktualisiert das Prediction-Modul 
 <h2 id="section-runtime-view">6. Laufzeitsicht</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>TBD</p>
+<p>Diese Sicht visualisiert im Gegensatz zur statischen Bausteinsicht dynamische Aspekte. Wie spielen die Teile zusammen?
+Mit Apollo Auto kommunizieren die Modulbausteine über Cyber RT.</p>
+</div>
+<div class="paragraph">
+<p>, die Pub/Sub basiert ist.</p>
+</div>
+<div class="sect2">
+<h3 id="_perception_2">6.1. Perception</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_guardian_2">6.2. Guardian</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/plantUMLGuardian.png" alt="plantUMLGuardian" width="451" height="219">
+</div>
+<div class="title">Abbildung 3. Guardian</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_canbus_2">6.3. CANBus</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/plantUMLCANBus.png" alt="plantUMLCANBus" width="513" height="248">
+</div>
+<div class="title">Abbildung 4. CANBus</div>
 </div>
 <div style="page-break-after: always;"></div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1785,6 +1831,7 @@ Besonders gegen komplexe Angriffe mit mehreren kombinierten Verfahren müssen di
 <p>Beispielsweise sind Diagramme in der Laufzeitsicht effizienter zu gestalten während ein Modul im Entstehen ist. Änderungen können mit jeder Entwicklungsstufe eingepflegt werden.
 Ein fertiges Modul in ein Diagramm zu überführen erfordert viel Zeit, da alle beteiligten Module und deren Funktionsweise erst identifiziert werden müssen.</p>
 </div>
+<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_doctoolchain">13.3. docToolChain</h3>
@@ -1834,7 +1881,7 @@ Ein fertiges Modul in ein Diagramm zu überführen erfordert viel Zeit, da alle 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-20 10:10:40 UTC
+Last updated 2021-06-20 10:58:45 UTC
 </div>
 </div>
 </body>
