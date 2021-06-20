@@ -36,6 +36,8 @@ image:qualitytree.png["Qualitätsbaum"]
 //In jedem Fall sollten Sie hier Verweise auf die Qualitätsszenarien des folgenden Abschnittes aufnehmen.
 //****
 
+<<<
+
 === Qualitätsszenarien
 
 [cols="e,15e" options="header"]
