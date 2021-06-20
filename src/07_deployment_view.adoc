@@ -57,6 +57,8 @@ Zuordnung von Bausteinen zu Infrastruktur:: _<Beschreibung der Zuordnung>_
 
 === Infrastruktur Ebene 2
 
+Die nachfolgende Abbildung zeigt die Verteilung der einzelnen Hardwarekomponenten wie sie in Apollo Auto verwendet werden.
+
 image:Hardware_connection_3_5_1.png["Deployment von Apollo Auto, Ebene 2"]
 
 //[role="arc42help"]
