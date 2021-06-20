@@ -142,6 +142,8 @@ https://github.com/ApolloAuto/apollo/tree/r5.5.0/modules/guardian
 //_<(Optional) Erfüllte Anforderungen>_
 //_<(optional) Offene Punkte/Probleme/Risiken>_
 
+<<<
+
 === Monitor
 ==== Zweck/Verantwortung
 Das Überwachungssystem für alle Module im Fahrzeug einschließlich der Hardware. Monitor empfängt Daten von verschiedenen Modulen und leitet sie an die HMI weiter, damit der Fahrer sie sehen und sicherstellen kann, dass alle Module ohne Probleme funktionieren. Im Falle eines Modul- oder Hardwarefehlers sendet Monitor eine Warnung an Guardian, das dann entscheidet, welche Maßnahmen ergriffen werden müssen, um einen Unfall zu verhindern.
