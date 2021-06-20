@@ -21,7 +21,30 @@ skinparam rectangle {
     roundCorner<<Concept>> 25
 }
 rectangle "Apollo Auto" <<system>> as AA
-rectangle "Open Vehicle Certification Platform" as OVCP
+rectangle "ICU" <<subsystem>> as ICU
+rectangle "AXU" <<subsystem>> as AXU
+rectangle "ASU" <<subsystem>>as ASU
+rectangle "V2X OBU" <<subsystem>> as V2X
+rectangle "Cyber RT" <<subsystem>> as C
+
+rectangle "Sensors" as SENS
+
+AA --> C
+AA --> V2X
+C -> ICU
+ICU --> AXU
+AXU -> SENS
+ICU --> ASU
+
+@enduml
+
+
+@startuml
+skinparam rectangle {
+    roundCorner<<Concept>> 25
+}
+rectangle "Apollo Auto" <<system>> as AA
+rectangle "Sensors" as OVCP
 rectangle "Hardware Development Platform" as HDP
 rectangle "Open Software Platform" as OSP
 rectangle "Cloud Service Platform" as CSP

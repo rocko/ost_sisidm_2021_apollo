@@ -53,11 +53,13 @@ rectangle "Open Vehicle Certification Platform" as OVCP
 rectangle "Hardware Development Platform" as HDP
 rectangle "Open Software Platform" as OSP
 rectangle "Cloud Service Platform" as CSP
+rectangle "Solutions" as S
 
 AA --> OVCP
 AA --> HDP
 AA --> OSP
 AA --> CSP
+AA --> S
 ----
 
 
@@ -139,53 +141,40 @@ Die Open Software Platform fasst alle Softwaremodule zusammen, die von Apollo Au
 
 Hierzu zählen beispielsweise Module zur Routenplanung, Vorhersage und Wahrneh
 
-//Map Engine
-//Localization
-//Perception
-//Prediction
-//Planning
-//Control
-//HMI
-//V2X Adaptor
-//Apollo Cyber RT
-//RTOS
-
 ==== Cloud Service Platform
 
 Die Cloud Service Platform fasst ergänzende cloud-basierte Module zusammen die von Apollo Auto verwendet werden.
 
 Hierzu zählen beispielsweise Security, V2X und OTA. 
 
-//HD Map
-//Simulation
-//Production Components
-//Security
-//OTA
-//DuerOS
-//V2X
-//Fuel Data Service
-//==== Solutions
+==== Solutions
 
-//=== Technischer Kontext
+Solutions behinhaltet diverse Szenarien für das automatisierte Fahren.
 
-//.Technischer Kontext von Apollo Auto
-//[plantuml, "{plantUMLDir}TECHcontext", png]
-//----
-//!pragma graphviz_dot smetana
-//skinparam rectangle {
-//   roundCorner<<Concept>> 25
-//}
-//rectangle "Apollo Auto" <<system>> as AA
-//rectangle "Open Vehicle Certification Platform" as OVCP
-//rectangle "Hardware Development Platform" as HDP
-//rectangle "Open Software Platform" as OSP
-//rectangle "Cloud Service Platform" as CSP
+=== Technischer Kontext
 
-//AA --> OVCP
-//AA --> HDP
-//AA --> OSP
-//AA --> CSP
-//----
+.Technischer Kontext von Apollo Auto
+[plantuml, "{plantUMLDir}TECHcontext", png]
+----
+skinparam rectangle {
+    roundCorner<<Concept>> 25
+}
+rectangle "Apollo Auto" <<system>> as AA {
+component "ICU" as ICU
+component "AXU" as AXU
+component "ASU" as ASU
+component "V2X OBU" as V2X
+rectangle "Cyber RT" <<subsystem>> as C
+
+component "Sensors" as SENS
+}
+
+C --> V2X
+C -> ICU
+C --> AXU
+ASU -d-> SENS
+C --> ASU
+----
 
 //[role="arc42help"]
 //****
