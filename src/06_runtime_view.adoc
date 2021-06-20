@@ -1,8 +1,8 @@
 [[section-runtime-view]]
 == Laufzeitsicht
 
-Diese Sicht visualisiert im Gegensatz zur statischen Bausteinsicht dynamische Aspekte. Wie spielen die Teile zusammen?
-Mit Apollo Auto kommunizieren die Modulbausteine über Cyber RT.
+
+Mit Apollo Auto kommunizieren die Modulbausteine über Apollo Cyber RT und protobuf Nachrichten. Aus diesert dezentralen Architektur ist es schwierig die Laufzeitsicht einzelner Komponenten explizit darzustellen. 
 
 
 
@@ -51,3 +51,6 @@ Mit Apollo Auto kommunizieren die Modulbausteine über Cyber RT.
 
 //=== CANBus
 //...
+
+
+// DONE
