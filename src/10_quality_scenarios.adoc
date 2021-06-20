@@ -62,6 +62,8 @@ Lösungsstrategie und Entwurf erschließen sich ihm innerhalb von einem Tag.
 |Beim Ausfall einiger Teilsysteme wird immer ein sicherer Zustand erreicht.
 |8
 |Im Falle eines Hackerangriffes wird dieser zuverlässig erkannt und hat keinen Einfluss auf das Fahrverhalten.
+|9
+|Nach der Produktion und in Betriebnahme eines Fahrzeuges müssen alle zusätzlichen Funktionen über Over-the-air-Updates integrierbar sein, ohne die Hardware anpassen zu müssen.
 |===
 //[role="arc42help"]
 //****
