@@ -20,6 +20,14 @@ Dieser Abschnitt beinhaltet konkrete Qualitätsszenarien, welche die zentralen Q
 
 Das folgende Bild gibt einen Überblick über die relevanten Qualitätsmerkmale und den ihnen jeweils zugeordneten Szenarien.
 
+//Wartbarkeit-> Analysierbarkeit 1,2,3
+//            -> Änderbarkeit 9
+//Funktionalität -> Richtigkeit 4
+//Zuverlässigkeit -> Fehlertoleranz 5
+//                -> Sicherheit 7,8
+//Effizienz -> Zeitverhalten 6
+
+
 image:qualitytree.png["Qualitätsbaum"]
 
 //[role="arc42help"]
@@ -47,7 +55,6 @@ image:qualitytree.png["Qualitätsbaum"]
 |1
 |Ein Interessierter mit Grundkenntnissen in autonomen Fahren und UML möchte einen Einstieg indie Architektur von Apollo Auto finden.
 Lösungsstrategie und Entwurf erschließen sich ihm innerhalb von einem Tag.
-
 |2
 |Ein Architekt, der arc42 anwenden möchte, sucht zu einem beliebigen Kapitel des Templates einen konkreten Beispielinhalt und findet ihn unverzüglich in der Dokumentation.
 |3
