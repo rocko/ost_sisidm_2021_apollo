@@ -51,8 +51,6 @@ Dieser Abschnitt beschreibt allgemeine Strukturen und Aspekte, die systemweit ge
 
 Das Common-Modul dient als sogenannte "shared library", und enthält Code der von allen Modulen innerhalb von Apollo Auto gleichermaßen verwendet wird.
 
-Hier finden sich Funktion um beispielsweise ....
-
 ==== Guardian
 
 Das Guardian-Modul dient als letzte Sicherungsinstanz / Gatekeeper um bei gefährlichen Situationen das Fahrzeug in einen sicheren Zustand zu überführen.
@@ -86,3 +84,6 @@ Apollo Cyber RT ein Open-Source-Laufzeit-Framework, das speziell für autonome F
 //
 //=== _<Konzept n>_
 //_<Erklärung>_
+
+
+// DONE
