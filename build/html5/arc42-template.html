@@ -1208,7 +1208,9 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 </div>
 <div class="sect3">
 <h4 id="_schnittstellen_2">5.3.2. Schnittstelle(n)</h4>
-
+<div class="paragraph">
+<p>TBD</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_qualitäts_leistungsmerkmale_2">5.3.3. Qualitäts-/Leistungsmerkmale</h4>
@@ -1275,17 +1277,11 @@ Tabelle: Überblick über Subsysteme von DokChess</p>
 </div>
 <div class="sect3">
 <h4 id="_schnittstellen_4">5.5.2. Schnittstelle(n)</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>OnControlCommand -
-ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird, wenn das CANBus-Modul Steuerbefehle empfängt</p>
-</li>
-<li>
-<p>OnGuardianCommand -
-ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird, wenn das Guardian-Modul Steuerbefehle empfängt</p>
-</li>
-</ul>
+<div class="imageblock">
+<div class="content">
+<img src="./images/plantUMLCANBus.png" alt="plantUMLCANBus" width="478" height="160">
+</div>
+<div class="title">Abbildung 3. CANBus</div>
 </div>
 </div>
 <div class="sect3">
@@ -1300,32 +1296,16 @@ ein ereignisbasierter Publisher mit einer Callback-Funktion, die ausgelöst wird
 <div class="sect3">
 <h4 id="_zweckverantwortung_5">5.6.1. Zweck/Verantwortung</h4>
 <div class="paragraph">
-<p>Die Control nimmt die geplante Trajektorie als Eingabe und generiert den Steuerbefehl zur Weitergabe an den CANBus.</p>
+<p>Das Control-Modul nimmt die geplante Trajektorie als Eingabe und generiert den Steuerbefehl zur Weitergabe an den CANBus.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_schnittstellen_5">5.6.2. Schnittstelle(n)</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>OnPad</p>
-</li>
-<li>
-<p>OnMonitor</p>
-</li>
-<li>
-<p>OnChassis</p>
-</li>
-<li>
-<p>OnPlanning</p>
-</li>
-<li>
-<p>OnLocalization</p>
-</li>
-</ul>
+<div class="imageblock">
+<div class="content">
+<img src="./images/plantUMLControl.png" alt="plantUMLControl" width="739" height="306">
 </div>
-<div class="paragraph">
-<p>OnPad und OnMonitor sind Routineinteraktionen mit der PAD-basierten Benutzeroberfläche und Simulationen.</p>
+<div class="title">Abbildung 4. Control</div>
 </div>
 </div>
 <div class="sect3">
@@ -1486,7 +1466,7 @@ Mit Apollo Auto kommunizieren die Modulbausteine über Cyber RT.</p>
 <div class="content">
 <img src="./images/plantUMLGuardian.png" alt="plantUMLGuardian" width="451" height="219">
 </div>
-<div class="title">Abbildung 3. Guardian</div>
+<div class="title">Abbildung 5. Guardian</div>
 </div>
 </div>
 <div class="sect2">
@@ -1495,7 +1475,7 @@ Mit Apollo Auto kommunizieren die Modulbausteine über Cyber RT.</p>
 <div class="content">
 <img src="./images/plantUMLCANBus.png" alt="plantUMLCANBus" width="513" height="248">
 </div>
-<div class="title">Abbildung 4. CANBus</div>
+<div class="title">Abbildung 6. CANBus</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -1881,7 +1861,7 @@ Ein fertiges Modul in ein Diagramm zu überführen erfordert viel Zeit, da alle 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-20 10:58:45 UTC
+Last updated 2021-06-20 11:18:16 UTC
 </div>
 </div>
 </body>
