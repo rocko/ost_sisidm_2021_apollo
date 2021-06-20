@@ -1,6 +1,8 @@
 [[section-introduction-and-goals]]
 ==	Einführung und Ziele
 
+:caution-caption: Test
+
 Dieser Abschnitt führt in die Aufgabenstellung ein und skizziert die Ziele, die Apollo Auto verfolgt.
 
 === Aufgabenstellung
