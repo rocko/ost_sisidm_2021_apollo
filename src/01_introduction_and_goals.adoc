@@ -94,3 +94,6 @@ Wollen Anregungen für weitere Forschungsprojekte und studentische Arbeiten find
 Setzen eigene Projekte (z.B. Masterarbeit) zum Thema autonomes Fahren mit Apollo Auto um.
 Schreiben eine Architekturdokumentation zu Apollo Auto.#
 |===
+
+
+// DONE

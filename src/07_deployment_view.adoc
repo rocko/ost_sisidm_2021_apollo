@@ -47,7 +47,7 @@
 //****
 
 //_**<Übersichtsdiagramm>**_
-image:Hardware_overview_3_5.png["Deployment von Apollo Auto"]
+image:Hardware_overview_3_5.png["Deployment von Apollo Auto, Ebene 1"]
 
 Begründung:: _<Erläuternder Text>_
 
@@ -56,6 +56,8 @@ Qualitäts- und/oder Leistungsmerkmale:: _<Erläuternder Text>_
 Zuordnung von Bausteinen zu Infrastruktur:: _<Beschreibung der Zuordnung>_
 
 === Infrastruktur Ebene 2
+
+image:Hardware_connection_3_5_1.png["Deployment von Apollo Auto, Ebene 2"]
 
 //[role="arc42help"]
 //****

@@ -5,7 +5,7 @@ Diese Sicht visualisiert im Gegensatz zur statischen Bausteinsicht dynamische As
 Mit Apollo Auto kommunizieren die Modulbausteine über Cyber RT.
 
 
-, die Pub/Sub basiert ist.
+
 
 
 //[role="arc42help"]
@@ -41,34 +41,13 @@ Mit Apollo Auto kommunizieren die Modulbausteine über Cyber RT.
 //* ...
 //****
 
-=== Perception
+//=== Perception
 
 //*  <hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
 //*  <hier Besonderheiten bei dem Zusammenspiel der Bausteine in diesem Szenario erläutern>
 
-=== Guardian
+//=== Guardian
+//...
 
-.Guardian
-[plantuml, "{plantUMLDir}Guardian", png]
-----
-!pragma graphviz_dot smetana
-
-CANBus -> Guardian: Chassis 
-Control -> Guardian: ControlCommand
-Monitor -> Guardian: SystemStatus
-
-Guardian --> CANBus: GuardianCommand
-----
-
-=== CANBus
-.CANBus
-[plantuml, "{plantUMLDir}CANBus", png]
-----
-!pragma graphviz_dot smetana
-Vehicle -> CANBus: ChassisDetails
-Control -> CANBus: ControlCommand 
-Guardian -> CANBus: GuardianCommand
-CANBus --> CyberRT: ChassisStatus
-CANBus --> CyberRT: ChasisDetailsStatus 
-----
+//=== CANBus
 //...

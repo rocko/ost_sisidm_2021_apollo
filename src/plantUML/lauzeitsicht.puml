@@ -1,35 +1,3 @@
-@startuml
-Perception -> Prediction: Authentication Request
-Prediction -> Planning: Authentication Response
-
-
-Control -> Guardian: ControlCommand
-CANBus -> Guardian: Chassis
-System -> Guardian: SystemStatus
-
-CANBus -> Control: Chassis
-Localization -> Control: LocalizationEstimate
-Planning -> Control: ADCTrajectory
-
-
-Planning -> Routing: RoutingRequest
-Routing --> Planning: RoutingResponse
-
-Guardian -> CANBus
-
-@enduml
-
-@startuml
-Perception -> Planning: TrafficLightDetection
-
-Planning -> Routing: RoutingRequest
-Routing --> Planning: RoutingResponse
-
-Plannning -> ADCTrajectory
-
-@enduml
-
-
 
 @startuml
 OnPlanning - [Control]
@@ -37,7 +5,6 @@ OnPlanning - [Control]
 [Control] -- OnChassis
 [Control] -- OnMonitor
 [Control] -- OnLocalization
-
 @enduml
 
 @startuml
@@ -46,5 +13,16 @@ Control -> CANBus: ControlCommand
 Guardian -> CANBus: GuardianCommand
 CANBus --> CyberRT: ChassisStatus
 CANBus --> CyberRT: ChasisDetailsStatus 
+@enduml
+
+
+@startuml
+
+LIDAR - [Perception]
+[Perception] - Camera
+[Perception] -- RADAR
+[Perception] -- ChassisDetails
+
+
 
 @enduml
