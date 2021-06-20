@@ -25,11 +25,9 @@ endif::backend-html5[]
 // configure DE settings for asciidoc
 include::src/config.adoc[]
 
+include::src/00_titlepage.adoc[]
 
-include::src/about-arc42.adoc[]
-
-// horizontal line
-***
+<<<<
 
 // numbering from here on
 :numbered:
