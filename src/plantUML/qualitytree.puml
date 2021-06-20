@@ -1,22 +1,48 @@
 @startuml
 left to right direction
-skinparam roundCorner 15
-card Qualität as q
-card Funktionalität as f
-'card Zuverlässigkeit as z
-card Portierbarkeit as p
-card Benutzbarkeit as b
 
-q --> f
-'q --> z
-q --> p
-q --> b
+card Qualität
 
-label Interoperabilität as I
-label Attraktivität as A
-label Anpassbarkeit as AN
-f --> I
-b --> A
-p --> AN
+card Wartbarkeit
+card Analysierbarkeit
+card Änderbarkeit
 
+card Funktionalität
+card Richtigkeit
+
+card Zuverlässigkeit
+card Fehlertoleranz
+card Sicherheit
+
+card Effizienz
+card Zeitverhalten
+
+Qualität --> Wartbarkeit
+Qualität --> Funktionalität
+Qualität --> Zuverlässigkeit
+Qualität --> Effizienz
+
+Wartbarkeit --> Analysierbarkeit
+Wartbarkeit --> Änderbarkeit
+Funktionalität --> Richtigkeit
+Zuverlässigkeit --> Fehlertoleranz
+Zuverlässigkeit --> Sicherheit
+Effizienz --> Zeitverhalten
+
+Analysierbarkeit -- 1
+Analysierbarkeit -- 2
+Analysierbarkeit -- 3
+Änderbarkeit -- 9
+Richtigkeit -- 4
+Fehlertoleranz -- 5
+Sicherheit -- 7
+Sicherheit -- 8
+Zeitverhalten -- 6
 @enduml
+
+//Wartbarkeit-> Analysierbarkeit 1,2,3
+//            -> Änderbarkeit 9
+//Funktionalität -> Richtigkeit 4
+//Zuverlässigkeit -> Fehlertoleranz 5
+//                -> Sicherheit 7,8
+//Effizienz -> Zeitverhalten 6
