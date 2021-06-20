@@ -47,6 +47,21 @@ Dieser Abschnitt beschreibt allgemeine Strukturen und Aspekte, die systemweit ge
 
 === Unter-der-Haube
 
+==== Common
+
+Das Common-Modul dient als sogenannte "shared library", und enthält Code der von allen Modulen innerhalb von Apollo Auto gleichermaßen verwendet wird.
+
+Hier finden sich Funktion um beispielsweise ....
+
+==== Guardian
+
+Das Guardian-Modul dient als letzte Sicherungsinstanz / Gatekeeper um bei gefährlichen Situationen das Fahrzeug in einen sicheren Zustand zu überführen.
+
+==== Drivers
+
+Das Drivers-Modul enthält Treiber für verschiedene Sensoren, wie beispielsweise LIDAR- oder Kamerasysteme
+
+
 //_<Erklärung>_
 Die Dynamik von autonomen Fahrzeugen (AV) wird von der Planungs-Engine über den Controller Area Network-Bus (CAN-Bus) gesteuert. Die Software liest Daten aus Hardware-Registern und schreibt sie zurück, genau wie wir es in Assembler tun würden. Für hochpräzise Berechnungen arbeiten die Lokalisierungs-, Wahrnehmungs- und Planungsmodule als unabhängige Eingabequellen, während die Ausgabequellen über das Peer2Peer (P2P)-Protokoll zusammenarbeiten. P2P wird durch die RPC-Netzwerkanwendung unterstützt.
 
