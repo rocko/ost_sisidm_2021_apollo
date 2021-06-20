@@ -152,26 +152,8 @@ Hierzu zählen beispielsweise Security, V2X und OTA.
 Solutions behinhaltet diverse Szenarien für das automatisierte Fahren.
 
 === Technischer Kontext
+image:tech_kontext-1.png["Technischer Kontext von Apollo Auto"]
 
-.Technischer Kontext von Apollo Auto
-[plantuml, "{plantUMLDir}TECHcontext", png]
-----
-skinparam rectangle {
-    roundCorner<<Concept>> 25
-}
-rectangle "Apollo Auto" <<system>> as AA {
-    component "ICU" as ICU
-    component "AXU" as AXU
-    component "ASU" as ASU
-    rectangle "Cyber RT" <<subsystem>> as C
-    component "Sensors" as SENS
-}
-
-C -> ICU
-C --> AXU
-ASU -d-> SENS
-C --> ASU
-----
 
 [cols="1,2" options="header"]
 |===
