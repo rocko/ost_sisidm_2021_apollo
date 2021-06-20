@@ -776,7 +776,7 @@ Multifusionslösung bestand aus Fahrzeug, Cloud, HD-Karte und Parkplätzen</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Apollo Auto übernimmt zuverlässig und sicher die autonome Steuerung von Fashrzeugen auf Level 4</span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Echtzeit Umfelderkennung</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Echtzeit Umfelderkennung (Zeitverhalten)</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="small">Für die Steuerung von Fahrzeugen wird ein Modell des Umfelds benötigt.
 Aus den Sensoprdaten wird ein digitales Abbild des Fahrweges, von beweglichen und unbeweglichen Hindernissen und von Signalen geschaffen</span></p></td>
 </tr>
@@ -1046,8 +1046,35 @@ Allerdings wirde Baidu um die architektonische Integrität, die Systemzuverläss
 <h2 id="section-solution-strategy">4. Lösungsstrategie</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Dieser Abschnitt enthält einen stark verdichteten Architekturüberblick. Eine Gegenüberstellung der wichtigsten Ziele und Lösungsansätze.</p>
+<p>Dieser Abschnitt enthält einen stark verdichteten Architekturüberblick. Eine Ge</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Qualitätsziel</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Dem zuträgliche Ansätze in der Architektur</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zugängliches Beispiel (Analysierbarkeit)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"> Architekturüberblick gegliedert nach arc42, Explizites, modul- und plattformbasiertes Domänenmodell, Ausführliche Dokumentation der öffentlichen Schnittstellen in doxygen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schnelle Reaktion auf Fahrsituationen (Zeitverhalten)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"> Apollo Extension Unit (AXU) zur Unterstützung der IPC bei Berechnungen,
+Cyber RT als Runtime Framework</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Interoperabilität</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"> Apollo Sensor Unit (ASU) als Sensorschnittstellen, um Daten von verschiedenen Sensoren zu sammeln und Sensordaten aggregiert für Module bereitzustellen</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>irgendwas zu interoperabilität weil versch. sensoren etc verwendet werden können</p>
 </div>
@@ -1484,6 +1511,9 @@ Wenn ein Lokalisierungsupdate empfangen wird, aktualisiert das Prediction-Modul 
 <div class="sect2">
 <h3 id="_infrastruktur_ebene_2">7.2. Infrastruktur Ebene 2</h3>
 <div class="paragraph">
+<p>Die nachfolgende Abbildung zeigt die Verteilung der einzelnen Hardwarekomponenten wie sie in Apollo Auto verwendet werden.</p>
+</div>
+<div class="paragraph">
 <p><span class="image"><img src="./images/Hardware_connection_3_5_1.png" alt="Deployment von Apollo Auto, Ebene 2"></span></p>
 </div>
 <div style="page-break-after: always;"></div>
@@ -1498,11 +1528,32 @@ Wenn ein Lokalisierungsupdate empfangen wird, aktualisiert das Prediction-Modul 
 </div>
 <div class="sect2">
 <h3 id="_unter_der_haube">8.1. Unter-der-Haube</h3>
+<div class="sect3">
+<h4 id="_common">8.1.1. Common</h4>
+<div class="paragraph">
+<p>Das Common-Modul dient als sogenannte "shared library", und enthält Code der von allen Modulen innerhalb von Apollo Auto gleichermaßen verwendet wird.</p>
+</div>
+<div class="paragraph">
+<p>Hier finden sich Funktion um beispielsweise &#8230;&#8203;.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_guardian_2">8.1.2. Guardian</h4>
+<div class="paragraph">
+<p>Das Guardian-Modul dient als letzte Sicherungsinstanz / Gatekeeper um bei gefährlichen Situationen das Fahrzeug in einen sicheren Zustand zu überführen.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_drivers">8.1.3. Drivers</h4>
+<div class="paragraph">
+<p>Das Drivers-Modul enthält Treiber für verschiedene Sensoren, wie beispielsweise LIDAR- oder Kamerasysteme</p>
+</div>
 <div class="paragraph">
 <p>Die Dynamik von autonomen Fahrzeugen (AV) wird von der Planungs-Engine über den Controller Area Network-Bus (CAN-Bus) gesteuert. Die Software liest Daten aus Hardware-Registern und schreibt sie zurück, genau wie wir es in Assembler tun würden. Für hochpräzise Berechnungen arbeiten die Lokalisierungs-, Wahrnehmungs- und Planungsmodule als unabhängige Eingabequellen, während die Ausgabequellen über das Peer2Peer (P2P)-Protokoll zusammenarbeiten. P2P wird durch die RPC-Netzwerkanwendung unterstützt.</p>
 </div>
 <div class="paragraph">
 <p>Apollo Auto verwendet ROS1 als zugrunde liegendes Netzwerk, was bedeutet, dass Apollo Auto das Master-Nodes-Framework von ROS1 entlehnt. Da xmlRPC von ROS1 wirklich alt ist (im Vergleich zu den neueren brpc und grpc), hat Baidu seine eigene protobuf-Version von RPC entwickelt.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -1873,7 +1924,7 @@ Ein fertiges Modul in ein Diagramm zu überführen erfordert viel Zeit, da alle 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-20 14:40:11 UTC
+Last updated 2021-06-20 16:27:24 UTC
 </div>
 </div>
 </body>
